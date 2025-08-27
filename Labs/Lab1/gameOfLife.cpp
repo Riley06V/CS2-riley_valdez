@@ -23,8 +23,8 @@ void initCells(Cell* board[][10], int boardSize)
     for (int i = 0; i < boardSize; i++) {
         for (int j=0; j < boardSize; j++) {
             board[i][j] = new Cell;
-            board[i][j]->x; //making it to an x, y coordinate plane
-            board[i][j]->y;
+            board[i][j]->x = i; //making it to an x, y coordinate plane
+            board[i][j]->y = j;
             board[i][j]->state = 0;
             board[i][j]->numLiveNeighbors = 0;
         }
