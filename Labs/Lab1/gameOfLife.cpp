@@ -118,7 +118,11 @@ Return if you updated cells or not to break out of while loop from main.
 */
 bool updateCellState(Cell* board[][10], int boardSize) {
     bool changed = false;  // Tracks if any cell's state changed
-
+    for (int i = 0; i < boardSize; i++) {//prep to call findNumNeighbors
+        for (int j = 0; j < boardSize; j++) {
+            findNumNeighbors(board, boardSize, board[i][j]);
+        }
+    }
     for (int i = 0; i < boardSize; i++) {
         for (int j = 0; j < boardSize; j++) {
             int liveNeighbors = board[i][j]->numLiveNeighbors; //local variables for typing and readability
