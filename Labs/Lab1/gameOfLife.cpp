@@ -20,7 +20,15 @@ Should create structs and populate the array
 */
 void initCells(Cell* board[][10], int boardSize)
 {
-
+    for (int i = 0; i < boardSize; i++) {
+        for (int j=0; j < boardSize; j++) {
+            board[i][j] = new Cell;
+            board[i][j]->x; //making it to an x, y coordinate plane
+            board[i][j]->y;
+            board[i][j]->state = 0;
+            board[i][j]->numLiveNeighbors = 0;
+        }
+    }
 }
 
 /*
@@ -30,7 +38,29 @@ Structure of file should consist of 10 lines of 0 or 1 to indicate cell state
 */
 void readBoard(Cell* board[][10], int boardSize) 
 {
+    string fileName;
+    cout << "Enter board #: ";
+    cin >> fileName; //getline to get entire thing.
+    cin.ignore(); //clear buffer
 
+    ifstream inputFromFile(fileName); //Open File
+    if (!inputFromFile.is_open()) {     //Debug incase file doesn't open, could add do{}while() loop but this fine for now
+        cerr << "Failed to open file: " << fileName << endl;
+        return 1;
+    }
+    for (int i = 0; i < boardSize; i ++) {      //Nested loop to iterate through entire array.
+        string line;
+        getline(inputFromFile, line); //getline through each iteration of a column to read each row
+        for (int j = 0; j < boardSize; j++) {
+            // read the information from the row dictating either 0 or 1 while casting to int
+            if (line[j] == '1') {
+                board[i][j]->state = 1;
+            } else {
+                board[i][j]->state = 0;
+            }
+        }
+    }
+    inputFromFile.close();
 }
 
 /*
