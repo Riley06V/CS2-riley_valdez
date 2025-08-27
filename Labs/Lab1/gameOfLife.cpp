@@ -150,6 +150,7 @@ bool updateCellState(Cell* board[][10], int boardSize) {
         }
     }
 
-    cout << "\nSimulation Complete" << std::endl;
+    cout << "\nSimulation Complete" << endl;
+    cout << "Enter to continue" << endl;
     return changed;
 }
