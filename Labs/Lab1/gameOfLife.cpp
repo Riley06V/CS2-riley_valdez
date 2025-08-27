@@ -66,9 +66,14 @@ void readBoard(Cell* board[][10], int boardSize)
 /*
 Function to print out all cells to cout
 */
-void printCells(Cell* board[][10], int boardSize)
+void printCells(Cell* board[][10], int boardSize) //easiest function, Just printing the information out
 {
-
+    for (int i = 0; i < boardSize; i++) {
+        for (int j = 0; j < boardSize; j++) {
+            cout << board[i][j]->state;
+        }
+    }
+    cout << endl;
 }
 
 /*
