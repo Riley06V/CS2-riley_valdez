@@ -1,7 +1,5 @@
 # CS2-riley_valdez
 
-# CS0-rvaldez
-
 | Basic Info | Riley Valdez |
 | --- | ---|
 | Course: | CSCI112 - CS2: Data Structures |
