@@ -35,19 +35,18 @@ points::Point* points::Point::getNearestPoint()
 
 points::Point* points::Point::calcNearestPoint(Point* pointList[], unsigned long arrSize)
 {
-    //Brute force method to find nearestpoint on geeksforgeeks.org
-    float min;
-    for (int i = 0; i < arrSize; ++i) {
-        for (int j = i + 1; j < arrSize; ++j) {
-            if (distPoints(pointList[i]) < min) {
-                min = distPoints(pointList[i]);
-                return min;
-            }
-            else {
-                return nullptr;
-            }
+    //newly modified geekforgeeks brute force for program
+    double minDistance = 0.0;
+    points::Point* closest = 0; //nullptr
+
+    for (unsigned long i = 0; i < arrSize; i++) {
+        double dist = distance(pointList[i]->getX(), pointList[i]->getY());
+        if (dist < minDistance) {
+            minDistance = dist;
+            closest = pointList[i];
         }
     }
+    return closest;
 }
 
 //Setters
