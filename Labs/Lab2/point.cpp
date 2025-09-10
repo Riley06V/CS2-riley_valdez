@@ -17,22 +17,37 @@ points::Point::~Point()
 //Getters
 int points::Point::getX()
 {
-    return 0;
+   // return 0; Something other than 0?
+    return x;
 }
 
 int points::Point::getY()
 {
-    return 0;
+   // return 0; Something other than 0
+    return y;
 }
 
 points::Point* points::Point::getNearestPoint()
 {
-    return nullptr;
+    //return nullptr; Maybe now randomized point
+    return nearestPoint;
 }
 
 points::Point* points::Point::calcNearestPoint(Point* pointList[], unsigned long arrSize)
 {
-    return nullptr;
+    //Brute force method to find nearestpoint on geeksforgeeks.org
+    float min;
+    for (int i = 0; i < arrSize; ++i) {
+        for (int j = i + 1; j < arrSize; ++j) {
+            if (distPoints(pointList[i]) < min) {
+                min = distPoints(pointList[i]);
+                return min;
+            }
+            else {
+                return nullptr;
+            }
+        }
+    }
 }
 
 //Setters
