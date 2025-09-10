@@ -54,5 +54,8 @@ void points::Point::setNearestPoint(Point* newNearestPoint)
 double points::Point::distPoints(Point& point)
 {
     //Formula using cmath sqrt function and some of the variables
+    int xSub2 = x - point.getX();
+    int ySub2 = y - point.getY();
+    return (xSub2 * xSub2 + ySub2 * ySub2);
     return 0.0;
 }
