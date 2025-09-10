@@ -7,23 +7,46 @@
     <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
-    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
   </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
   <component name="CMakeProjectFlavorService">
     <option name="flavorId" value="CMakePlainProjectFlavor" />
   </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
   <component name="CMakeRunConfigurationManager">
-    <generated />
+    <generated>
+      <config projectName="Project" targetName="PracticeLecture" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Release-WSL" ENABLED="true" CONFIG_NAME="Release" TOOLCHAIN_NAME="WSL" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5084d794-4ad1-4e63-9289-9b5d3ac7a361" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
+    <list default="true" id="4b295502-2e08-474d-b1d3-9c7be175ff78" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Assignments/HW1/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignments/HW1/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignments/HW1/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignments/HW2/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/082825.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/090125.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/090125_Classes/09012025_Lecture.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/090125_Classes/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/090125_Classes/Vehicles/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/090125_Classes/Vehicles/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Labs/Lab1/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Labs/Lab1/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PracticeLecture.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PracticeLecture.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/customTargets.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/customTargets.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/082625.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/082625.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,23 +56,25 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Riley06V"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Riley06V&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:Riley06V/CS2-riley_valdez.git",
-    "accountId": "a96ccfb4-834f-487f-b442-7f980a9d1139"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Riley06V/CS2-riley_valdez.git&quot;,
+    &quot;accountId&quot;: &quot;a96ccfb4-834f-487f-b442-7f980a9d1139&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/082625.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/082625.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:////wsl.localhost/Ubuntu/home/rcvaldez/projects/CS2-riley_valdez/PracticeLecture/082825.cpp" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -57,9 +82,9 @@
     <option name="minorVersion" value="3.4" />
     <option name="productBranch" value="Classic" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="31q5gZWhHeqQVuGTWDLSVAaQbok" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -67,50 +92,99 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "C/C++ File.082625.cpp - WSL.executor": "Run",
+    "C/C++ File.082625.cpp.executor": "Run",
+    "C/C++ File.082725.cpp.executor": "Run",
+    "C/C++ File.082825.cpp.executor": "Run",
+    "Custom Build Application.run.executor": "Run",
+    "Makefile Target.Makefile.executor": "Run",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/rcvaldez/projects/CS2-riley_valdez/PracticeLecture/082625.cpp",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/rcvaldez/projects/CS2-riley_valdez/PracticeLecture/090125_Classes/Vehicles/main.cpp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "CLionExternalConfigurable",
+    "onboarding.tips.debug.path": "//wsl.localhost/Ubuntu/home/rcvaldez/projects/CS2-riley_valdez/PracticeLecture/main.cpp",
+    "settings.editor.selected.configurable": "CPPToolchains",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu\home\rcvaldez\projects\CS2-riley_valdez\PracticeLecture\090125_Classes\Vehicles" />
+      <recent name="\\wsl.localhost\Ubuntu\home\rcvaldez\projects\CS2-riley_valdez\PracticeLecture" />
+    </key>
+  </component>
+  <component name="RunManager" selected="C/C++ File.082825.cpp">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="all" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="run" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" RUN_PATH="main.out">
+    <configuration name="082625.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PracticeLecture" TARGET_NAME="082625.cpp" CONFIG_NAME="082625.cpp">
+      <option name="sourceFile" value="082625.cpp" />
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="082725.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PracticeLecture" TARGET_NAME="082725.cpp" CONFIG_NAME="082725.cpp">
+      <option name="sourceFile" value="082725.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="082825.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PracticeLecture" TARGET_NAME="082825.cpp" CONFIG_NAME="082825.cpp">
+      <option name="sourceFile" value="082825.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="C/C++ File.082625.cpp" />
+      <item itemvalue="C/C++ File.082725.cpp" />
+      <item itemvalue="C/C++ File.082825.cpp" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="C/C++ File.082825.cpp" />
+        <item itemvalue="C/C++ File.082725.cpp" />
+        <item itemvalue="C/C++ File.082625.cpp" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5084d794-4ad1-4e63-9289-9b5d3ac7a361" name="Changes" comment="" />
-      <created>1756238874070</created>
+      <changelist id="4b295502-2e08-474d-b1d3-9c7be175ff78" name="Changes" comment="" />
+      <created>1756325274671</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1756238874070</updated>
-      <workItem from="1756238875248" duration="2037000" />
+      <updated>1756325274671</updated>
+      <workItem from="1756325276626" duration="2002000" />
+      <workItem from="1756411663563" duration="205000" />
+      <workItem from="1756411953577" duration="908000" />
+      <workItem from="1756412982133" duration="345000" />
+      <workItem from="1756413468019" duration="163000" />
+      <workItem from="1756498272096" duration="1200000" />
+      <workItem from="1756757165538" duration="89000" />
+      <workItem from="1756930183629" duration="169000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
   </component>
 </project>

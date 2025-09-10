@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CLionExternalBuildManager">
-    <target id="47e4d0e3-a1d9-4bff-965c-93335c33263d" name="all" defaultType="TOOL">
-      <configuration id="6a24a118-f40f-4c71-94ec-97c47d11ab5d" name="all" />
+    <target id="144c40f3-9289-4c77-8310-bdb7c4fdce3b" name="MakefileStuff_test" defaultType="TOOL">
+      <configuration id="579bc24e-48d0-4f55-843e-fd66f18fd272" name="MakefileStuff_test" toolchainName="WSL" />
     </target>
   </component>
 </project>

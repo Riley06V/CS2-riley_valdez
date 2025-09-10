@@ -2,6 +2,7 @@
 #include <fstream>
 using namespace std;
 
+//io stream notes
 int main(int argc, const char * argv[]) {
     ifstream fin;
     // int number;
