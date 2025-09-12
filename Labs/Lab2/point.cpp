@@ -29,20 +29,19 @@ int points::Point::getY()
 
 points::Point* points::Point::getNearestPoint()
 {
-    //return nullptr; Maybe now randomized point
+    //return nullptr; Something other than null
     return nearestPoint;
 }
 
 points::Point* points::Point::calcNearestPoint(Point* pointList[], unsigned long arrSize)
 {
-    //newly modified geekforgeeks brute force for program
-    double minDistance = 0.0;
-    points::Point* closest = 0; //nullptr
-
+    //PsuedoCode in plain english: In order to figure out which coordinate pair is, we have to go through
+    //every index in the array of pointList[], use the distPoints on every single one, whichever is smallest is returned
+    points::Point* closest = nullptr;
+    closest = pointList[0];
     for (unsigned long i = 0; i < arrSize; i++) {
-        double dist = distance(pointList[i]->getX(), pointList[i]->getY());
-        if (dist < minDistance) {
-            minDistance = dist;
+        distPoints(*pointList[i]);
+        if(pointList[i]->nearestPoint > closest) {
             closest = pointList[i];
         }
     }
@@ -71,5 +70,4 @@ double points::Point::distPoints(Point& point)
     int xSub2 = x - point.getX();
     int ySub2 = y - point.getY();
     return sqrt((xSub2 * xSub2) + (ySub2 * ySub2));
-    return 0.0;
 }
