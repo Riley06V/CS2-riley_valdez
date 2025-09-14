@@ -38,11 +38,15 @@ points::Point* points::Point::calcNearestPoint(Point* pointList[], unsigned long
     //PsuedoCode in plain english: In order to figure out which coordinate pair is, we have to go through
     //every index in the array of pointList[], use the distPoints on every single one, whichever is smallest is returned
     points::Point* closest = nullptr;
-    closest = pointList[0];
+    double minDistance = 0.0;
     for (unsigned long i = 0; i < arrSize; i++) {
-        distPoints(*pointList[i]);
-        if(pointList[i]->nearestPoint > closest) {
+        double pointDistance = distPoints(*pointList[i]);
+        if (closest == nullptr) {
             closest = pointList[i];
+            minDistance = pointDistance;
+        } else if (pointDistance < minDistance) {
+            closest = pointList[i];
+            minDistance = pointDistance;
         }
     }
     return closest;
