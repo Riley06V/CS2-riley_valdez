@@ -35,4 +35,13 @@ ________________________________________________________________________________
 | Location: | https://github.com/Riley06V/CS2-riley_valdez/tree/main/Labs/Lab1 |
 | Notes: | Complete, I felt really big brain doing dx, dy loops for neighbor counting |
 
+## Lab #2
+| Riley Valdez | I deserve 100% |
+| --- | --- |
+| Name: | Point Distance |
+| Description: | "Calculate distance between points using classes" |
+| Due Date: | 9/15/2025 |
+| Status: | Complete |
+| Location: | https://github.com/Riley06V/CS2-riley_valdez/tree/main/Labs/Lab2 |
+| Notes: | Complete, I overthought the logic, talked about it during class Friday 9-12 |
 
