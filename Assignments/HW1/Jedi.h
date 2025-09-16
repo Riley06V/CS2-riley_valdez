@@ -4,7 +4,7 @@
 
 #ifndef JEDI_H
 #define JEDI_H
-
+#include <string>
 namespace starwars {
     class Jedi {
         private:
@@ -13,13 +13,13 @@ namespace starwars {
             int _lightsaberSkill;
             int _forcePower;
         public:
-            Jedi(std::string = "Uknown Jedi", int = 100, int = 50, int  = 75); //Paramertierzied Constructor
+            Jedi(std::string = "Unknown Jedi", int = 100, int = 50, int  = 75); //Paramertierzied Constructor
             ~Jedi(); //Default Destructor
             //Setters
-            void setName();
-            void setHealth();
-            void setLightsaberSkill();
-            void setForcePower();
+            void setName(std::string name);
+            void setHealth(int health);
+            void setLightsaberSkill(int lightsaberSkill);
+            void setForcePower(int forcePower);
             //Getteres
             std::string getName();
             int getHealth();
@@ -30,9 +30,6 @@ namespace starwars {
             int useForce(int power);
             int takeDamage(int damage);
     };
-
-
-
 }
 
 
