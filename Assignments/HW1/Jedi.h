@@ -32,7 +32,7 @@ namespace starwars {
             int takeDamage(int damage);
             //File IO
             void saveToFile(std::string &fileName);
-            void loadFromFile();
+            void loadFromFile(std::string &fileName);
     };
 }
 

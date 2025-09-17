@@ -56,13 +56,37 @@ int starwars::Jedi::takeDamage(int damage) {
 }
 
 void starwars::Jedi::saveToFile(std::string &fileName) {
-  	std::ofstream saveFile;
-	std::cout << "Enter the name of your saved file: ";
+	std::cout << "Enter the name of the file you want to save to: ";
     std::cin >> fileName;
-
+    std::ofstream outFile(fileName);
+    if (outFile.is_open()) { //Human readable information in case user wants to mod
+      outFile << "Name: " << _name << "\n"
+      		  << "Health: " << _health << "\n"
+      		  << "LightsaberSkill: " << _lightsaberSkill << "\n"
+      		  << "ForcePower: " << _forcePower << "\n";
+      outFile.close();
+      } else {
+        std::cerr << "Unable to open file " << fileName << "\n";
+    }
 
 }
 
-void starwars::Jedi::loadFromFile() {
+void starwars::Jedi::loadFromFile(std::string &fileName) {
+	std::cout << "Enter your save file name: ";
+	std::cin >> fileName;
+	std::ifstream inFile(fileName);
+        if (!inFile.is_open()) {
+          std::cerr << "Unable to open file " << fileName << "\n";
+          return; //exit
+        }
+        inFile.ignore(32, ' '); //ignore 32 characters, or until reaching a space
+        std::getline(inFile, _name); //Since it is a string
+		inFile.ignore(32, ' ');
+		inFile >> _health; //Since it is an int
+		inFile.ignore(32, ' ');
+		inFile >> _lightsaberSkill;
+		inFile.ignore(32, ' ');
+		inFile >> _forcePower;
+    inFile.close();
 
 }

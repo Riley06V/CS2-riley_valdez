@@ -7,7 +7,7 @@ using namespace std;
 //void loadFromFile(); Belong in Jedi Class
 
 int main(char argc, const char * argv[]) {
-  cout << "Hello World!\n";
+  cout << "Welcome to the Star Wars auto battler Minigame" << endl;
   return 0;
 }
 
