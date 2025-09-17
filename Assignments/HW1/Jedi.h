@@ -5,6 +5,7 @@
 #ifndef JEDI_H
 #define JEDI_H
 #include <string>
+#include <fstream>
 namespace starwars {
     class Jedi {
         private:
@@ -29,6 +30,9 @@ namespace starwars {
             int attack();
             int useForce(int power);
             int takeDamage(int damage);
+            //File IO
+            void saveToFile(std::string &fileName);
+            void loadFromFile();
     };
 }
 
