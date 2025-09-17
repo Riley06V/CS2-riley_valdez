@@ -55,6 +55,8 @@ int starwars::Jedi::takeDamage(int damage) {
 	return _health;
 }
 
+//file I/O Functions
+
 void starwars::Jedi::saveToFile(std::string &fileName) {
     std::ofstream outFile(fileName);
     if (outFile.is_open()) { //Human readable information in case user wants to mod
@@ -70,8 +72,6 @@ void starwars::Jedi::saveToFile(std::string &fileName) {
 }
 
 void starwars::Jedi::loadFromFile(std::string &fileName) {
-	std::cout << "Enter your save file name: ";
-	std::cin >> fileName;
 	std::ifstream inFile(fileName);
         if (!inFile.is_open()) {
           std::cerr << "Unable to open file " << fileName << "\n";
