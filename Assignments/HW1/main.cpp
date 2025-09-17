@@ -10,7 +10,7 @@ int main(char argc, const char * argv[]) {
   string jediName;
   cout << "Welcome to the Star Wars auto battler Minigame" << endl;
   cout << "Enter your Jedi's Name: ";
-  cin >> jediName;
+  getline(cin, jediName);
 
   string fileName;
 
