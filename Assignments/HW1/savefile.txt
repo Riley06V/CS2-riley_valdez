@@ -1,4 +1,0 @@
-Name: Jeffery Epstein
-Health: 100
-LightsaberSkill: 50
-ForcePower: 75

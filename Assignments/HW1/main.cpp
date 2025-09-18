@@ -6,6 +6,11 @@ using namespace std;
 //void saveToFile();
 //void loadFromFile(); Belong in Jedi Class
 
+void battleStage();
+void menu();
+void saveFileInfo();
+starwars::Jedi createCustomJedi();
+
 int main(char argc, const char * argv[]) {
     string jediName;
     cout << "Welcome to the Star Wars auto battler Minigame" << endl;
@@ -67,9 +72,20 @@ int main(char argc, const char * argv[]) {
 
     } while (player.getHealth() > 0 || enemy.getHealth() > 0);
 
-
-
-
     return 0;
+}
+
+starwars::Jedi createCustomJedi() {
+    std::string name;
+    int health, skill, force;
+    std::cout << "Enter Jedi name: ";
+    std::cin >> name;
+    std::cout << "Health: ";
+    std::cin >> health;
+    std::cout << "Lightsaber Skill: ";
+    std::cin >> skill;
+    std::cout << "Force Power: ";
+    std::cin >> force;
+    return starwars::Jedi(name, health, skill, force);
 }
 
