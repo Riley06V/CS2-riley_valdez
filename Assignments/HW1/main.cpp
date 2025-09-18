@@ -70,24 +70,28 @@ starwars::Jedi createCustomJedi() {
 
 void battleStage(starwars::Jedi player, starwars::Sith enemy) {
     cout << "The Sith provokes and attacks first!";
-    //Auto Battler, Do While loop? As one is alive make them attack, use force power, based on user input
+    //Auto Battler, Sith attacks first, Jedi Goes second. Completely based on class attributes.
     do {
-        // //Sith provokes, so they attack first This wouldn't have worked because calling funcitons instead of members.functions
-        // starwars::Jedi takeDamage(starwars::Sith attack());
-        // cout << jediName << "'s remaining health: " << starwars::Jedi::getHealth;
-        // cout << "Unknown Sith's remaining health: " << starwars::Sith::getHealth;
-        // cout << endl;
-        // cout << jediName << "'s turn to attack! Please put an attack value: ";
+
         cout << "Sith's Attack: " << endl;
         int damageToJedi = enemy.attack();
         player.takeDamage(damageToJedi);
         cout <<player.getName() << "'s remaining health: " << player.getHealth() << "\n";
 
+        if (enemy.getHealth() <= 0) {
+            cout << player.getName() << " has brought balance to the force!" << endl;
+            break;
+        }
         //Jedi attacks
         cout << player.getName() << "'s attack: " << endl;
         int damageToSith = player.attack();
         enemy.takeDamage(damageToSith);
         cout << enemy.getName() << "'s remaining health: " << enemy.getHealth() << endl;
+
+        if (player.getHealth() <= 0) {
+            cout << "The Sith has Won this time..." << endl;
+            break;
+        }
 
     } while (player.getHealth() > 0 || enemy.getHealth() > 0);
 }
