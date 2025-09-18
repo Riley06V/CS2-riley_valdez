@@ -11,6 +11,7 @@ int main(char argc, const char * argv[]) {
     cout << "Welcome to the Star Wars auto battler Minigame" << endl;
     cout << "Enter your Jedi's Name: ";
     getline(cin, jediName);
+    starwars::Jedi player;
     
     //Way to get something different than default health/forcePower/LightsaberSkill
     char choice;
@@ -18,30 +19,50 @@ int main(char argc, const char * argv[]) {
     cin >> choice;
     choice = toupper(choice);
     if (choice == 'Y') {
-        starwars::Jedi Jedi(jediName, 110, 65, 85);
+        player = starwars::Jedi (jediName, 110, 65, 85);
     } else {
-        starwars::Jedi Jedi(jediName);
+        player = starwars::Jedi (jediName);
     }
 
     string fileName;
     cout << "Enter the name of the file you want to save to: "; //moved this line to main as it makes more sense
     cin >> fileName;
-    starwars::Jedi saveToFile(fileName);
-    starwars::Jedi loadFromFile(fileName);
+    player.saveToFile(fileName);
+    player.loadFromFile(fileName);
+    //Print out information
+    cout << "\n You're Jedi:\n";
+    cout << "Name: " << player.getName() << "\n";
+    cout << "Health: " << player.getHealth() << "\n";
+    cout << "LightsaberSkill: " << player.getLightsaberSkill() << "\n";
+    cout << "ForcePower: " << player.getForcePower() << "\n";
 
     cout << jediName << " will be fighting an unknown Sith!" << endl;
-    starwars::Sith Sith();
+    starwars::Sith enemy = starwars::Sith();
+
+    cout << "\nSith Opponent:\n";
+    cout << "Name: " << enemy.getName() << '\n';
+    cout << "Health: " << enemy.getHealth() << '\n';
+    cout << "Lightsaber Skill: " << enemy.getLightsaberSkill() << endl;
 
     //Auto Battler, Do While loop? As one is alive make them attack, use force power, based on user input
     do {
-        //Sith provokes, so they attack first
-        starwars::Jedi takeDamage(starwars::Sith attack());
-        cout << jediName << "'s remaining health: " << starwars::Jedi::getHealth;
-        cout << "Unknown Sith's remaining health: " << starwars::Sith::getHealth;
-        cout << endl;
-        cout << jediName << "'s turn to attack! Please put an attack value: ";
+        // //Sith provokes, so they attack first This wouldn't have worked because calling funcitons instead of members.functions
+        // starwars::Jedi takeDamage(starwars::Sith attack());
+        // cout << jediName << "'s remaining health: " << starwars::Jedi::getHealth;
+        // cout << "Unknown Sith's remaining health: " << starwars::Sith::getHealth;
+        // cout << endl;
+        // cout << jediName << "'s turn to attack! Please put an attack value: ";
+        cout << "The Sith provokes and attacks first!";
+        int damageToJedi = enemy.attack();
+        player.takeDamage(damageToJedi);
+        cout <<player.getName() << "'s remaining health: " << player.getHealth() << "\n";
 
-    } while (starwars::Jedi::getHealth() > 0 || starwars::Sith::getHealth > 0);
+        //Jedi attacks
+        int damageToSith = player.attack();
+        enemy.takeDamage(damageToSith);
+        cout << enemy.getName() << "'s remaining health: " << enemy.getHealth() << endl;
+
+    } while (player.getHealth() > 0 || enemy.getHealth() > 0);
 
 
 
