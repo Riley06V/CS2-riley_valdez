@@ -11,7 +11,7 @@ void menu();
 void saveFileInfo();
 starwars::Jedi createCustomJedi();
 
-int main(char argc, const char * argv[]) {
+int main(int argc, const char * argv[]) {
     string jediName;
     cout << "Welcome to the Star Wars auto battler Minigame" << endl;
     cout << "Enter your Jedi's Name: ";
@@ -35,7 +35,7 @@ int main(char argc, const char * argv[]) {
     player.saveToFile(fileName);
     player.loadFromFile(fileName);
     //Print out information
-    cout << "\n You're Jedi:\n";
+    cout << "\nYour Jedi:\n";
     cout << "Name: " << player.getName() << "\n";
     cout << "Health: " << player.getHealth() << "\n";
     cout << "LightsaberSkill: " << player.getLightsaberSkill() << "\n";
@@ -73,7 +73,7 @@ void battleStage(starwars::Jedi player, starwars::Sith enemy) {
     //Auto Battler, Sith attacks first, Jedi Goes second. Completely based on class attributes.
     do {
 
-        cout << "Sith's Attack: " << endl;
+        cout << "Sith's Attack: " << enemy.attack() << endl;
         int damageToJedi = enemy.attack();
         player.takeDamage(damageToJedi);
         cout <<player.getName() << "'s remaining health: " << player.getHealth() << "\n";
@@ -83,7 +83,7 @@ void battleStage(starwars::Jedi player, starwars::Sith enemy) {
             break;
         }
         //Jedi attacks
-        cout << player.getName() << "'s attack: " << endl;
+        cout << player.getName() << "'s attack: " << player.attack() << endl;
         int damageToSith = player.attack();
         enemy.takeDamage(damageToSith);
         cout << enemy.getName() << "'s remaining health: " << enemy.getHealth() << endl;
