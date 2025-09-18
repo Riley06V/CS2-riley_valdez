@@ -69,7 +69,7 @@ starwars::Jedi createCustomJedi() {
 }
 
 void battleStage(starwars::Jedi player, starwars::Sith enemy) {
-    cout << "The Sith provokes and attacks first!";
+    cout << "\n\nThe Sith provokes and attacks first!";
     //Auto Battler, Sith attacks first, Jedi Goes second. Completely based on class attributes.
     do {
 
@@ -78,18 +78,19 @@ void battleStage(starwars::Jedi player, starwars::Sith enemy) {
         player.takeDamage(damageToJedi);
         cout <<player.getName() << "'s remaining health: " << player.getHealth() << "\n";
 
-        if (enemy.getHealth() <= 0) {
-            cout << player.getName() << " has brought balance to the force!" << endl;
+        if (player.getHealth() <= 0) {
+            cout << "The Sith has Won this time..." << endl;
             break;
         }
+
         //Jedi attacks
         cout << player.getName() << "'s attack: " << player.attack() << endl;
         int damageToSith = player.attack();
         enemy.takeDamage(damageToSith);
         cout << enemy.getName() << "'s remaining health: " << enemy.getHealth() << endl;
 
-        if (player.getHealth() <= 0) {
-            cout << "The Sith has Won this time..." << endl;
+        if (enemy.getHealth() <= 0) {
+            cout << player.getName() << " has brought balance to the force!" << endl;
             break;
         }
 
