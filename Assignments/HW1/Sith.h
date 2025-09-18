@@ -12,7 +12,7 @@ namespace starwars {
         int _health;
         int _lightsaberSkill;
       public:
-        Sith(std::string name = " ", int health = 120, int lightsaberSkill = 60); //Paramaterized Constructor
+        Sith(std::string name = "Unknown Sith", int health = 120, int lightsaberSkill = 60); //Paramaterized Constructor
         ~Sith(); //Deconstructor
         //Getters
         std::string getName();

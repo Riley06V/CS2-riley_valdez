@@ -15,7 +15,7 @@ int main(char argc, const char * argv[]) {
     
     //Way to get something different than default health/forcePower/LightsaberSkill
     char choice;
-    cout << "Is " << jediName << " a master? Y|N";
+    cout << "Is " << jediName << " a master? Y|N : ";
     cin >> choice;
     choice = toupper(choice);
     if (choice == 'Y') {
@@ -44,6 +44,8 @@ int main(char argc, const char * argv[]) {
     cout << "Health: " << enemy.getHealth() << '\n';
     cout << "Lightsaber Skill: " << enemy.getLightsaberSkill() << endl;
 
+
+    cout << "The Sith provokes and attacks first!";
     //Auto Battler, Do While loop? As one is alive make them attack, use force power, based on user input
     do {
         // //Sith provokes, so they attack first This wouldn't have worked because calling funcitons instead of members.functions
@@ -52,12 +54,13 @@ int main(char argc, const char * argv[]) {
         // cout << "Unknown Sith's remaining health: " << starwars::Sith::getHealth;
         // cout << endl;
         // cout << jediName << "'s turn to attack! Please put an attack value: ";
-        cout << "The Sith provokes and attacks first!";
+        cout << "Sith's Attack: " << endl;
         int damageToJedi = enemy.attack();
         player.takeDamage(damageToJedi);
         cout <<player.getName() << "'s remaining health: " << player.getHealth() << "\n";
 
         //Jedi attacks
+        cout << player.getName() << "'s attack: " << endl;
         int damageToSith = player.attack();
         enemy.takeDamage(damageToSith);
         cout << enemy.getName() << "'s remaining health: " << enemy.getHealth() << endl;
