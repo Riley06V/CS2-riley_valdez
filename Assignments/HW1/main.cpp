@@ -6,7 +6,7 @@ using namespace std;
 //void saveToFile();
 //void loadFromFile(); Belong in Jedi Class
 
-void battleStage();
+void battleStage(starwars::Jedi, starwars::Sith);
 void menu();
 void saveFileInfo();
 starwars::Jedi createCustomJedi();
@@ -49,7 +49,26 @@ int main(char argc, const char * argv[]) {
     cout << "Health: " << enemy.getHealth() << '\n';
     cout << "Lightsaber Skill: " << enemy.getLightsaberSkill() << endl;
 
+    battleStage(player, enemy);
 
+    return 0;
+}
+
+starwars::Jedi createCustomJedi() {
+    std::string name;
+    int health, skill, force;
+    std::cout << "Enter Jedi name: ";
+    std::cin >> name;
+    std::cout << "Health: ";
+    std::cin >> health;
+    std::cout << "Lightsaber Skill: ";
+    std::cin >> skill;
+    std::cout << "Force Power: ";
+    std::cin >> force;
+    return starwars::Jedi(name, health, skill, force);
+}
+
+void battleStage(starwars::Jedi player, starwars::Sith enemy) {
     cout << "The Sith provokes and attacks first!";
     //Auto Battler, Do While loop? As one is alive make them attack, use force power, based on user input
     do {
@@ -71,21 +90,4 @@ int main(char argc, const char * argv[]) {
         cout << enemy.getName() << "'s remaining health: " << enemy.getHealth() << endl;
 
     } while (player.getHealth() > 0 || enemy.getHealth() > 0);
-
-    return 0;
 }
-
-starwars::Jedi createCustomJedi() {
-    std::string name;
-    int health, skill, force;
-    std::cout << "Enter Jedi name: ";
-    std::cin >> name;
-    std::cout << "Health: ";
-    std::cin >> health;
-    std::cout << "Lightsaber Skill: ";
-    std::cin >> skill;
-    std::cout << "Force Power: ";
-    std::cin >> force;
-    return starwars::Jedi(name, health, skill, force);
-}
-
