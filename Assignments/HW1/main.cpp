@@ -23,8 +23,8 @@ starwars::Jedi createCustomJedi() {
     string name;
     int health, skill, force;
     cout << "Enter Jedi name: ";
-    getline(cin, name);
     cin.ignore();
+    getline(cin, name);
     cout << "Health: ";
     cin >> health;
     cout << "Lightsaber Skill: ";
@@ -39,8 +39,8 @@ starwars::Sith createCustomSith() {
     string name;
     int health, skill;
     cout << "Enter Sith name: ";
-    getline(cin, name);
     cin.ignore();
+    getline(cin, name);
     cout << "Health: ";
     cin >> health;
     cout << "Lightsaber Skill: ";
