@@ -165,3 +165,4 @@ void menu() {
         }
     }
 }
+//Probably need pointers and stuff to work now
