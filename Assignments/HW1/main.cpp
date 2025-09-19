@@ -23,7 +23,8 @@ starwars::Jedi createCustomJedi() {
     string name;
     int health, skill, force;
     cout << "Enter Jedi name: ";
-    cin >> name;
+    getline(cin, name);
+    cin.ignore();
     cout << "Health: ";
     cin >> health;
     cout << "Lightsaber Skill: ";
@@ -38,7 +39,8 @@ starwars::Sith createCustomSith() {
     string name;
     int health, skill;
     cout << "Enter Sith name: ";
-    cin >> name;
+    getline(cin, name);
+    cin.ignore();
     cout << "Health: ";
     cin >> health;
     cout << "Lightsaber Skill: ";
@@ -63,7 +65,7 @@ void battleStage(starwars::Jedi player, starwars::Sith enemy) {
     cout << "Lightsaber Skill: " << enemy.getLightsaberSkill() << endl;
 
 
-    cout << "\n\nThe Sith provokes and attacks first!";
+    cout << "\n\nThe Sith provokes and attacks first!\n";
     //Auto Battler, Sith attacks first, Jedi Goes second. Completely based on class attributes.
     do {
 
@@ -156,8 +158,8 @@ void menu() {
                 break;
             }
             case 4: {
-                starwars::Sith customEnemy = createCustomSith();
                 starwars::Jedi customPlayer = createCustomJedi();
+                starwars::Sith customEnemy = createCustomSith();
                 battleStage(customPlayer, customEnemy);
                 break;
             }

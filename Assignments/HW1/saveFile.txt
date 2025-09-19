@@ -1,4 +1,0 @@
-Name: Jeff
-Health: 115
-LightsaberSkill: 70
-ForcePower: 90
