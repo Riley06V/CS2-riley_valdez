@@ -114,7 +114,7 @@ void menu() {
         cout << "Enter your choice: ";
         cin >> menuChoice;
         switch (menuChoice) {
-            case 1:
+            case 1: {
                 string jediName;
                 cout << "Enter your Jedi's Name: ";
                 cin.ignore();
@@ -143,25 +143,31 @@ void menu() {
 
                 battleStage(player, enemy);
                 break;
-            case 2:
+            }
+            case 2: {
                 starwars::Jedi loadedJedi = loadJedi();
                 starwars::Sith defaultEnemy;
                 battleStage(loadedJedi, defaultEnemy);
                 break;
-            case 3: //To be worked on
+            }
+            case 3:  {//To be worked on
                 break;
-            case 4:
+            }
+            case 4: {
                 starwars::Sith customEnemy = createCustomSith();
                 starwars::Jedi customPlayer = createCustomJedi();
                 battleStage(customPlayer, customEnemy);
                 break;
-            case 5:
+            }
+            case 5: {
                 cout << "Exiting... May the Force be with you." << endl;
                 run = false;
                 break;
-            default:
+            }
+            default: {
                 cout << "Invalid choice... Try again." << endl;
                 break;
+            }
         }
     }
 }
