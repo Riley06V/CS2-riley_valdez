@@ -14,34 +14,8 @@ starwars::Sith createCustomSith();
 starwars::Jedi loadJedi();
 
 int main(int argc, const char * argv[]) {
-    string jediName;
     cout << "Welcome to the Star Wars auto battler Minigame" << endl;
-    cout << "Enter your Jedi's Name: ";
-    getline(cin, jediName);
-    starwars::Jedi player;
-    
-    //Way to get something different than default health/forcePower/LightsaberSkill
-    char choice;
-    cout << "Is " << jediName << " a master? Y|N : ";
-    cin >> choice;
-    choice = toupper(choice);
-    if (choice == 'Y') {
-        player = starwars::Jedi (jediName, 110, 65, 85);
-    } else {
-        player = starwars::Jedi (jediName);
-    }
-
-    starwars::Sith enemy = starwars::Sith();
-
-
-    string fileName;
-    cout << "Enter the name of the file you want to save to: "; //moved this line to main as it makes more sense
-    cin >> fileName;
-    player.saveToFile(fileName);
-    player.loadFromFile(fileName);
-
-    battleStage(player, enemy);
-
+    menu();
     return 0;
 }
 
@@ -118,6 +92,7 @@ void battleStage(starwars::Jedi player, starwars::Sith enemy) {
 starwars::Jedi loadJedi() {
     string fileName;
     cout << "Enter the name of the save file: ";
+    cin.ignore();
     getline(cin, fileName);
     starwars::Jedi player;
     player.loadFromFile(fileName);
@@ -140,6 +115,33 @@ void menu() {
         cin >> choice;
         switch (choice) {
             case 1:
+                string jediName;
+                cout << "Enter your Jedi's Name: ";
+                cin.ignore();
+                getline(cin, jediName);
+                starwars::Jedi player;
+
+                //Way to get something different than default health/forcePower/LightsaberSkill
+                char choice;
+                cout << "Is " << jediName << " a master? Y|N : ";
+                cin >> choice;
+                choice = toupper(choice);
+                if (choice == 'Y') {
+                    player = starwars::Jedi (jediName, 115, 70, 90);
+                } else {
+                    player = starwars::Jedi (jediName);
+                }
+
+                starwars::Sith enemy = starwars::Sith();
+
+
+                string fileName;
+                cout << "Enter the name of the file you want to save to: "; //moved this line to main as it makes more sense
+                cin >> fileName;
+                player.saveToFile(fileName);
+                player.loadFromFile(fileName);
+
+                battleStage(player, enemy);
                 break;
             case 2:
                 starwars::Jedi loadedJedi = loadJedi();
@@ -149,15 +151,17 @@ void menu() {
             case 3:
                 break;
             case 4:
-                starwars::Sith enemy = createCustomSith();
-                starwars::Jedi player = createCustomJedi();
-                battleStage(player, enemy);
+                starwars::Sith customEnemy = createCustomSith();
+                starwars::Jedi customPlayer = createCustomJedi();
+                battleStage(customPlayer, customEnemy);
                 break;
             case 5:
                 cout << "Exiting... May the Force be with you." << endl;
                 run = false;
+                break;
             case default:
                 cout << "Invalid choice... Try again." << endl;
+                break;
         }
     }
 }
