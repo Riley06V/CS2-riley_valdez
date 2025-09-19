@@ -11,6 +11,7 @@ void menu();
 void saveFileInfo();
 starwars::Jedi createCustomJedi();
 starwars::Sith createCustomSith();
+starwars::Jedi loadJedi();
 
 int main(int argc, const char * argv[]) {
     string jediName;
@@ -30,25 +31,14 @@ int main(int argc, const char * argv[]) {
         player = starwars::Jedi (jediName);
     }
 
+    starwars::Sith enemy = starwars::Sith();
+
+
     string fileName;
     cout << "Enter the name of the file you want to save to: "; //moved this line to main as it makes more sense
     cin >> fileName;
     player.saveToFile(fileName);
     player.loadFromFile(fileName);
-    //Print out information
-    cout << "\nYour Jedi:\n";
-    cout << "Name: " << player.getName() << "\n";
-    cout << "Health: " << player.getHealth() << "\n";
-    cout << "LightsaberSkill: " << player.getLightsaberSkill() << "\n";
-    cout << "ForcePower: " << player.getForcePower() << "\n";
-
-    cout << jediName << " will be fighting an unknown Sith!" << endl;
-    starwars::Sith enemy = starwars::Sith();
-
-    cout << "\nSith Opponent:\n";
-    cout << "Name: " << enemy.getName() << '\n';
-    cout << "Health: " << enemy.getHealth() << '\n';
-    cout << "Lightsaber Skill: " << enemy.getLightsaberSkill() << endl;
 
     battleStage(player, enemy);
 
@@ -82,6 +72,21 @@ starwars::Sith createCustomSith() {
 }
 
 void battleStage(starwars::Jedi player, starwars::Sith enemy) {
+    //Print out information
+    cout << "\nYour Jedi:\n";
+    cout << "Name: " << player.getName() << "\n";
+    cout << "Health: " << player.getHealth() << "\n";
+    cout << "LightsaberSkill: " << player.getLightsaberSkill() << "\n";
+    cout << "ForcePower: " << player.getForcePower() << "\n";
+
+    cout << player.getName() << " will be fighting " << enemy.getName() << "!" << endl;
+
+    cout << "\nSith Opponent:\n";
+    cout << "Name: " << enemy.getName() << '\n';
+    cout << "Health: " << enemy.getHealth() << '\n';
+    cout << "Lightsaber Skill: " << enemy.getLightsaberSkill() << endl;
+
+
     cout << "\n\nThe Sith provokes and attacks first!";
     //Auto Battler, Sith attacks first, Jedi Goes second. Completely based on class attributes.
     do {
@@ -110,6 +115,17 @@ void battleStage(starwars::Jedi player, starwars::Sith enemy) {
     } while (player.getHealth() > 0 || enemy.getHealth() > 0);
 }
 
+starwars::Jedi loadJedi() {
+    string fileName;
+    cout << "Enter the name of the save file: ";
+    getline(cin, fileName);
+    starwars::Jedi player;
+    player.loadFromFile(fileName);
+    cout << player.getName() << "From file: " << fileName << "Is stepping in..." << endl;
+    return player;
+}
+
+
 void menu() {
     int choice;
     bool run = true;
@@ -125,8 +141,23 @@ void menu() {
         switch (choice) {
             case 1:
                 break;
+            case 2:
+                starwars::Jedi loadedJedi = loadJedi();
+                starwars::Sith defaultEnemy;
+                battleStage(loadedJedi, defaultEnemy);
+                break;
+            case 3:
+                break;
+            case 4:
+                starwars::Sith enemy = createCustomSith();
+                starwars::Jedi player = createCustomJedi();
+                battleStage(player, enemy);
+                break;
+            case 5:
+                cout << "Exiting... May the Force be with you." << endl;
+                run = false;
+            case default:
+                cout << "Invalid choice... Try again." << endl;
         }
     }
-
-
 }
