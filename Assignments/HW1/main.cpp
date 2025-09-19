@@ -20,29 +20,29 @@ int main(int argc, const char * argv[]) {
 }
 
 starwars::Jedi createCustomJedi() {
-    std::string name;
+    string name;
     int health, skill, force;
-    std::cout << "Enter Jedi name: ";
-    std::cin >> name;
-    std::cout << "Health: ";
-    std::cin >> health;
-    std::cout << "Lightsaber Skill: ";
-    std::cin >> skill;
-    std::cout << "Force Power: ";
-    std::cin >> force;
+    cout << "Enter Jedi name: ";
+    cin >> name;
+    cout << "Health: ";
+    cin >> health;
+    cout << "Lightsaber Skill: ";
+    cin >> skill;
+    cout << "Force Power: ";
+    cin >> force;
     starwars::Jedi customeJedi(name, health, skill, force);
     return customeJedi;
 }
 
 starwars::Sith createCustomSith() {
-    std::string name;
+    string name;
     int health, skill;
-    std::cout << "Enter Sith name: ";
-    std::cin >> name;
-    std::cout << "Health: ";
-    std::cin >> health;
-    std::cout << "Lightsaber Skill: ";
-    std::cin >> skill;
+    cout << "Enter Sith name: ";
+    cin >> name;
+    cout << "Health: ";
+    cin >> health;
+    cout << "Lightsaber Skill: ";
+    cin >> skill;
     starwars::Sith customSith(name, health, skill);
     return customSith;
 }
@@ -173,4 +173,3 @@ void menu() {
         }
     }
 }
-//Probably need pointers and stuff to work now
