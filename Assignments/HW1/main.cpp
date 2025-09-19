@@ -10,6 +10,7 @@ void battleStage(starwars::Jedi, starwars::Sith);
 void menu();
 void saveFileInfo();
 starwars::Jedi createCustomJedi();
+starwars::Sith createCustomSith();
 
 int main(int argc, const char * argv[]) {
     string jediName;
@@ -68,6 +69,18 @@ starwars::Jedi createCustomJedi() {
     return starwars::Jedi(name, health, skill, force);
 }
 
+starwars::Sith createCustomSith() {
+    std::string name;
+    int health, skill;
+    std::cout << "Enter Sith name: ";
+    std::cin >> name;
+    std::cout << "Health: ";
+    std::cin >> health;
+    std::cout << "Lightsaber Skill: ";
+    std::cin >> skill;
+    return starwars::Sith(name, health, skill);
+}
+
 void battleStage(starwars::Jedi player, starwars::Sith enemy) {
     cout << "\n\nThe Sith provokes and attacks first!";
     //Auto Battler, Sith attacks first, Jedi Goes second. Completely based on class attributes.
@@ -95,4 +108,25 @@ void battleStage(starwars::Jedi player, starwars::Sith enemy) {
         }
 
     } while (player.getHealth() > 0 || enemy.getHealth() > 0);
+}
+
+void menu() {
+    int choice;
+    bool run = true;
+    while (run == true) {
+        cout << "Welcome to the Star Wars Auto-Battler" << endl;
+        cout << "1. Create a new Jedi and run game" << endl;
+        cout << "2. Load Jedi from file and run game" << endl;
+        cout << "3. View available save files " << endl;
+        cout << "4. Create a modified game " << endl;
+        cout << "5. Exit " << endl;
+        cout << "Enter your choice: ";
+        cin >> choice;
+        switch (choice) {
+            case 1:
+                break;
+        }
+    }
+
+
 }
