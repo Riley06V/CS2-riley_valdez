@@ -30,7 +30,8 @@ starwars::Jedi createCustomJedi() {
     std::cin >> skill;
     std::cout << "Force Power: ";
     std::cin >> force;
-    return starwars::Jedi(name, health, skill, force);
+    starwars::Jedi customeJedi(name, health, skill, force);
+    return customeJedi;
 }
 
 starwars::Sith createCustomSith() {
@@ -42,7 +43,8 @@ starwars::Sith createCustomSith() {
     std::cin >> health;
     std::cout << "Lightsaber Skill: ";
     std::cin >> skill;
-    return starwars::Sith(name, health, skill);
+    starwars::Sith customSith(name, health, skill);
+    return customSith;
 }
 
 void battleStage(starwars::Jedi player, starwars::Sith enemy) {
