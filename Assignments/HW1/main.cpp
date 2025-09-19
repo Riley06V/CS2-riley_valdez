@@ -102,7 +102,7 @@ starwars::Jedi loadJedi() {
 
 
 void menu() {
-    int choice;
+    int menuChoice;
     bool run = true;
     while (run == true) {
         cout << "Welcome to the Star Wars Auto-Battler" << endl;
@@ -112,8 +112,8 @@ void menu() {
         cout << "4. Create a modified game " << endl;
         cout << "5. Exit " << endl;
         cout << "Enter your choice: ";
-        cin >> choice;
-        switch (choice) {
+        cin >> menuChoice;
+        switch (menuChoice) {
             case 1:
                 string jediName;
                 cout << "Enter your Jedi's Name: ";
@@ -148,7 +148,7 @@ void menu() {
                 starwars::Sith defaultEnemy;
                 battleStage(loadedJedi, defaultEnemy);
                 break;
-            case 3:
+            case 3: //To be worked on
                 break;
             case 4:
                 starwars::Sith customEnemy = createCustomSith();
@@ -159,7 +159,7 @@ void menu() {
                 cout << "Exiting... May the Force be with you." << endl;
                 run = false;
                 break;
-            case default:
+            default:
                 cout << "Invalid choice... Try again." << endl;
                 break;
         }
