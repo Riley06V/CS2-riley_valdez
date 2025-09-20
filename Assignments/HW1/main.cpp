@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Jedi.h"
 #include "Sith.h"
+#include <filesystem>
 using namespace std;
 //Now that classes are established, we work on file input and saving to file
 //void saveToFile();
@@ -100,7 +101,7 @@ starwars::Jedi loadJedi() {
     getline(cin, fileName);
     starwars::Jedi player;
     player.loadFromFile(fileName);
-    cout << player.getName() << "From file: " << fileName << "Is stepping in..." << endl;
+    cout << player.getName() << " from file: " << fileName << " is stepping in..." << endl;
     return player;
 }
 
@@ -109,7 +110,6 @@ void menu() {
     int menuChoice;
     bool run = true;
     while (run == true) {
-        cout << "Welcome to the Star Wars Auto-Battler" << endl;
         cout << "1. Create a new Jedi and run game" << endl;
         cout << "2. Load Jedi from file and run game" << endl;
         cout << "3. View available save files " << endl;
