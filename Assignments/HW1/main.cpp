@@ -155,6 +155,7 @@ void menu() {
                 break;
             }
             case 3:  {//To be worked on
+                saveFileInfo();
                 break;
             }
             case 4: {
