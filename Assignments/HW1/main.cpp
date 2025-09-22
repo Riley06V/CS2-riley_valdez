@@ -96,7 +96,7 @@ void battleStage(starwars::Jedi player, starwars::Sith enemy) {
 
 starwars::Jedi loadJedi() {
     string fileName;
-    cout << "Enter the name of the save file: ";
+    cout << "Enter the name of the save file: (Ex: saveFile.txt)   ";
     cin.ignore();
     getline(cin, fileName);
     starwars::Jedi player;
@@ -140,7 +140,7 @@ void menu() {
 
 
                 string fileName;
-                cout << "Enter the name of the file you want to save to: "; //moved this line to main as it makes more sense
+                cout << "Enter the name of the file you want to save to: (Ex: saveFile.txt)   "; //moved this line to main as it makes more sense
                 cin >> fileName;
                 player.saveToFile(fileName);
                 player.loadFromFile(fileName);
