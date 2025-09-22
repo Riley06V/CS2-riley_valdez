@@ -175,3 +175,23 @@ void menu() {
         }
     }
 }
+
+void saveFileInfo() {
+    cout << "\nAvailable Save Files: ";
+    string savePath = "./saves"; //creates string variable for directory "saves"
+    if (!filesystem::exists(savePath)) { //checks to make sure savePath exists
+        filesystem::create_directory(savePath); //makes sure to create it with same name
+        return;
+    }
+    bool found = false;
+    for (const auto& entry : filesystem::directory_iterator(savePath)) { //iterates through single directory with name of savePath
+        if (entry.path().extension() == ".txt") { //opens only files saved as .txt
+            std::cout << " - " << entry.path().filename().string() << endl; //used cppreference.com
+            found = true;
+        }
+    }
+    if (!found) {
+        std::cout << "No save files found in: " << savePath << std::endl;
+    }
+}
+
