@@ -15,12 +15,12 @@ ________________________________________________________________________________
 ## Assignment #1
 | Riley Valdez | I deserve 0% |
 | --- | --- |
-| Name: | |
-| Description: | "" |
-| Due Date: |  |
-| Status: |  |
-| Location: |  |
-| Notes: |  |
+| Name: | HW1 - Star Wars Auto Battler |
+| Description: | "Create a simple Auto Battler using classes" |
+| Due Date: | 9/22/2020 |
+| Status: | Finished |
+| Location: | https://github.com/Riley06V/CS2-riley_valdez/tree/main/Assignments/HW1 |
+| Notes: | Finished, done with some bonus features such as menu, and file saving system |
 
 
 # LABS
