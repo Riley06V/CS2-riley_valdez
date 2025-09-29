@@ -13,7 +13,7 @@ ________________________________________________________________________________
 # Assignments
 
 ## Assignment #1
-| Riley Valdez | I deserve 0% |
+| Riley Valdez | I deserve 100% |
 | --- | --- |
 | Name: | HW1 - Star Wars Auto Battler |
 | Description: | "Create a simple Auto Battler using classes" |
