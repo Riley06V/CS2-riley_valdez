@@ -2,11 +2,22 @@
 
 fractions::Fraction::Fraction(int numerator, int denominator)
 {
+    if (denominator == 0) {
+        std::cout << "Error: Denominator cannot be 0, defaulting to 1" << std::endl;
+        _denominator = 1;
+    }
+
+    _numerator = numerator;
+    _denominator = denominator;
+
+
 }
 
 fractions::Fraction fractions::Fraction::operator+(fractions::Fraction const &frac)
 {
-    return Fraction(0, 1);
+    int num = numerator * other.denominator + frac.denominator * other.numerator;
+    int denom = denominator * other.denominator;
+    return Fraction(num, denom);
 }
 
 fractions::Fraction fractions::Fraction::operator-(fractions::Fraction const &frac)
@@ -31,11 +42,14 @@ fractions::Fraction fractions::Fraction::simplify(Fraction frac)
 
 void fractions::Fraction::simplify()
 {
+    int simplified = gcd(abs(_numerator), (abs(_denominator)));
+    _numerator /= simplified;
+    _denominator /= simplified;
 }
 
 int fractions::Fraction::gcd(int a, int b)
 {
-    return 0;
+    return b == 0 ? a : gcd(b, a % b);
 }
 
 bool fractions::Fraction::operator==(Fraction const &frac)
