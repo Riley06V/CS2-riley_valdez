@@ -61,6 +61,10 @@ fractions::Fraction fractions::Fraction::simplify(Fraction frac)
 
 void fractions::Fraction::simplify()
 {
+    if (_denominator == 0) {
+        std::cout << "Error: Denominator cannot be 0, defaulting to 1" << std::endl;
+        _denominator = 1;
+    }
     int simplified = gcd(abs(_numerator), (abs(_denominator)));
     _numerator /= simplified;
     _denominator /= simplified;
