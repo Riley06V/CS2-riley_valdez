@@ -5,7 +5,7 @@ fractions::Fraction::Fraction(int numerator, int denominator)
     //zero handling
     if (denominator == 0) {
         std::cout << "Error: Denominator cannot be 0, defaulting to 1" << std::endl;
-        _denominator = 1;
+        denominator = 1;
     }
     //negative handling
     if (denominator < 0) {
