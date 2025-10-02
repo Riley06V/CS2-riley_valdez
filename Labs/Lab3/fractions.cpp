@@ -16,7 +16,7 @@ fractions::Fraction::Fraction(int numerator, int denominator)
     _numerator = numerator;
     _denominator = denominator;
 
-    simplify();
+    simplify(); //reduce the fraction
 }
 
 fractions::Fraction fractions::Fraction::operator+(fractions::Fraction const &frac)
@@ -62,16 +62,16 @@ void fractions::Fraction::simplify()
     _denominator /= simplified;
 }
 
-int fractions::Fraction::gcd(int a, int b) //This time without gcd
+int fractions::Fraction::gcd(int a, int b) //using GeeksForGeeks reference
 {
-    int minVal = std::min(a, b);
-    int gcd = 1;
-    for (int i = 1; i <= minVal; i++) {
-        if (a % i == 0 && b % i == 0) {
-            gcd = i;
+    int answer = min(a,b);
+    while (answer > 1) {
+        if (a % answer == 0 && b % answer == 0) {
+            break;
         }
+        answer--;
     }
-    return gcd;
+    return answer;
 }
 
 bool fractions::Fraction::operator==(Fraction const &frac)
