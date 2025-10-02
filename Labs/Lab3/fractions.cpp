@@ -49,10 +49,6 @@ fractions::Fraction fractions::Fraction::operator/(Fraction const &frac)
 
 fractions::Fraction fractions::Fraction::simplify(Fraction frac)
 {
-    if (frac._denominator == 0) {
-        std::cout << "Error: Denominator cannot be 0, defaulting to 1" << std::endl;
-        frac._denominator = 1;
-    }
     int greatestCommonDiviser = gcd(abs(frac._numerator), abs(frac._denominator));
     int num = frac._numerator / greatestCommonDiviser;
     int denom = frac._denominator / greatestCommonDiviser;
@@ -61,34 +57,30 @@ fractions::Fraction fractions::Fraction::simplify(Fraction frac)
 
 void fractions::Fraction::simplify()
 {
-    if (_denominator == 0) {
-        std::cout << "Error: Denominator cannot be 0, defaulting to 1" << std::endl;
-        _denominator = 1;
-    }
+
     int simplified = gcd(abs(_numerator), (abs(_denominator)));
     _numerator /= simplified;
     _denominator /= simplified;
 }
 
-int fractions::Fraction::gcd(int a, int b) //using GeeksForGeeks reference
+int fractions::Fraction::gcd(int a, int b) //using GeeksForGeeks reference jk it sucks so tweaked
 {
-    int answer = min(a,b);
-    while (answer > 1) {
-        if (a % answer == 0 && b % answer == 0) {
-            break;
+    int minVal = std::min(a, b);
+    int greatest = 1;
+    for (int i = 1; i <= minVal; i++) {
+        if (a % i == 0 && b % i == 0) {
+            greatest = i;
         }
-        answer--;
     }
-    return answer;
+    return greatest;
 }
 
 bool fractions::Fraction::operator==(Fraction const &frac)
 {
     if (_numerator == frac._numerator && _denominator == frac._denominator) {
         return true;
-    } else {
-        return false;
     }
+    return false;
 }
 
 ostream &fractions::operator<<(ostream &os, const Fraction &frac)
