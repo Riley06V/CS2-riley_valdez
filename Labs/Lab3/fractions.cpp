@@ -64,12 +64,14 @@ void fractions::Fraction::simplify()
 
 int fractions::Fraction::gcd(int a, int b) //This time without gcd
 {
-    while (b != 0) {
-        int temp = b;
-        b = a % b;
-        a = temp;
+    int minVal = std::min(a, b);
+    int gcd = 1;
+    for (int i = 1; i <= minVal; i++) {
+        if (a % i == 0 && b % i == 0) {
+            gcd = i;
+        }
     }
-    return a;
+    return gcd;
 }
 
 bool fractions::Fraction::operator==(Fraction const &frac)
