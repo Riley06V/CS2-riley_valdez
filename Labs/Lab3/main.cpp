@@ -31,23 +31,31 @@ void tests()
     fractions::Fraction testFrac2(3, 5);
     fractions::Fraction ansFrac(0, 1);
     ansFrac = testFrac1 + testFrac2;
+    cout << "Result test1: " << ansFrac << endl;
     assert(ansFrac == fractions::Fraction(19, 15));
     ansFrac = testFrac1 - testFrac2;
+    cout << "Result test2: " << ansFrac << endl;
     assert(ansFrac == fractions::Fraction(1, 15));
     ansFrac = testFrac1 * testFrac2;
+    cout << "Result test3: " << ansFrac << endl;
     assert(ansFrac == fractions::Fraction(2, 5));
     ansFrac = testFrac1 / testFrac2;
+    cout << "Result test4: " << ansFrac << endl;
     assert(ansFrac == fractions::Fraction(10, 9));
 
     fractions::Fraction testFrac3(5, 7);
     fractions::Fraction testFrac4(-2, 9);
     ansFrac = testFrac3 + testFrac4;
+    cout << "Result test5: " << ansFrac << endl;
     assert(ansFrac == fractions::Fraction(31, 63));
     ansFrac = testFrac3 - testFrac4;
+    cout << "Result test6: " << ansFrac << endl;
     assert(ansFrac == fractions::Fraction(59, 63));
     ansFrac = testFrac3 * testFrac4;
+    cout << "Result test7: " << ansFrac << endl;
     assert(ansFrac == fractions::Fraction(-10, 63));
     ansFrac = testFrac3 / testFrac4;
+    cout << "Result test8: " << ansFrac << endl;
     assert(ansFrac == fractions::Fraction(45, -14));
     cout << "All test cases passed" << endl;
 }
