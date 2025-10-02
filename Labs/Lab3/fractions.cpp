@@ -76,7 +76,11 @@ int fractions::Fraction::gcd(int a, int b) //This time without gcd
 
 bool fractions::Fraction::operator==(Fraction const &frac)
 {
-    if (_numerator == frac._numerator && _denominator == frac._denominator) return true;
+    if (_numerator == frac._numerator && _denominator == frac._denominator) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 ostream &fractions::operator<<(ostream &os, const Fraction &frac)
