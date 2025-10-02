@@ -49,6 +49,10 @@ fractions::Fraction fractions::Fraction::operator/(Fraction const &frac)
 
 fractions::Fraction fractions::Fraction::simplify(Fraction frac)
 {
+    if (frac._denominator == 0) {
+        std::cout << "Error: Denominator cannot be 0, defaulting to 1" << std::endl;
+        frac._denominator = 1;
+    }
     int greatestCommonDiviser = gcd(abs(frac._numerator), abs(frac._denominator));
     int num = frac._numerator / greatestCommonDiviser;
     int denom = frac._denominator / greatestCommonDiviser;
