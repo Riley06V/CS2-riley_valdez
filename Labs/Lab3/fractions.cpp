@@ -71,5 +71,6 @@ bool fractions::Fraction::operator==(Fraction const &frac)
 
 ostream &fractions::operator<<(ostream &os, const Fraction &frac)
 {
+    os << frac._numerator << "/" << frac._denominator;
     return os;
 }
