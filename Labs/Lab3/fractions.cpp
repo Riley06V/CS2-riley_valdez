@@ -21,14 +21,14 @@ fractions::Fraction::Fraction(int numerator, int denominator)
 
 fractions::Fraction fractions::Fraction::operator+(fractions::Fraction const &frac)
 {
-    int num = _numerator * frac._denominator + frac._denominator * frac._numerator;
+    int num = _numerator * frac._denominator + frac._numerator * _denominator;
     int denom = _denominator * frac._denominator;
     return Fraction(num, denom);
 }
 
 fractions::Fraction fractions::Fraction::operator-(fractions::Fraction const &frac)
 {
-    int num = _numerator * frac._denominator - frac._denominator * frac._numerator;
+    int num = _numerator * frac._denominator - frac._numerator * _denominator;
     int denom = _denominator * frac._denominator;
     return Fraction(num, denom);
 }
