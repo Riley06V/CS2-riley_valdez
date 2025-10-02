@@ -44,12 +44,15 @@ fractions::Fraction fractions::Fraction::operator/(Fraction const &frac)
 {
     int num = _numerator * frac._denominator;
     int denom = _denominator * frac._numerator;
-    return Fraction(0, 1);
+    return Fraction(num, denom);
 }
 
 fractions::Fraction fractions::Fraction::simplify(Fraction frac)
 {
-    return Fraction(0, 1);
+    int greatestCommonDiviser = gcd(abs(frac._numerator), abs(frac._denominator));
+    int num = frac._numerator / greatestCommonDiviser;
+    int denom = frac._denominator / greatestCommonDiviser;
+    return Fraction(num, denom);
 }
 
 void fractions::Fraction::simplify()
@@ -59,9 +62,14 @@ void fractions::Fraction::simplify()
     _denominator /= simplified;
 }
 
-int fractions::Fraction::gcd(int a, int b)
+int fractions::Fraction::gcd(int a, int b) //This time without gcd
 {
-    return b == 0 ? a : gcd(b, a % b);
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
 }
 
 bool fractions::Fraction::operator==(Fraction const &frac)
