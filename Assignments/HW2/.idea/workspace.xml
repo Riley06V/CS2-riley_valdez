@@ -7,7 +7,6 @@
     <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
-    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
   </component>
   <component name="CMakeProjectFlavorService">
     <option name="flavorId" value="CMakePlainProjectFlavor" />
@@ -25,17 +24,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="878fe131-c88b-4ba7-9e04-22edb81aa769" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../HW1/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HW1/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PracticeLecture/082825.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Labs/Lab1/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Labs/Lab1/.idea/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeLecture/.idea/PracticeLecture.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticeLecture/.idea/PracticeLecture.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeLecture/.idea/customTargets.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticeLecture/.idea/customTargets.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeLecture/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticeLecture/.idea/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeLecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticeLecture/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeLecture/082625.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticeLecture/082625.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeLecture/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticeLecture/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Labs/Lab3/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../Labs/Lab3/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Labs/Lab3/main.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../Labs/Lab3/main.out" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,18 +44,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Riley06V"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Riley06V&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:Riley06V/CS2-riley_valdez.git",
-    "accountId": "a96ccfb4-834f-487f-b442-7f980a9d1139"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Riley06V/CS2-riley_valdez.git&quot;,
+    &quot;accountId&quot;: &quot;a96ccfb4-834f-487f-b442-7f980a9d1139&quot;
   }
-}]]></component>
+}</component>
   <component name="MakefileLocalSettings">
     <option name="availableProjects">
       <map>
@@ -98,44 +89,39 @@
     <option name="minorVersion" value="3.4" />
     <option name="productBranch" value="Classic" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="31yc0Kosnpqgkw79TZ8DoiCnyKq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.RadMigrateCodeStyle": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/rcvaldez/projects/CS2-riley_valdez/Assignments/HW2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu/home/rcvaldez/projects/CS2-riley_valdez/Assignments/HW2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="\\wsl.localhost\Ubuntu\home\rcvaldez\projects\CS2-riley_valdez\Assignments\HW2" />
     </key>
   </component>
   <component name="RunManager" selected="Native Application.all">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="all" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HW2" TARGET_NAME="all" CONFIG_NAME="all" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
@@ -144,6 +130,11 @@
     <configuration name="run" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HW2" TARGET_NAME="run" CONFIG_NAME="run" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
@@ -160,6 +151,7 @@
       <option name="presentableId" value="Default" />
       <updated>1756499529178</updated>
       <workItem from="1756499530236" duration="238000" />
+      <workItem from="1759880527734" duration="3000" />
     </task>
     <servers />
   </component>
