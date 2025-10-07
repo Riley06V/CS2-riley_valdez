@@ -45,3 +45,13 @@ ________________________________________________________________________________
 | Location: | https://github.com/Riley06V/CS2-riley_valdez/tree/main/Labs/Lab2 |
 | Notes: | Complete, I overthought the logic, talked about it during class Friday 9-12 |
 
+## Lab #2
+| Riley Valdez | I deserve 100% |
+| --- | --- |
+| Name: | Fractions Operator Overloading |
+| Description: | "Use operator overloading on fraction calculator" |
+| Due Date: | 10/2/2025 |
+| Status: | Complete |
+| Location: | https://github.com/Riley06V/CS2-riley_valdez/tree/main/Labs/Lab3 |
+| Notes: | Complete, Stayed debugging logic for incorrectly auto-completed code 👍 |
+
