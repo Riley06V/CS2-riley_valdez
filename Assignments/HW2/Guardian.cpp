@@ -18,7 +18,7 @@ namespace starwars {
 		bool crit = (rand() % 5 == 0); // 20% chance for critical hit
 		if (crit) {
 			std::cout << getName() << " lands a critical strike!\n";
-			return base * 2;
+			return base * (_forcePower/50);
 		}
 		return base;
 	}

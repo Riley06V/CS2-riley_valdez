@@ -56,6 +56,7 @@ void starwars::character::saveToFile(std::string &fileName) {
 	std::ofstream outFile("./saves/" + fileName);
 	if (outFile.is_open()) { //Human readable information in case user wants to mod
 		outFile << "Name: " << _name << "\n"
+				<< "Type: " << _type << "\n"
 				  << "Health: " << _health << "\n"
 				  << "LightsaberSkill: " << _lightsaberSkill << "\n";
 		outFile.close();
@@ -74,12 +75,15 @@ void starwars::character::loadFromFile(std::string &fileName) {
 	inFile.ignore(32, ' '); //ignore 32 characters, or until reaching a space
 	std::getline(inFile, _name); //Since it is a string
 	inFile.ignore(32, ' ');
+	std::getline(inFile, _type); //Since it is a string
+	inFile.ignore(32, ' ');
 	inFile >> _health; //Since it is an int
 	inFile.ignore(32, ' ');
 	inFile >> _lightsaberSkill;
 	inFile.ignore(32, ' ');
 	inFile.close();
 	std::cout << "Name: " << _name << "\n"
+			  << "Type: " << _type << "\n"
 			  << "Health: " << _health << "\n"
 			  << "LightsaberSkill: " << _lightsaberSkill << "\n";
 }
