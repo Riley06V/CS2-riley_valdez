@@ -6,9 +6,7 @@
 #include <iostream>
 
 starwars::Jedi::Jedi(std::string name, int health, int lightsaberSkill, int forcePower) { //Paramertierzied Constructor
-  _name = name;
-  _health = health;
-  _lightsaberSkill = lightsaberSkill;
+
   _forcePower = forcePower;
 }
 

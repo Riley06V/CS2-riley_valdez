@@ -7,6 +7,7 @@
     <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
   </component>
   <component name="CMakeProjectFlavorService">
     <option name="flavorId" value="CMakePlainProjectFlavor" />
@@ -23,10 +24,18 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="878fe131-c88b-4ba7-9e04-22edb81aa769" name="Changes" comment="">
+    <list default="true" id="878fe131-c88b-4ba7-9e04-22edb81aa769" name="Changes" comment="Made new .cpp/.h files for the required bits">
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Labs/Lab3/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../Labs/Lab3/main.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Labs/Lab3/main.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../Labs/Lab3/main.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Character.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Character.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Character.h" beforeDir="false" afterPath="$PROJECT_DIR$/Character.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jedi.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Jedi.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jedi.h" beforeDir="false" afterPath="$PROJECT_DIR$/Jedi.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jedi.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sith.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.out" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,11 +141,6 @@
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Native Application.all" />
       <item itemvalue="Native Application.run" />
@@ -151,11 +155,37 @@
       <option name="presentableId" value="Default" />
       <updated>1756499529178</updated>
       <workItem from="1756499530236" duration="238000" />
-      <workItem from="1759880527734" duration="3000" />
+      <workItem from="1759880527734" duration="2079000" />
+      <workItem from="1759882972608" duration="170000" />
+      <workItem from="1760234380971" duration="102000" />
+      <workItem from="1760386010598" duration="2377000" />
+      <workItem from="1760400074150" duration="359000" />
     </task>
+    <task id="LOCAL-00001" summary="Copied HW1 into here">
+      <option name="closed" value="true" />
+      <created>1759881398228</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1759881398228</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Made new .cpp/.h files for the required bits">
+      <option name="closed" value="true" />
+      <created>1759881508098</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1759881508098</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Copied HW1 into here" />
+    <MESSAGE value="Made new .cpp/.h files for the required bits" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made new .cpp/.h files for the required bits" />
   </component>
 </project>
