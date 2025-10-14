@@ -4,10 +4,19 @@
 
 #ifndef ACOLYTE_H
 #define ACOLYTE_H
+#include <string>
+
+#include "Sith.h"
 
 
+class Acolyte : public starwars::Sith{
+	public:
+		Acolyte(std::string name = "Acolyte");
+		float stealth;
 
-class Acolyte {
+		std::string getType() override;
+		void saveToFile(std::string &fileName) override;
+		void loadFromFile(std::string &fileName) override;
 
 };
 

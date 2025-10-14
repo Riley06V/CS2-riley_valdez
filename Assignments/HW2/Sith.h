@@ -5,26 +5,19 @@
 #ifndef SITH_H
 #define SITH_H
 #include <string>
+
+#include "Character.h"
+
 namespace starwars {
-    class Sith {
-      private:
-        std::string _name;
-        int _health;
-        int _lightsaberSkill;
+    class Sith : public starwars::character {
       public:
         Sith(std::string name = "Unknown Sith", int health = 120, int lightsaberSkill = 60); //Paramaterized Constructor
         ~Sith(); //Deconstructor
-        //Getters
-        std::string getName();
-        int getHealth();
-        int getLightsaberSkill();
-        //Setters
-        void setName(std::string name);
-        void setHealth(int health);
-        void setLightsaberSkill(int lightsaberSkill);
-        //Helpers
-        int attack();
-        int takeDamage(int damage);
+
+    	std::string getType() override;
+        int attack() override;
+    	virtual void saveToFile(std::string &fileName);
+    	virtual void loadFromFile(std::string &fileName);
     };
 
 }

@@ -19,7 +19,7 @@ void starwars::Jedi::setForcePower(int forcePower) {
 	_forcePower = forcePower;
 }
 
-std::string starwars::Jedi::getType() const {
+std::string starwars::Jedi::getType() {
 	return "Jedi";
 }
 

@@ -11,13 +11,12 @@ namespace starwars {
     class Darth : public Sith {
     public:
         Darth(std::string name = "Darth");
-
+		int rage;
         // Overrides
-        int attack() override;
-        int takeDamage(int damage) override;
 
-        // Optional: identify type
-        std::string getType() const override;
+        std::string getType() override;
+        void saveToFile(std::string &fileName) override;
+        void loadFromFile(std::string &fileName) override;
     };
 }
 

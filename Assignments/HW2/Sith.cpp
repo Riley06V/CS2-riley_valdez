@@ -4,39 +4,27 @@
 
 #include "Sith.h"
 
-starwars::Sith::Sith(std::string name, int health, int lightsaberSkill) {
-    _name = name;
-    _health = health;
-    _lightsaberSkill = lightsaberSkill;
-} //Paramaterized Constructor
-starwars::Sith::~Sith() {
+#include "Character.h"
+
+starwars::Sith::Sith(std::string name, int health, int lightsaberSkill): character(name, health, lightsaberSkill) {}
+
+	starwars::Sith::~Sith() {
 	//nothing dynamic to delete so far
 } //Deconstructor
-//Getters
- std::string starwars::Sith::getName() {
-    return _name;
+
+//Revamped stuff
+std::string starwars::Sith::getType() {
+	return "Sith";
 }
- int starwars::Sith::getHealth() {
- 	return _health;
-}
- int starwars::Sith::getLightsaberSkill() {
-	return _lightsaberSkill;
-}
-//Setters
-void starwars::Sith::setName(std::string name) {
-	_name = name;
-}
-void starwars::Sith::setHealth(int health) {
-    _health = health;
-}
-void starwars::Sith::setLightsaberSkill(int lightsaberSkill) {
-  	_lightsaberSkill = lightsaberSkill;
-}
-//Helpers
+
 int starwars::Sith::attack() {
-	return _lightsaberSkill;
+
 }
-int starwars::Sith::takeDamage(int damage) {
-	_health -= damage;
-	return _health;
+
+void starwars::Sith::loadFromFile(std::string &fileName) {
+
+}
+
+void starwars::Sith::saveToFile(std::string &fileName) {
+
 }

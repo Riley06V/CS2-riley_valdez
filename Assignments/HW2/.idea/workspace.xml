@@ -24,18 +24,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="878fe131-c88b-4ba7-9e04-22edb81aa769" name="Changes" comment="Made new .cpp/.h files for the required bits">
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+    <list default="true" id="878fe131-c88b-4ba7-9e04-22edb81aa769" name="Changes" comment="Some more minor changes before bed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Character.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Character.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Character.h" beforeDir="false" afterPath="$PROJECT_DIR$/Character.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Acolyte.h" beforeDir="false" afterPath="$PROJECT_DIR$/Acolyte.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Darth.h" beforeDir="false" afterPath="$PROJECT_DIR$/Darth.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jedi.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Jedi.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jedi.h" beforeDir="false" afterPath="$PROJECT_DIR$/Jedi.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jedi.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sith.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sith.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Sith.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sith.h" beforeDir="false" afterPath="$PROJECT_DIR$/Sith.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +112,7 @@
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu/home/rcvaldez/projects/CS2-riley_valdez/Assignments/HW2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu/home/rcvaldez/projects/CS2-riley_valdez/PracticeLecture/090125_Classes&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -159,7 +155,8 @@
       <workItem from="1759882972608" duration="170000" />
       <workItem from="1760234380971" duration="102000" />
       <workItem from="1760386010598" duration="2377000" />
-      <workItem from="1760400074150" duration="359000" />
+      <workItem from="1760400074150" duration="8035000" />
+      <workItem from="1760471968969" duration="1882000" />
     </task>
     <task id="LOCAL-00001" summary="Copied HW1 into here">
       <option name="closed" value="true" />
@@ -177,7 +174,47 @@
       <option name="project" value="LOCAL" />
       <updated>1759881508098</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Moving stuff from og Jedi to Character.h">
+      <option name="closed" value="true" />
+      <created>1760400770930</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1760400770930</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixed changes for this stuff in Jedi">
+      <option name="closed" value="true" />
+      <created>1760402810384</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1760402810384</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fixed changes for this stuff in Jedi">
+      <option name="closed" value="true" />
+      <created>1760403291748</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1760403291748</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added Type to define their type, changes to gameplay flow such as special abilities for Jedi">
+      <option name="closed" value="true" />
+      <created>1760410917639</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1760410917639</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Some more minor changes before bed">
+      <option name="closed" value="true" />
+      <created>1760412517372</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1760412517372</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,6 +223,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Copied HW1 into here" />
     <MESSAGE value="Made new .cpp/.h files for the required bits" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made new .cpp/.h files for the required bits" />
+    <MESSAGE value="Moving stuff from og Jedi to Character.h" />
+    <MESSAGE value="Fixed changes for this stuff in Jedi" />
+    <MESSAGE value="Added Type to define their type, changes to gameplay flow such as special abilities for Jedi" />
+    <MESSAGE value="Some more minor changes before bed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some more minor changes before bed" />
   </component>
 </project>
