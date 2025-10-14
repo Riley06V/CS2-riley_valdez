@@ -6,7 +6,6 @@
 #define CHARACTER_H
 #include <string>
 
-
 namespace starwars {
 	class character {
           protected: //copied form Jedi.h
@@ -22,8 +21,10 @@ namespace starwars {
             std::string getName();
             int getHealth();
             int getLightsaberSkill();
-            int attack();
-            int takeDamage(int damage);
+            virtual int attack();
+            virtual int takeDamage(int damage);
+			virtual void saveToFile(std::string &fileName);
+			virtual void loadFromFile(std::string &fileName);
 	};
 }
 

@@ -23,9 +23,11 @@ namespace starwars {
             int getForcePower();
             //Helpers/bonus function
             int useForce(int power);
-            //File IO
-            void saveToFile(std::string &fileName);
-            void loadFromFile(std::string &fileName);
+            int attack() override;
+            int takeDamage(int damage) override;
+            void saveToFile(std::string fileName) override;
+            void loadFromFile(std::string fileName) override;
+
     };
 }
 
