@@ -11,15 +11,14 @@
 
 namespace starwars {
     class Jedi : public starwars::character {
-        private:
-            int _forcePower;
         public:
+          int _forcePower;
             Jedi(std::string = "Unknown Jedi", int = 100, int = 50, int  = 75); //Paramertierzied Constructor
             ~Jedi(); //Default Destructor
             //Setters
             void setForcePower(int forcePower);
             //Getteres
-
+    		virtual std::string getType() const override;
             int getForcePower();
             //Helpers/bonus function
             int useForce(int power);

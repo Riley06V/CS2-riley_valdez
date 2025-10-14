@@ -18,7 +18,10 @@ starwars::Jedi::~Jedi() { //Default Destructor
 void starwars::Jedi::setForcePower(int forcePower) {
 	_forcePower = forcePower;
 }
-//Getteres
+
+std::string starwars::Jedi::getType() const {
+	return "Jedi";
+}
 
 int starwars::Jedi::getForcePower() {
 	return _forcePower;
@@ -39,7 +42,7 @@ int starwars::Jedi::takeDamage(int damage) {
 	return _health;
 }
 
-void starwars::Jedi::loadFromFile(std::string fileName) {
+void starwars::Jedi::loadFromFile(std::string &fileName) {
 	character::loadFromFile(fileName);
 	std::ifstream inFile("./saves/" + fileName);
 	if (!inFile.is_open()) {
@@ -56,7 +59,7 @@ void starwars::Jedi::loadFromFile(std::string fileName) {
 	inFile.close();
 }
 
-void starwars::Jedi::saveToFile(std::string fileName) {
+void starwars::Jedi::saveToFile(std::string &fileName) {
 	character::saveToFile(fileName);
 	std::ofstream outFile("./saves/" + fileName, std::ios::app); //needed to append file
 	if (outFile.is_open()) {

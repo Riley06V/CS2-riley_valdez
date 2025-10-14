@@ -5,17 +5,18 @@
 #include <fstream>
 #include <iostream>
 
-starwars::character::character(std::string name, int health, int lightsaberSkill) {
+starwars::character::character(std::string name, int health, int lightsaberSkill, std::string type) {
 	//Paramertierzied Constructor
 	_name = name;
 	_health = health;
 	_lightsaberSkill = lightsaberSkill;
+	_type = type;
 }
 
 starwars::character::~character() {
 	//Nothing currently dynamic
 }
-
+//Setters
 void starwars::character::setName(std::string name) {
 	_name = name;
 }
@@ -25,8 +26,12 @@ void starwars::character::setHealth(int health) {
 void starwars::character::setLightsaberSkill(int lightsaberSkill) {
 	_lightsaberSkill = lightsaberSkill;
 }
+
+void starwars::character::setType(std::string type) {
+	_type = type;
+}
 std::string starwars::character::getName() {
-	return _name;
+	return  _name;
 }
 int starwars::character::getHealth() {
 	return _health;
@@ -34,6 +39,11 @@ int starwars::character::getHealth() {
 int starwars::character::getLightsaberSkill() {
 	return _lightsaberSkill;
 }
+
+std::string starwars::character::getType() {
+	return _type;
+}
+
 int starwars::character::attack() {
 	return _lightsaberSkill;
 }

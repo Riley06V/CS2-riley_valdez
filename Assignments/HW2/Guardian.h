@@ -5,12 +5,19 @@
 #ifndef GUARDIAN_H
 #define GUARDIAN_H
 
+#include "Jedi.h"
 
+namespace starwars {
+	class Guardian : public Jedi {
+	public:
+		Guardian(std::string name = "Guardian");
 
-class Guardian {
+		// Override attack to include critical hit chance
+		int attack() override;
 
-};
+		// Identify class type
+		std::string getType() const override;
+	};
+}
 
-
-
-#endif //GUARDIAN_H
+#endif // GUARDIAN_H
