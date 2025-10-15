@@ -8,13 +8,13 @@
 #include "Sith.h"
 
 namespace starwars {
-    class Darth : public Sith {
-    public:
-        Darth(std::string name = "Darth");
-        // Overrides
+	class Darth : public Sith {
+	public:
+		Darth(std::string name = "Darth");
+		// Overrides
 		int attack() override;
-        std::string getType() override;
-    };
+		std::string getType() override;
+	};
 }
 
 #endif // DARTH_H

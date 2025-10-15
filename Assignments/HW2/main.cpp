@@ -2,6 +2,11 @@
 #include "Jedi.h"
 #include "Sith.h"
 #include <filesystem>
+
+#include "Darth.h"
+#include "Acolyte.h"
+#include "Consular.h"
+#include "Guardian.h"
 using namespace std;
 //Now that classes are established, we work on file input and saving to file
 //void saveToFile();
@@ -10,9 +15,10 @@ using namespace std;
 void battleStage(starwars::character, starwars::character);
 void menu();
 void saveFileInfo();
-starwars::Jedi createCustomJedi();
-starwars::Sith createCustomSith();
-starwars::Jedi loadJedi();
+starwars::character* createCharacter();
+starwars::character createCustomJedi();
+starwars::character createCustomSith();
+starwars::character loadJedi();
 
 int main(int argc, const char * argv[]) {
     cout << "Welcome to the Star Wars auto battler Minigame" << endl;
@@ -20,34 +26,30 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
 
-starwars::Jedi createCustomJedi() {
-    string name;
-    int health, skill, force;
-    cout << "Enter Jedi name: ";
+starwars::character* createCharacter() {
+    cout << "Choose a character type: "
+         << "\n1. Jedi"
+         << "\n2. Guardian"
+         << "\n3. Consular"
+         << "\n4. Sith"
+         << "\n5. Darth"
+         << "\n6. Acolyte"
+         << endl;
+    int choiceType;
+    cin >> choiceType;
+    cout << "Name your character: ";
     cin.ignore();
-    getline(cin, name);
-    cout << "Health: ";
-    cin >> health;
-    cout << "Lightsaber Skill: ";
-    cin >> skill;
-    cout << "Force Power: ";
-    cin >> force;
-    starwars::Jedi customeJedi(name, health, skill, force);
-    return customeJedi;
-}
-
-starwars::Sith createCustomSith() {
     string name;
-    int health, skill;
-    cout << "Enter Sith name: ";
-    cin.ignore();
     getline(cin, name);
-    cout << "Health: ";
-    cin >> health;
-    cout << "Lightsaber Skill: ";
-    cin >> skill;
-    starwars::Sith customSith(name, health, skill);
-    return customSith;
+    switch (choiceType) {
+        case 1: return new starwars::Jedi(name);
+        case 2: return new starwars::Guardian(name);
+        case 3: return new starwars::Consular(name);
+        case 4: return new starwars::Sith(name);
+        case 5: return new starwars::Darth(name);
+        case 6: return new starwars::Acolyte(name);
+        default: cout << "Invalid type.\n"; return nullptr;
+    }
 }
 
 void battleStage(starwars::character* player, starwars::character* enemy) { //Using character class, from scratch
@@ -110,43 +112,16 @@ void menu() {
     int menuChoice;
     bool run = true;
     while (run == true) {
-        cout << "1. Create a new Jedi and run game" << endl;
-        cout << "2. Load Jedi from file and run game" << endl;
+        cout << "1. Create a new character and run game" << endl;
+        cout << "2. Load character from file and run game" << endl;
         cout << "3. View available save files " << endl;
-        cout << "4. Create a modified game " << endl;
+        cout << "4. Create a custom game " << endl;
         cout << "5. Exit " << endl;
         cout << "Enter your choice: ";
         cin >> menuChoice;
         switch (menuChoice) {
             case 1: {
-                string jediName;
-                cout << "Enter your Jedi's Name: ";
-                cin.ignore();
-                getline(cin, jediName);
-                starwars::Jedi player;
 
-                //Way to get something different than default health/forcePower/LightsaberSkill
-                char choice;
-                cout << "Is " << jediName << " a master? Y|N : ";
-                cin >> choice;
-                choice = toupper(choice);
-                if (choice == 'Y') {
-                    player = starwars::Jedi (jediName, 115, 70, 90);
-                } else {
-                    player = starwars::Jedi (jediName);
-                }
-
-                starwars::Sith enemy = starwars::Sith();
-
-
-                string fileName;
-                cout << "Enter the name of the file you want to save to: (Ex: saveFile.txt)   "; //moved this line to main as it makes more sense
-                cin >> fileName;
-                player.saveToFile(fileName);
-                player.loadFromFile(fileName);
-
-                battleStage(player, enemy);
-                break;
             }
             case 2: {
                 starwars::Jedi loadedJedi = loadJedi();

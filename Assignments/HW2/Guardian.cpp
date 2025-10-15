@@ -23,7 +23,7 @@ namespace starwars {
 		return base;
 	}
 
-	std::string Guardian::getType() const {
+	std::string Guardian::getType() {
 		return "Guardian";
 	}
 
