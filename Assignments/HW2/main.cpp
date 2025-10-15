@@ -7,7 +7,7 @@ using namespace std;
 //void saveToFile();
 //void loadFromFile(); Belong in Jedi Class
 
-void battleStage(starwars::Jedi, starwars::Sith);
+void battleStage(starwars::character, starwars::character);
 void menu();
 void saveFileInfo();
 starwars::Jedi createCustomJedi();
@@ -50,49 +50,49 @@ starwars::Sith createCustomSith() {
     return customSith;
 }
 
-void battleStage(starwars::Jedi player, starwars::Sith enemy) {
-    //Print out information
-    cout << "\nYour Jedi:\n";
-    cout << "Name: " << player.getName() << "\n";
-    cout << "Health: " << player.getHealth() << "\n";
-    cout << "LightsaberSkill: " << player.getLightsaberSkill() << "\n";
-    cout << "ForcePower: " << player.getForcePower() << "\n";
+void battleStage(starwars::character* player, starwars::character* enemy) { //Using character class, from scratch
+    cout << "\nYour Character:\n";
+    cout << "Name: " << player->getName() << "\n";
+    cout << "Type: " << player->getType() << "\n";
+    cout << "Health: " << player->getHealth() << "\n";
 
-    cout << player.getName() << " will be fighting " << enemy.getName() << "!" << endl;
+    cout << "\nEnemy Character:\n";
+    cout << "Name: " << enemy->getName() << "\n";
+    cout << "Type: " << enemy->getType() << "\n";
+    cout << "Health: " << enemy->getHealth() << "\n";
 
-    cout << "\nSith Opponent:\n";
-    cout << "Name: " << enemy.getName() << '\n';
-    cout << "Health: " << enemy.getHealth() << '\n';
-    cout << "Lightsaber Skill: " << enemy.getLightsaberSkill() << endl;
+    cout << "\n\nThe enemy provokes and attacks first!\n";
 
-
-    cout << "\n\nThe Sith provokes and attacks first!\n";
-    //Auto Battler, Sith attacks first, Jedi Goes second. Completely based on class attributes.
     do {
+        int damageToPlayer = enemy->attack();
+        cout << enemy->getName() << " attacks for " << damageToPlayer << " damage to" << player->getName() << "!" << endl;
+        player->takeDamage(damageToPlayer);
+        cout << player->getName() << " takes damage!\n";
+        cout << player->getName() << " has " << player->getHealth() << " health remaining!" << endl;
 
-        cout << "Sith's Attack: " << enemy.attack() << endl;
-        int damageToJedi = enemy.attack();
-        player.takeDamage(damageToJedi);
-        cout <<player.getName() << "'s remaining health: " << player.getHealth() << "\n";
-
-        if (player.getHealth() <= 0) {
-            cout << "The Sith has Won this time..." << endl;
+        if (player->getHealth() <= 0) {
+            cout << enemy->getName() << " has won this battle..." << endl;
             break;
         }
 
-        //Jedi attacks
-        cout << player.getName() << "'s attack: " << player.attack() << endl;
-        int damageToSith = player.attack();
-        enemy.takeDamage(damageToSith);
-        cout << enemy.getName() << "'s remaining health: " << enemy.getHealth() << endl;
+        int damageToEnemy = player->attack();
+        cout << player->getName() << " attacks for " << damageToEnemy << endl;
+        enemy->takeDamage(damageToEnemy);
+        cout << enemy->getName() << "'s remaining health: " << enemy->getHealth() << endl;
 
-        if (enemy.getHealth() <= 0) {
-            cout << player.getName() << " has brought balance to the force!" << endl;
-            break;
-        }
+        if (enemy->getHealth() <= 0) {
+            if (player->getType() == "Sith" || player->getType() == "Acolyte" || player->getType() == "Darth") {
+                cout << player->getName() << " has cleansed the weak light side..." << endl;
+            }
 
-    } while (player.getHealth() > 0 || enemy.getHealth() > 0);
-}
+            if (player->getType() == "Jedi" || player->getType() == "Guardian" || player->getType() == "Consular") {
+                cout << player->getName() << " has brought balance to the force!" << endl;
+            }
+        break;
+    }
+
+} while (player->getHealth() > 0 && enemy->getHealth() > 0);
+
 
 starwars::Jedi loadJedi() {
     string fileName;

@@ -8,11 +8,12 @@
 
 namespace starwars {
 	class character {
+		  protected:
+			std::string _name;
+			int _health;
+			int _lightsaberSkill;
+			std::string _type;
           public:  //copied from Jedi.h
-				std::string _name;
-				int _health;
-				int _lightsaberSkill;
-				std::string _type;
 			character(std::string name = "", int health = 100, int lightsaberSkill = 0, std::string type = "Character ");
 			~character();
 			void setName(std::string name);

@@ -24,10 +24,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="878fe131-c88b-4ba7-9e04-22edb81aa769" name="Changes" comment="Changes to Sith">
+    <list default="true" id="878fe131-c88b-4ba7-9e04-22edb81aa769" name="Changes" comment="Just main to finish off Study Hall">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Darth.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Darth.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Darth.h" beforeDir="false" afterPath="$PROJECT_DIR$/Darth.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Character.h" beforeDir="false" afterPath="$PROJECT_DIR$/Character.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +153,8 @@
       <workItem from="1760386010598" duration="2377000" />
       <workItem from="1760400074150" duration="8035000" />
       <workItem from="1760471968969" duration="2111000" />
-      <workItem from="1760486365672" duration="2427000" />
+      <workItem from="1760486365672" duration="2771000" />
+      <workItem from="1760494123995" duration="928000" />
     </task>
     <task id="LOCAL-00001" summary="Copied HW1 into here">
       <option name="closed" value="true" />
@@ -227,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760487916074</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Just main to finish off Study Hall">
+      <option name="closed" value="true" />
+      <created>1760489117144</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1760489117144</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +251,7 @@
     <MESSAGE value="Some more minor changes before bed" />
     <MESSAGE value="starting study hall" />
     <MESSAGE value="Changes to Sith" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes to Sith" />
+    <MESSAGE value="Just main to finish off Study Hall" />
+    <option name="LAST_COMMIT_MESSAGE" value="Just main to finish off Study Hall" />
   </component>
 </project>
