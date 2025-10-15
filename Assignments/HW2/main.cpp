@@ -15,11 +15,11 @@ using namespace std;
 void battleStage(starwars::character, starwars::character);
 void menu();
 void saveFileInfo();
-starwars::character properEnemy(starwars::character*);
+starwars::character* properEnemy(starwars::character*);
 starwars::character* createCharacter();
-starwars::character createCustomJedi();
-starwars::character createCustomSith();
-starwars::character loadJedi();
+starwars::character* createCustomCharacter();
+starwars::character* createCustomEnemy();
+starwars::character* loadCharacter();
 
 int main(int argc, const char * argv[]) {
     cout << "Welcome to the Star Wars auto battler Minigame" << endl;
@@ -53,16 +53,16 @@ starwars::character* createCharacter() {
     }
 }
 
-starwars::character properEnemy(starwars::character* player) {
+starwars::character* properEnemy(starwars::character* player) {
     if (player->getType() == "Jedi") {
         srand(time(0));
         int randNum = rand() % 100;
         int enemyType = randNum/2;
         if (enemyType > 50) {
-            return starwars::Acolyte("Unknown Acolyte");
+            return new starwars::Acolyte("Unknown Acolyte");
         }
         else {
-            return starwars::Darth("Unknown Darth");
+            return new starwars::Darth("Unknown Darth");
         }
     }
     else if (player->getType() == "Sith") {
@@ -70,16 +70,16 @@ starwars::character properEnemy(starwars::character* player) {
         int randNum = rand() % 100;
         int enemyType = randNum/2;
         if (enemyType > 50) {
-            return starwars::Guardian("Unknown Guardian");
+            return new starwars::Guardian("Unknown Guardian");
         }
         else {
-            return starwars::Consular("Unknown Council Member");
+            return new starwars::Consular("Unknown Council Member");
         }
     }
 }
-;
 
-void battleStage(starwars::character* player, starwars::character* enemy) { //Using character class, from scratch
+void battleStage(starwars::character* player, starwars::character* enemy) {
+    //Using character class, from scratch
     cout << "\nYour Character:\n";
     cout << "Name: " << player->getName() << "\n";
     cout << "Type: " << player->getType() << "\n";
@@ -117,20 +117,21 @@ void battleStage(starwars::character* player, starwars::character* enemy) { //Us
             if (player->getType() == "Jedi" || player->getType() == "Guardian" || player->getType() == "Consular") {
                 cout << player->getName() << " has brought balance to the force!" << endl;
             }
-        break;
-    }
+            break;
+        }
 
-} while (player->getHealth() > 0 && enemy->getHealth() > 0);
+    } while (player->getHealth() > 0 && enemy->getHealth() > 0);
+}
 
 
-starwars::Jedi loadJedi() {
+starwars::character* loadCharacter(){
     string fileName;
     cout << "Enter the name of the save file: (Ex: saveFile.txt)   ";
     cin.ignore();
     getline(cin, fileName);
-    starwars::Jedi player;
-    player.loadFromFile(fileName);
-    cout << player.getName() << " from file: " << fileName << " is stepping in..." << endl;
+    starwars::character *player;
+    player->loadFromFile(fileName);
+    cout << player->getName() << " from file: " << fileName << " is stepping in..." << endl;
     return player;
 }
 
@@ -150,23 +151,23 @@ void menu() {
             case 1: {
                 //Proper Enemy call
                 starwars::character *player = createCharacter();
-                starwars::character enemy = properEnemy(player);
-                battleStage(*player, enemy);
+                starwars::character *enemy = properEnemy(player);
+                battleStage(*player, *enemy);
             }
             case 2: {
-                starwars::Jedi loadedJedi = loadJedi();
-                starwars::Sith defaultEnemy;
-                battleStage(loadedJedi, defaultEnemy);
+                starwars::character *player = loadCharacter();
+                starwars::character *enemy = properEnemy(player);
+                battleStage(*player, *enemy);
                 break;
             }
-            case 3:  {//To be worked on
+            case 3:  {
                 saveFileInfo();
                 break;
             }
             case 4: {
-                starwars::Jedi customPlayer = createCustomJedi();
-                starwars::Sith customEnemy = createCustomSith();
-                battleStage(customPlayer, customEnemy);
+                starwars::character *customPlayer = createCustomCharacter();
+                starwars::character *customEnemy = createCustomEnemy();
+                battleStage(*customPlayer, *customEnemy);
                 break;
             }
             case 5: {
