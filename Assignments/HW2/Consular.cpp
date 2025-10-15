@@ -21,7 +21,7 @@ namespace starwars {
 		return _health;
 	}
 
-	std::string Consular::getType() const {
+	std::string Consular::getType() {
 		return "Consular";
 	}
 

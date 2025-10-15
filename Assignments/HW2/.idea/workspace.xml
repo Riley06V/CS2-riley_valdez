@@ -24,9 +24,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="878fe131-c88b-4ba7-9e04-22edb81aa769" name="Changes" comment="Enemy creation + battle stage for part 1">
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="878fe131-c88b-4ba7-9e04-22edb81aa769" name="Changes" comment="No errors, but no testing done" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -153,7 +151,7 @@
       <workItem from="1760471968969" duration="2111000" />
       <workItem from="1760486365672" duration="2771000" />
       <workItem from="1760494123995" duration="3832000" />
-      <workItem from="1760558254836" duration="1195000" />
+      <workItem from="1760558254836" duration="2145000" />
     </task>
     <task id="LOCAL-00001" summary="Copied HW1 into here">
       <option name="closed" value="true" />
@@ -259,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760559382879</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="No errors, but no testing done">
+      <option name="closed" value="true" />
+      <created>1760560412027</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1760560412027</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +284,7 @@
     <MESSAGE value="Battle stage changes" />
     <MESSAGE value="Bedtime" />
     <MESSAGE value="Enemy creation + battle stage for part 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enemy creation + battle stage for part 1" />
+    <MESSAGE value="No errors, but no testing done" />
+    <option name="LAST_COMMIT_MESSAGE" value="No errors, but no testing done" />
   </component>
 </project>

@@ -16,7 +16,7 @@ namespace starwars {
 		int takeDamage(int damage) override;
 
 		// Identify class type
-		std::string getType() const override;
+		std::string getType() override;
 	};
 }
 
