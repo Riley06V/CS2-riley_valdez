@@ -8,18 +8,15 @@
 
 #include "Sith.h"
 
-
-class Acolyte : public starwars::Sith{
+namespace starwars {
+	class Acolyte : public starwars::Sith{
 	public:
 		Acolyte(std::string name = "Acolyte");
-		float stealth;
 
 		std::string getType() override;
-		void saveToFile(std::string &fileName) override;
-		void loadFromFile(std::string &fileName) override;
+		int takeDamage(int damage) override; //Dodge
 
-};
-
-
+	};
+}
 
 #endif //ACOLYTE_H
