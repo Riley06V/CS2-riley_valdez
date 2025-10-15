@@ -15,6 +15,7 @@ using namespace std;
 void battleStage(starwars::character, starwars::character);
 void menu();
 void saveFileInfo();
+starwars::character properEnemy(starwars::character*);
 starwars::character* createCharacter();
 starwars::character createCustomJedi();
 starwars::character createCustomSith();
@@ -51,6 +52,32 @@ starwars::character* createCharacter() {
         default: cout << "Invalid type.\n"; return nullptr;
     }
 }
+
+starwars::character properEnemy(starwars::character* player) {
+    if (player->getType() == "Jedi") {
+        srand(time(0));
+        int randNum = rand() % 100;
+        int enemyType = randNum/2;
+        if (enemyType > 50) {
+            return starwars::Acolyte("Unknown Acolyte");
+        }
+        else {
+            return starwars::Darth("Unknown Darth");
+        }
+    }
+    else if (player->getType() == "Sith") {
+        srand(time(nullptr));
+        int randNum = rand() % 100;
+        int enemyType = randNum/2;
+        if (enemyType > 50) {
+            return starwars::Guardian("Unknown Guardian");
+        }
+        else {
+            return starwars::Consular("Unknown Council Member");
+        }
+    }
+}
+;
 
 void battleStage(starwars::character* player, starwars::character* enemy) { //Using character class, from scratch
     cout << "\nYour Character:\n";
@@ -121,7 +148,10 @@ void menu() {
         cin >> menuChoice;
         switch (menuChoice) {
             case 1: {
-
+                //Proper Enemy call
+                starwars::character *player = createCharacter();
+                starwars::character enemy = properEnemy(player);
+                battleStage(*player, enemy);
             }
             case 2: {
                 starwars::Jedi loadedJedi = loadJedi();
