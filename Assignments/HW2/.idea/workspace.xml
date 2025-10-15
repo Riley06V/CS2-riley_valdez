@@ -24,12 +24,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="878fe131-c88b-4ba7-9e04-22edb81aa769" name="Changes" comment="Some more minor changes before bed">
+    <list default="true" id="878fe131-c88b-4ba7-9e04-22edb81aa769" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Acolyte.h" beforeDir="false" afterPath="$PROJECT_DIR$/Acolyte.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Darth.h" beforeDir="false" afterPath="$PROJECT_DIR$/Darth.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jedi.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Jedi.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jedi.h" beforeDir="false" afterPath="$PROJECT_DIR$/Jedi.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sith.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Sith.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sith.h" beforeDir="false" afterPath="$PROJECT_DIR$/Sith.h" afterDir="false" />
     </list>
@@ -156,7 +153,8 @@
       <workItem from="1760234380971" duration="102000" />
       <workItem from="1760386010598" duration="2377000" />
       <workItem from="1760400074150" duration="8035000" />
-      <workItem from="1760471968969" duration="1882000" />
+      <workItem from="1760471968969" duration="2111000" />
+      <workItem from="1760486365672" duration="1397000" />
     </task>
     <task id="LOCAL-00001" summary="Copied HW1 into here">
       <option name="closed" value="true" />
@@ -214,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760412517372</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="starting study hall">
+      <option name="closed" value="true" />
+      <created>1760484324453</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1760484324453</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +233,7 @@
     <MESSAGE value="Fixed changes for this stuff in Jedi" />
     <MESSAGE value="Added Type to define their type, changes to gameplay flow such as special abilities for Jedi" />
     <MESSAGE value="Some more minor changes before bed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some more minor changes before bed" />
+    <MESSAGE value="starting study hall" />
+    <option name="LAST_COMMIT_MESSAGE" value="starting study hall" />
   </component>
 </project>

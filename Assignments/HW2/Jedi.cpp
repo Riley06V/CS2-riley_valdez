@@ -52,7 +52,7 @@ void starwars::Jedi::loadFromFile(std::string &fileName) {
 
 	std::string line;
 	while (std::getline(inFile, line)) {
-		if (line.find("ForcePower: ") != std::string::npos) {
+		if (line.find("Force Power: ") != std::string::npos) {
 			_forcePower = std::stoi(line.substr(line.find(":")+2));
 		}
 	}
@@ -63,7 +63,7 @@ void starwars::Jedi::saveToFile(std::string &fileName) {
 	character::saveToFile(fileName);
 	std::ofstream outFile("./saves/" + fileName, std::ios::app); //needed to append file
 	if (outFile.is_open()) {
-		outFile << "ForcePower: " << _forcePower << "\n";
+		outFile << "Force Power: " << _forcePower << "\n";
 		outFile.close();
 	} else {
 		std::cerr << "Unable to open file " << fileName << "\n";
