@@ -11,7 +11,7 @@
 namespace starwars {
 	class Acolyte : public starwars::Sith{
 	public:
-		Acolyte(std::string name = "Acolyte");
+		Acolyte(std::string name = "Acolyte", int health =90, int lightsaberSkill= 65, int rageLevel= 40);
 
 		std::string getType() override;
 		int takeDamage(int damage) override; //Dodge

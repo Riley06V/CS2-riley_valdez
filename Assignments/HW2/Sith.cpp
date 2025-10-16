@@ -8,7 +8,9 @@
 
 
 starwars::Sith::Sith(std::string name, int health, int lightsaberSkill, int rageLevel)
-: character(name, health, lightsaberSkill), _rageLevel(rageLevel) {}
+: character(name, health, lightsaberSkill, ), _rageLevel(rageLevel) {
+	_type = "Sith";
+}
 
 	starwars::Sith::~Sith() {
 	//nothing dynamic to delete so far

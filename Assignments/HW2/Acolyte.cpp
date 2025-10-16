@@ -4,7 +4,7 @@
 
 namespace starwars {
 
-	Acolyte::Acolyte(std::string name)
+	Acolyte::Acolyte(std::string name, int health, int lightsaberSkill, int rageLevel)
 		: Sith(name, 90, 65, 40) {
 		// Lower health, decent saber skill, moderate rage
 	}

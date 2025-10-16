@@ -5,12 +5,11 @@
 #include <fstream>
 #include <iostream>
 
-starwars::character::character(std::string name, int health, int lightsaberSkill, std::string type) {
+starwars::character::character(std::string name, int health, int lightsaberSkill) {
 	//Paramertierzied Constructor
 	_name = name;
 	_health = health;
 	_lightsaberSkill = lightsaberSkill;
-	_type = type;
 }
 
 starwars::character::~character() {
@@ -82,8 +81,8 @@ void starwars::character::loadFromFile(std::string &fileName) {
 	inFile >> _lightsaberSkill;
 	inFile.ignore(32, ' ');
 	inFile.close();
-	std::cout << "Name: " << _name << "\n"
-			  << "Type: " << _type << "\n"
+	std::cout << "Type: " << _type << "\n"
+			  << "Name: " << _name << "\n"
 			  << "Health: " << _health << "\n"
 			  << "LightsaberSkill: " << _lightsaberSkill << "\n";
 }

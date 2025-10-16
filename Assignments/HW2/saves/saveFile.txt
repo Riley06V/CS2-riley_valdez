@@ -1,4 +1,0 @@
-Name: Jerry
-Health: 700
-LightsaberSkill: 700
-ForcePower: 700

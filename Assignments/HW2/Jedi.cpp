@@ -7,7 +7,9 @@
 #include <iostream>
 
 starwars::Jedi::Jedi(std::string name, int health, int lightsaberSkill, int forcePower)
-	: character(name, health, lightsaberSkill), _forcePower(forcePower) {}
+	: character(name, health, lightsaberSkill), _forcePower(forcePower) {
+	_type = "Jedi";
+}
 
 
 starwars::Jedi::~Jedi() { //Default Destructor

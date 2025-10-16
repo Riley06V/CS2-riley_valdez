@@ -24,7 +24,23 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="878fe131-c88b-4ba7-9e04-22edb81aa769" name="Changes" comment="No errors, but no testing done" />
+    <list default="true" id="878fe131-c88b-4ba7-9e04-22edb81aa769" name="Changes" comment="No errors, but no testing done">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Acolyte.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Acolyte.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Acolyte.h" beforeDir="false" afterPath="$PROJECT_DIR$/Acolyte.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Character.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Character.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Character.h" beforeDir="false" afterPath="$PROJECT_DIR$/Character.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Consular.h" beforeDir="false" afterPath="$PROJECT_DIR$/Consular.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Darth.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Darth.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Darth.h" beforeDir="false" afterPath="$PROJECT_DIR$/Darth.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guardian.h" beforeDir="false" afterPath="$PROJECT_DIR$/Guardian.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jedi.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Jedi.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sith.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Sith.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sith.h" beforeDir="false" afterPath="$PROJECT_DIR$/Sith.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saves/saveFile.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saves/saveFile2.txt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,7 +167,8 @@
       <workItem from="1760471968969" duration="2111000" />
       <workItem from="1760486365672" duration="2771000" />
       <workItem from="1760494123995" duration="3832000" />
-      <workItem from="1760558254836" duration="2145000" />
+      <workItem from="1760558254836" duration="2359000" />
+      <workItem from="1760571137091" duration="4613000" />
     </task>
     <task id="LOCAL-00001" summary="Copied HW1 into here">
       <option name="closed" value="true" />
@@ -265,7 +282,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760560412027</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="No errors, but no testing done">
+      <option name="closed" value="true" />
+      <created>1760560607301</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1760560607301</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

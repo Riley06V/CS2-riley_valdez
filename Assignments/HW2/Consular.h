@@ -10,7 +10,7 @@
 namespace starwars {
 	class Consular : public Jedi {
 	public:
-		Consular(std::string name = "Consular");
+		Consular(std::string name = "Unknown Council Member", int health = 150, int skill = 70, int force = 60);
 
 		// Override takeDamage to include stronger force-based mitigation
 		int takeDamage(int damage) override;

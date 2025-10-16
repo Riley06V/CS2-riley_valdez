@@ -10,7 +10,7 @@
 namespace starwars {
 	class Guardian : public Jedi {
 	public:
-		Guardian(std::string name = "Guardian");
+		Guardian(std::string name = "Unknown Guardian", int health = 150, int skill = 70, int force = 60);
 
 		// Override attack to include critical hit chance
 		int attack() override;

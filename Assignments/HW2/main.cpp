@@ -18,7 +18,6 @@ void saveFileInfo();
 starwars::character* properEnemy(starwars::character*);
 starwars::character* createCharacter();
 starwars::character* createCustomCharacter();
-starwars::character* createCustomEnemy();
 starwars::character* loadCharacter();
 
 int main(int argc, const char * argv[]) {
@@ -124,18 +123,6 @@ void battleStage(starwars::character* player, starwars::character* enemy) {
 }
 
 
-starwars::character* loadCharacter(){
-    string fileName;
-    cout << "Enter the name of the save file: (Ex: saveFile.txt)   ";
-    cin.ignore();
-    getline(cin, fileName);
-    starwars::character *player;
-    player->loadFromFile(fileName);
-    cout << player->getName() << " from file: " << fileName << " is stepping in..." << endl;
-    return player;
-}
-
-
 void menu() {
     int menuChoice;
     bool run = true;
@@ -152,12 +139,13 @@ void menu() {
                 //Proper Enemy call
                 starwars::character *player = createCharacter();
                 starwars::character *enemy = properEnemy(player);
-                battleStage(*player, *enemy);
+                battleStage(player, enemy);
+                break;
             }
             case 2: {
                 starwars::character *player = loadCharacter();
                 starwars::character *enemy = properEnemy(player);
-                battleStage(*player, *enemy);
+                battleStage(player, enemy);
                 break;
             }
             case 3:  {
@@ -165,9 +153,11 @@ void menu() {
                 break;
             }
             case 4: {
+                cout << "1. Create your character: " << endl;
                 starwars::character *customPlayer = createCustomCharacter();
-                starwars::character *customEnemy = createCustomEnemy();
-                battleStage(*customPlayer, *customEnemy);
+                cout << "2. Create your enemy: " << endl;
+                starwars::character *customEnemy = createCustomCharacter();
+                battleStage(customPlayer, customEnemy);
                 break;
             }
             case 5: {
@@ -182,6 +172,37 @@ void menu() {
         }
     }
 }
+
+starwars::character* loadCharacter(){
+    string fileName;
+    cout << "Enter the name of the save file: (Ex: saveFile.txt)   ";
+    cin.ignore();
+    getline(cin, fileName);
+    ifstream inFile("./saves/" + fileName);
+    if (!inFile.is_open()) {
+        cout << "Unable to open file." << endl;
+        return nullptr;
+    }
+    string line, type;
+    while (getline(inFile, line)) {
+        if (line.find("Type: ") != string::npos) {
+            type = line.substr(line.find(":")+2); //Makes sure to return the correct type as stored.
+            break;
+        }
+    }
+    starwars::character* player = nullptr;
+    if (type == "Jedi") player = new starwars::Jedi();
+    else if (type == "Guardian") player = new starwars::Guardian();
+    else if (type == "Consular") player = new starwars::Consular();
+    else if (type == "Sith") player = new starwars::Sith();
+    else if (type == "Darth") player = new starwars::Darth();
+    else if (type == "Acolyte") player = new starwars::Acolyte(); //Should create a character of the correct type.
+
+    if (player) player->loadFromFile(fileName);
+    return player;
+
+}
+
 
 void saveFileInfo() {
     cout << "\nAvailable Save Files: ";
@@ -202,3 +223,42 @@ void saveFileInfo() {
     }
 }
 
+starwars::character* createCustomCharacter() {
+    //Use existing function to make type and name
+    starwars::character* base = createCharacter();
+    if (!base) return nullptr;
+    string type = base->getType();
+    string name = base->getName();
+    delete base; //discard the default instance
+
+    int health, skill;
+    std::cout << "Enter custom health: ";
+    std::cin >> health;
+    std::cout << "Enter custom lightsaber skill: ";
+    std::cin >> skill;
+
+    if (type == "Jedi" || type == "Guardian" || type == "Consular") {
+        int force;
+        std::cout << "Enter Force power: ";
+        std::cin >> force;
+
+        if (type == "Jedi") return new starwars::Jedi(name, health, skill, force);
+        if (type == "Guardian") return new starwars::Guardian(name, health, skill, force);
+        if (type == "Consular") return new starwars::Consular(name, health, skill, force);
+    }
+
+    if (type == "Sith" || type == "Darth" || type == "Acolyte") {
+        int rage;
+        std::cout << "Enter Rage level: ";
+        std::cin >> rage;
+
+        if (type == "Sith") return new starwars::Sith(name, health, skill, rage);
+        if (type == "Darth") return new starwars::Darth(name, health, skill, rage);
+        if (type == "Acolyte") return new starwars::Acolyte(name, health, skill, rage);
+    }
+
+    std::cout << "Unknown type.\n";
+    return nullptr;
+}
+
+}

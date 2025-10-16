@@ -5,8 +5,10 @@
 #include "Darth.h"
 #include <iostream>
 namespace starwars {
-	starwars::Darth::Darth(std::string name)
-			: Sith(name, 120, 75, 25) {} //Higher base health and saber skill. Starting rage
+	starwars::Darth::Darth(std::string name, int health, int lightsaberSkill, int rage)
+			: Sith(name, health, lightsaberSkill, rage) {
+          _type = "Darth";
+			} //Higher base health and saber skill. Starting rage
 
 	int starwars::Darth::attack() {
 		if(_rageLevel >= 50) {
