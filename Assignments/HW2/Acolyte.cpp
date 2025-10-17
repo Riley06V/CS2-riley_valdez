@@ -5,18 +5,18 @@
 namespace starwars {
 
 	Acolyte::Acolyte(std::string name, int health, int lightsaberSkill, int rageLevel)
-		: Sith(name, 90, 65, 40) {
-		// Lower health, decent saber skill, moderate rage
+		: Sith(name, 90, 65, 10) {
+		// Lower health, decent saber skill, low rage
 	}
 
 	int Acolyte::takeDamage(int damage) {
-		// Dodge chance scales with rageLevel (e.g., 0–100 → 0–30% dodge)
+		// Dodge chance scales with rageLevel (e.g., 0–100 -> 0–30% dodge)
 		int dodgeChance = std::min(30, _rageLevel / 3); // cap at 30%
 		bool dodged = (rand() % 100) < dodgeChance;
 
 		if (dodged) {
 			std::cout << getName() << " dodges the attack with Sith agility!\n";
-			buildRage(5); // small rage gain from adrenaline
+			buildRage(3); // small rage gain from adrenaline
 			return _health;
 		}
 

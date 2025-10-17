@@ -9,7 +9,7 @@
 namespace starwars {
 	class Darth : public Sith {
 	public:
-  		Darth(std::string = "Unknown Darth", int health= 120 , int lightsaberSkill = 75, int rage = 25);
+  		Darth(std::string = "Unknown Darth", int health= 120 , int lightsaberSkill = 75, int rage = 15);
 		// Overrides
 		int attack() override;
 		std::string getType() override;

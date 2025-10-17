@@ -40,7 +40,7 @@ int starwars::Sith::getRageLevel() {
 
 int starwars::Sith::attack() {
 	int damage = _lightsaberSkill + (_rageLevel / 10);
-	std::cout << getName() << " attacks with rage-fueld power!\n";
+	std::cout << getName() << " attacks with rage-fueled power!\n";
 	resetRage();
 	return damage;
 }

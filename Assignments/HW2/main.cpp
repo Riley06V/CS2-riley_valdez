@@ -54,8 +54,8 @@ starwars::character* createCharacter() {
 
 starwars::character* properEnemy(starwars::character* player) {
     if (player->getType() == "Jedi" || player->getType() == "Guardian" || player->getType() == "Consular") {
-        srand(time(0));
-        int enemyType = rand() % 100;
+        srand(time(nullptr));
+        int enemyType = (rand() % 100 +1);
         if (enemyType < 33) {
             return new starwars::Acolyte("Unknown Acolyte");
         }
@@ -67,7 +67,7 @@ starwars::character* properEnemy(starwars::character* player) {
     }
     else if (player->getType() == "Sith" || player->getType() == "Darth" || player->getType() == "Acolyte") {
         srand(time(nullptr));
-        int randNum = rand() % 100;
+        int randNum = (rand() % 100 +1);
         int enemyType = randNum/3;
         if (enemyType < 33) {
             return new starwars::Guardian("Unknown Guardian");
@@ -97,7 +97,7 @@ void battleStage(starwars::character* player, starwars::character* enemy) {
 
     do {
         int damageToPlayer = enemy->attack();
-        cout << enemy->getName() << "\n attacks for " << damageToPlayer << " damage to " << player->getName() << "!" << endl;
+        cout <<"\n" << enemy->getName() << " attacks for " << damageToPlayer << " damage to " << player->getName() << "!" << endl;
         player->takeDamage(damageToPlayer);
         cout << player->getName() << " takes damage!\n";
         cout << player->getName() << " has " << player->getHealth() << " health remaining!" << endl;
@@ -156,7 +156,11 @@ void menu() {
                 break;
             }
             case 2: {
-                starwars::character *player = loadCharacter();
+                starwars::character *player;
+                if (!(player = loadCharacter())) {
+                    cerr << "Failed to load a character" << endl;
+                    break;
+            }
                 starwars::character *enemy = properEnemy(player);
                 battleStage(player, enemy);
                 break;
@@ -191,6 +195,7 @@ starwars::character* loadCharacter(){
     cout << "Enter the name of the save file: (Ex: saveFile.txt)   ";
     cin.ignore();
     getline(cin, fileName);
+    cout << endl;
     ifstream inFile("./saves/" + fileName);
     if (!inFile.is_open()) {
         cout << "Unable to open file." << endl;
@@ -213,7 +218,6 @@ starwars::character* loadCharacter(){
 
     if (player) player->loadFromFile(fileName);
     return player;
-
 }
 
 

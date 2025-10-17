@@ -1,0 +1,5 @@
+Name: Yoda
+Type: Jedi
+Health: 100
+LightsaberSkill: 40
+Force Power: 120
