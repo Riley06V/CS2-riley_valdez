@@ -46,7 +46,7 @@ starwars::character* createCharacter() {
         case 2: return new starwars::Guardian(name);
         case 3: return new starwars::Consular(name);
         case 4: return new starwars::Sith(name);
-        case 5: return new starwars::Darth(name);
+        case 5: return new starwars::Darth(name); //Error undefined reference to Darth
         case 6: return new starwars::Acolyte(name);
         default: cout << "Invalid type.\n"; return nullptr;
     }
@@ -61,7 +61,7 @@ starwars::character* properEnemy(starwars::character* player) {
             return new starwars::Acolyte("Unknown Acolyte");
         }
         else {
-            return new starwars::Darth("Unknown Darth");
+            return new starwars::Darth("Unknown Darth"); //Error undefined reference to Darth
         }
     }
     else if (player->getType() == "Sith") {
@@ -75,6 +75,7 @@ starwars::character* properEnemy(starwars::character* player) {
             return new starwars::Consular("Unknown Council Member");
         }
     }
+    return nullptr;
 }
 
 void battleStage(starwars::character* player, starwars::character* enemy) {
@@ -195,7 +196,7 @@ starwars::character* loadCharacter(){
     else if (type == "Guardian") player = new starwars::Guardian();
     else if (type == "Consular") player = new starwars::Consular();
     else if (type == "Sith") player = new starwars::Sith();
-    else if (type == "Darth") player = new starwars::Darth();
+    else if (type == "Darth") player = new starwars::Darth(); //Error undefined reference to Darth
     else if (type == "Acolyte") player = new starwars::Acolyte(); //Should create a character of the correct type.
 
     if (player) player->loadFromFile(fileName);
@@ -253,7 +254,7 @@ starwars::character* createCustomCharacter() {
         std::cin >> rage;
 
         if (type == "Sith") return new starwars::Sith(name, health, skill, rage);
-        if (type == "Darth") return new starwars::Darth(name, health, skill, rage);
+        if (type == "Darth") return new starwars::Darth(name, health, skill, rage); //Error undefined reference to Darth
         if (type == "Acolyte") return new starwars::Acolyte(name, health, skill, rage);
     }
 
@@ -261,4 +262,3 @@ starwars::character* createCustomCharacter() {
     return nullptr;
 }
 
-}

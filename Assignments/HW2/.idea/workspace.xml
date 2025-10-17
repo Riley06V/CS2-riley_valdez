@@ -24,7 +24,22 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="878fe131-c88b-4ba7-9e04-22edb81aa769" name="Changes" comment="Making class changes but bedtime" />
+    <list default="true" id="878fe131-c88b-4ba7-9e04-22edb81aa769" name="Changes" comment="10/16/25 before class">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Acolyte.o" beforeDir="false" afterPath="$PROJECT_DIR$/Acolyte.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Character.o" beforeDir="false" afterPath="$PROJECT_DIR$/Character.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Consular.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Consular.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Consular.o" beforeDir="false" afterPath="$PROJECT_DIR$/Consular.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Darth.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Darth.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Darth.h" beforeDir="false" afterPath="$PROJECT_DIR$/Darth.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guardian.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Guardian.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guardian.o" beforeDir="false" afterPath="$PROJECT_DIR$/Guardian.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jedi.o" beforeDir="false" afterPath="$PROJECT_DIR$/Jedi.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sith.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Sith.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sith.o" beforeDir="false" afterPath="$PROJECT_DIR$/Sith.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/main.o" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -153,6 +168,7 @@
       <workItem from="1760494123995" duration="3832000" />
       <workItem from="1760558254836" duration="2359000" />
       <workItem from="1760571137091" duration="5593000" />
+      <workItem from="1760644041891" duration="2332000" />
     </task>
     <task id="LOCAL-00001" summary="Copied HW1 into here">
       <option name="closed" value="true" />
@@ -282,7 +298,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760579697226</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="10/16/25 before class">
+      <option name="closed" value="true" />
+      <created>1760644067474</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1760644067474</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,6 +327,7 @@
     <MESSAGE value="Enemy creation + battle stage for part 1" />
     <MESSAGE value="No errors, but no testing done" />
     <MESSAGE value="Making class changes but bedtime" />
-    <option name="LAST_COMMIT_MESSAGE" value="Making class changes but bedtime" />
+    <MESSAGE value="10/16/25 before class" />
+    <option name="LAST_COMMIT_MESSAGE" value="10/16/25 before class" />
   </component>
 </project>

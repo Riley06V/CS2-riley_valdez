@@ -8,7 +8,7 @@
 
 namespace starwars {
 
-	Consular::Consular(std::string name)
+	Consular::Consular(std::string name, int health, int lightsaberSkill, int forcePower)
 		: Jedi(name, 100, 40, 120) {
 		// Lower health, modest saber skill, high force power
 	}

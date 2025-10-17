@@ -5,12 +5,12 @@
 #include "Darth.h"
 #include <iostream>
 namespace starwars {
-	starwars::Darth::Darth(std::string name, int health, int lightsaberSkill, int rage)
-			: Sith(name, health, lightsaberSkill, rage) {
+	Darth::Darth(std::string name, int health, int lightsaberSkill, int rageLevel)
+			: Sith(name, 120, 75, 25) {
           _type = "Darth";
 			} //Higher base health and saber skill. Starting rage
 
-	int starwars::Darth::attack() {
+	int Darth::attack() {
 		if(_rageLevel >= 50) {
 			std::cout << getName() << " uses Force Choke to crush the enemy!\n";
 			resetRage();
@@ -19,7 +19,7 @@ namespace starwars {
 		return Sith::attack();
 	}
 
-	std::string starwars::Darth::getType() {
+	std::string Darth::getType() {
 		return "Darth";
 	}
 

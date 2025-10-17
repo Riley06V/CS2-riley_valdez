@@ -8,7 +8,7 @@
 
 namespace starwars {
 
-	Guardian::Guardian(std::string name)
+	Guardian::Guardian(std::string name, int health, int lightsaberSkill, int forcePower)
 		: Jedi(name, 150, 70, 60) {
 		// High health, strong saber skill, moderate force
 	}
