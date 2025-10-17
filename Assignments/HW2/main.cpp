@@ -53,26 +53,29 @@ starwars::character* createCharacter() {
 }
 
 starwars::character* properEnemy(starwars::character* player) {
-    if (player->getType() == "Jedi") {
+    if (player->getType() == "Jedi" || player->getType() == "Guardian" || player->getType() == "Consular") {
         srand(time(0));
-        int randNum = rand() % 100;
-        int enemyType = randNum/2;
-        if (enemyType > 50) {
+        int enemyType = rand() % 100;
+        if (enemyType < 33) {
             return new starwars::Acolyte("Unknown Acolyte");
         }
-        else {
-            return new starwars::Darth("Unknown Darth"); //Error undefined reference to Darth
+        else if ( enemyType >=33 && enemyType < 66){
+            return new starwars::Darth("Unknown Darth");
+        } else {
+            return new starwars::Sith("Unknown Sith");
         }
     }
-    else if (player->getType() == "Sith") {
+    else if (player->getType() == "Sith" || player->getType() == "Darth" || player->getType() == "Acolyte") {
         srand(time(nullptr));
         int randNum = rand() % 100;
-        int enemyType = randNum/2;
-        if (enemyType > 50) {
+        int enemyType = randNum/3;
+        if (enemyType < 33) {
             return new starwars::Guardian("Unknown Guardian");
         }
-        else {
+        else if (enemyType >=33 && enemyType < 66) {
             return new starwars::Consular("Unknown Council Member");
+        } else {
+            return new starwars::Jedi("Unknown Jedi");
         }
     }
     return nullptr;
@@ -94,7 +97,7 @@ void battleStage(starwars::character* player, starwars::character* enemy) {
 
     do {
         int damageToPlayer = enemy->attack();
-        cout << enemy->getName() << " attacks for " << damageToPlayer << " damage to" << player->getName() << "!" << endl;
+        cout << enemy->getName() << "\n attacks for " << damageToPlayer << " damage to " << player->getName() << "!" << endl;
         player->takeDamage(damageToPlayer);
         cout << player->getName() << " takes damage!\n";
         cout << player->getName() << " has " << player->getHealth() << " health remaining!" << endl;
@@ -139,6 +142,15 @@ void menu() {
             case 1: {
                 //Proper Enemy call
                 starwars::character *player = createCharacter();
+                std::string fileName;
+                cout << "Create a Save File (Ex: saveFile.txt): " << endl;
+                cin.ignore();
+                cin >> fileName;
+                if (player->getType() == "Jedi" || player->getType() == "Guardian" || player->getType() == "Consular") {
+                    player->saveToFile(fileName);
+                } else if (player->getType() =="Sith" || player->getType() =="Darth" || player->getType() ==  "Acolyte") {
+                    player->saveToFile(fileName);
+                }
                 starwars::character *enemy = properEnemy(player);
                 battleStage(player, enemy);
                 break;
@@ -196,7 +208,7 @@ starwars::character* loadCharacter(){
     else if (type == "Guardian") player = new starwars::Guardian();
     else if (type == "Consular") player = new starwars::Consular();
     else if (type == "Sith") player = new starwars::Sith();
-    else if (type == "Darth") player = new starwars::Darth(); //Error undefined reference to Darth
+    else if (type == "Darth") player = new starwars::Darth();
     else if (type == "Acolyte") player = new starwars::Acolyte(); //Should create a character of the correct type.
 
     if (player) player->loadFromFile(fileName);
@@ -254,7 +266,7 @@ starwars::character* createCustomCharacter() {
         std::cin >> rage;
 
         if (type == "Sith") return new starwars::Sith(name, health, skill, rage);
-        if (type == "Darth") return new starwars::Darth(name, health, skill, rage); //Error undefined reference to Darth
+        if (type == "Darth") return new starwars::Darth(name, health, skill, rage);
         if (type == "Acolyte") return new starwars::Acolyte(name, health, skill, rage);
     }
 
