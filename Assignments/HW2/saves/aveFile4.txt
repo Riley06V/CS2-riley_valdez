@@ -1,0 +1,5 @@
+Name: idk any
+Type: Sith
+Health: 90
+LightsaberSkill: 65
+Rage Level: 10

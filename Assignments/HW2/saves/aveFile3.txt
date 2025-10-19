@@ -1,0 +1,5 @@
+Name: Darth Sidious
+Type: Darth
+Health: 120
+LightsaberSkill: 75
+Rage Level: 25

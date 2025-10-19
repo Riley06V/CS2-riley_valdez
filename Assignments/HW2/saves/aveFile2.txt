@@ -1,0 +1,5 @@
+Name: Obi-Wan
+Type: Jedi
+Health: 150
+LightsaberSkill: 70
+Force Power: 60
