@@ -1,0 +1,5 @@
+Name: Generic Jedi
+Type: Jedi
+Health: 100
+LightsaberSkill: 50
+Force Power: 75

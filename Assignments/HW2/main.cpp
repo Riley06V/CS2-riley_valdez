@@ -190,35 +190,42 @@ void menu() {
     }
 }
 
-starwars::character* loadCharacter(){
+starwars::character* loadCharacter() {
     string fileName;
-    cout << "Enter the name of the save file: (Ex: saveFile.txt)   ";
-    cin.ignore();
-    getline(cin, fileName);
-    cout << endl;
-    ifstream inFile("./saves/" + fileName);
-    if (!inFile.is_open()) {
-        cout << "Unable to open file." << endl;
-        return nullptr;
-    }
-    string line, type;
-    while (getline(inFile, line)) {
-        if (line.find("Type: ") != string::npos) {
-            type = line.substr(line.find(":")+2); //Makes sure to return the correct type as stored.
-            break;
-        }
-    }
-    starwars::character* player = nullptr;
-    if (type == "Jedi") player = new starwars::Jedi();
-    else if (type == "Guardian") player = new starwars::Guardian();
-    else if (type == "Consular") player = new starwars::Consular();
-    else if (type == "Sith") player = new starwars::Sith();
-    else if (type == "Darth") player = new starwars::Darth();
-    else if (type == "Acolyte") player = new starwars::Acolyte(); //Should create a character of the correct type.
+    starwars::character *player = nullptr;
+    while (true) {
+        cout << "Enter the name of the save file: (Ex: saveFile.txt)   ";
+        getline(cin, fileName);
+        cout << endl;
 
-    if (player) player->loadFromFile(fileName);
-    return player;
+        ifstream inFile("./saves/" + fileName);
+        if (!inFile.is_open()) {
+            cout << "Unable to open file. Please try again.\n" << endl;
+            continue;
+        }
+        string line, type;
+        while (getline(inFile, line)) {
+            if (line.find("Type: ") != string::npos) {
+                type = line.substr(line.find(":")+2); //Makes sure to return the correct type as stored.
+                break;
+            }
+        }
+        if (type == "Jedi") player = new starwars::Jedi();
+        else if (type == "Guardian") player = new starwars::Guardian();
+        else if (type == "Consular") player = new starwars::Consular();
+        else if (type == "Sith") player = new starwars::Sith();
+        else if (type == "Darth") player = new starwars::Darth();
+        else if (type == "Acolyte") player = new starwars::Acolyte(); //Should create a character of the correct type.
+        else {
+            cout << "Unkown type in file. \n";
+            return nullptr;
+        }
+
+        if (player) player->loadFromFile(fileName);
+        return player;
+    }
 }
+
 
 
 void saveFileInfo() {
