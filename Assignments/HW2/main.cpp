@@ -195,6 +195,7 @@ starwars::character* loadCharacter() {
     starwars::character *player = nullptr;
     while (true) {
         cout << "Enter the name of the save file: (Ex: saveFile.txt)   ";
+        cin.ignore();
         getline(cin, fileName);
         cout << endl;
 
