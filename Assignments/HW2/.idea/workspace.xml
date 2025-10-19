@@ -24,10 +24,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="878fe131-c88b-4ba7-9e04-22edb81aa769" name="Changes" comment="Hopefully saves right file name">
+    <list default="true" id="878fe131-c88b-4ba7-9e04-22edb81aa769" name="Changes" comment="some debugging">
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/main.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.out" beforeDir="false" afterPath="$PROJECT_DIR$/main.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saves/aveFile.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +176,7 @@
       <workItem from="1760644041891" duration="2332000" />
       <workItem from="1760731135175" duration="3061000" />
       <workItem from="1760891810874" duration="169000" />
-      <workItem from="1760892092134" duration="1912000" />
+      <workItem from="1760892092134" duration="2274000" />
     </task>
     <task id="LOCAL-00001" summary="Copied HW1 into here">
       <option name="closed" value="true" />
@@ -425,7 +426,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760893860256</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Hopefully saves right file name">
+      <option name="closed" value="true" />
+      <created>1760894148011</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1760894148011</updated>
+    </task>
+    <task id="LOCAL-00033" summary="some debugging">
+      <option name="closed" value="true" />
+      <created>1760894258680</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1760894258680</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,6 +472,7 @@
     <MESSAGE value="saveFile changes to avoid infinite loop" />
     <MESSAGE value="Changes to save custom character" />
     <MESSAGE value="Hopefully saves right file name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hopefully saves right file name" />
+    <MESSAGE value="some debugging" />
+    <option name="LAST_COMMIT_MESSAGE" value="some debugging" />
   </component>
 </project>

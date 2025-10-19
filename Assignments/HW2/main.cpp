@@ -152,8 +152,6 @@ void menu() {
                 std::string fileName;
                 cout << endl;
                 cout << "Create a Save File (Ex: saveFile.txt): " << endl;
-                cin.clear();
-                cin.ignore(numeric_limits<streamsize>::max(), '\n'); //full flush
                 getline(cin, fileName);
                 cout << fileName << "File name entered" << endl;
                 if (player->getType() == "Jedi" || player->getType() == "Guardian" || player->getType() == "Consular") {
@@ -203,6 +201,7 @@ void menu() {
                 break;
             }
         }
+        cout << endl;
     }
 }
 

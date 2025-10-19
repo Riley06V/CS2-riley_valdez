@@ -1,4 +1,0 @@
-Name: Unknown Sith
-Type: Sith
-Health: 120
-LightsaberSkill: 60
