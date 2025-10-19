@@ -143,9 +143,10 @@ void menu() {
                 //Proper Enemy call
                 starwars::character *player = createCharacter();
                 std::string fileName;
+                cout << endl;
                 cout << "Create a Save File (Ex: saveFile.txt): " << endl;
                 cin.ignore();
-                cin >> fileName;
+                getline(cin, fileName);
                 if (player->getType() == "Jedi" || player->getType() == "Guardian" || player->getType() == "Consular") {
                     player->saveToFile(fileName);
                 } else if (player->getType() =="Sith" || player->getType() =="Darth" || player->getType() ==  "Acolyte") {
