@@ -138,8 +138,13 @@ void menu() {
         cout << "4. Create a custom game " << endl;
         cout << "5. Exit " << endl;
         cout << "Enter your choice: ";
-        cin.ignore();
         cin >> menuChoice;
+        if (cin.fail()) {
+            cin.clear();
+            cin.ignore();
+            cout << "Invalid input. Please enter a number;\n";
+            continue;
+        }
         switch (menuChoice) {
             case 1: {
                 //Proper Enemy call
