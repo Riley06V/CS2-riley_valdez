@@ -24,7 +24,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="878fe131-c88b-4ba7-9e04-22edb81aa769" name="Changes" comment="saveFile changes to avoid infinite loop" />
+    <list default="true" id="878fe131-c88b-4ba7-9e04-22edb81aa769" name="Changes" comment="Changes to save custom character" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -171,7 +171,7 @@
       <workItem from="1760644041891" duration="2332000" />
       <workItem from="1760731135175" duration="3061000" />
       <workItem from="1760891810874" duration="169000" />
-      <workItem from="1760892092134" duration="1026000" />
+      <workItem from="1760892092134" duration="1515000" />
     </task>
     <task id="LOCAL-00001" summary="Copied HW1 into here">
       <option name="closed" value="true" />
@@ -397,7 +397,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760893123041</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="saveFile changes to avoid infinite loop">
+      <option name="closed" value="true" />
+      <created>1760893392332</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1760893392332</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Changes to save custom character">
+      <option name="closed" value="true" />
+      <created>1760893586953</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1760893586953</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,6 +441,7 @@
     <MESSAGE value="Save Files for sharing" />
     <MESSAGE value="restart savefiles" />
     <MESSAGE value="saveFile changes to avoid infinite loop" />
-    <option name="LAST_COMMIT_MESSAGE" value="saveFile changes to avoid infinite loop" />
+    <MESSAGE value="Changes to save custom character" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes to save custom character" />
   </component>
 </project>

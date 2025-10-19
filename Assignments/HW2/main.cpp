@@ -138,6 +138,7 @@ void menu() {
         cout << "4. Create a custom game " << endl;
         cout << "5. Exit " << endl;
         cout << "Enter your choice: ";
+        cin.ignore();
         cin >> menuChoice;
         switch (menuChoice) {
             case 1: {
@@ -146,6 +147,7 @@ void menu() {
                 std::string fileName;
                 cout << endl;
                 cout << "Create a Save File (Ex: saveFile.txt): " << endl;
+                cin.clear();
                 cin.ignore();
                 getline(cin, fileName);
                 if (player->getType() == "Jedi" || player->getType() == "Guardian" || player->getType() == "Consular") {
@@ -176,6 +178,7 @@ void menu() {
                 starwars::character *customPlayer = createCustomCharacter();
                 cout << "2. Save to a new file (Ex. saveFile.txt): ";
                 string fileName;
+                cin.clear();
                 cin.ignore();
                 getline(cin, fileName);
                 customPlayer->saveToFile(fileName);
@@ -202,6 +205,7 @@ starwars::character* loadCharacter() {
     starwars::character *player = nullptr;
     while (true) {
         cout << "Enter the name of the save file: (Ex: saveFile.txt)   ";
+        cin.clear();
         cin.ignore();
         getline(cin, fileName);
         cout << endl;
