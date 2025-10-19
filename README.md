@@ -22,6 +22,15 @@ ________________________________________________________________________________
 | Location: | https://github.com/Riley06V/CS2-riley_valdez/tree/main/Assignments/HW1 |
 | Notes: | Finished, done with some bonus features such as menu, and file saving system |
 
+## Assignment #2
+| Riley Valdez | I deserve 100% |
+| --- | --- |
+| Name: | HW2 - Star Wars Auto Battler using class inheritance|
+| Description: | "Create a simple Auto Battler using classes" |
+| Due Date: | 10/13/2020 |
+| Status: | Finished |
+| Location: | https://github.com/Riley06V/CS2-riley_valdez/tree/main/Assignments/HW2 |
+| Notes: | Finished, done with some bonus features such as menu, and file saving system |
 
 # LABS
  
