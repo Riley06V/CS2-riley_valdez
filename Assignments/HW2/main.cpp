@@ -153,7 +153,7 @@ void menu() {
                 cout << endl;
                 cout << "Create a Save File (Ex: saveFile.txt): " << endl;
                 getline(cin, fileName);
-                cout << fileName << "File name entered" << endl;
+                //cout << fileName << "File name entered" << endl;
                 if (player->getType() == "Jedi" || player->getType() == "Guardian" || player->getType() == "Consular") {
                     player->saveToFile(fileName);
                 } else if (player->getType() =="Sith" || player->getType() =="Darth" || player->getType() ==  "Acolyte") {
