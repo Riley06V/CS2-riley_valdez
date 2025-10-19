@@ -174,7 +174,12 @@ void menu() {
             case 4: {
                 cout << "1. Create your character: " << endl;
                 starwars::character *customPlayer = createCustomCharacter();
-                cout << "2. Create your enemy: " << endl;
+                cout << "2. Save to a new file (Ex. saveFile.txt): ";
+                string fileName;
+                cin.ignore();
+                getline(cin, fileName);
+                customPlayer->saveToFile(fileName);
+                cout << "3. Create your enemy: " << endl;
                 starwars::character *customEnemy = createCustomCharacter();
                 battleStage(customPlayer, customEnemy);
                 break;
@@ -244,9 +249,10 @@ void saveFileInfo() {
             std::cout << " - " << entry.path().filename().string() << endl; //used cppreference.com
             found = true;
         }
+        cout << endl;
     }
     if (!found) {
-        std::cout << "No save files found in: " << savePath << std::endl;
+        std::cout << "\nNo save files found in: " << savePath << std::endl;
     }
 }
 
