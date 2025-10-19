@@ -24,11 +24,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="878fe131-c88b-4ba7-9e04-22edb81aa769" name="Changes" comment="saveFile changes to avoid infinite loop">
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/main.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.out" beforeDir="false" afterPath="$PROJECT_DIR$/main.out" afterDir="false" />
-    </list>
+    <list default="true" id="878fe131-c88b-4ba7-9e04-22edb81aa769" name="Changes" comment="saveFile changes to avoid infinite loop" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,7 +171,7 @@
       <workItem from="1760644041891" duration="2332000" />
       <workItem from="1760731135175" duration="3061000" />
       <workItem from="1760891810874" duration="169000" />
-      <workItem from="1760892092134" duration="700000" />
+      <workItem from="1760892092134" duration="1026000" />
     </task>
     <task id="LOCAL-00001" summary="Copied HW1 into here">
       <option name="closed" value="true" />
@@ -377,7 +373,31 @@
       <option name="project" value="LOCAL" />
       <updated>1760892724311</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="saveFile changes to avoid infinite loop">
+      <option name="closed" value="true" />
+      <created>1760892865045</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1760892865045</updated>
+    </task>
+    <task id="LOCAL-00027" summary="saveFile changes to avoid infinite loop">
+      <option name="closed" value="true" />
+      <created>1760892871428</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1760892871428</updated>
+    </task>
+    <task id="LOCAL-00028" summary="saveFile changes to avoid infinite loop">
+      <option name="closed" value="true" />
+      <created>1760893123041</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1760893123041</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

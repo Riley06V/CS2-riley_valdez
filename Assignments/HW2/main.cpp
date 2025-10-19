@@ -124,6 +124,7 @@ void battleStage(starwars::character* player, starwars::character* enemy) {
         }
 
     } while (player->getHealth() > 0 && enemy->getHealth() > 0);
+    cout << endl;
 }
 
 
@@ -161,7 +162,7 @@ void menu() {
                 if (!(player = loadCharacter())) {
                     cerr << "Failed to load a character" << endl;
                     break;
-            }
+                }
                 starwars::character *enemy = properEnemy(player);
                 battleStage(player, enemy);
                 break;
