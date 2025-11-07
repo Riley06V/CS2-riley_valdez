@@ -40,6 +40,10 @@ namespace starwars {
 		friend bool operator<=( starwars::character &character1,  starwars::character &character2);
 		friend bool operator>=( starwars::character &character1,  starwars::character &character2);
 
+        character& operator+(int heal);
+        character& operator-(int damage);
+
+
 	};
 }
 

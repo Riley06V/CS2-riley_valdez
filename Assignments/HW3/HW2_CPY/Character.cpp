@@ -118,3 +118,15 @@ bool operator<=( starwars::character &character1,  starwars::character &characte
 bool operator>=( starwars::character &character1,  starwars::character &character2) {
 	return character1.getLightsaberSkill() >= character2.getLightsaberSkill();
 }
+
+//overloading with + and -
+starwars::character& starwars::character::operator-(int damage) {
+  _health -= damage;
+  if (_health <= 0) _health = 0;
+  return *this;
+}
+
+starwars::character& starwars::character::operator+(int heal) {
+	_health += heal;
+	return *this;
+}

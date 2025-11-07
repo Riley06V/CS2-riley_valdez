@@ -85,19 +85,18 @@ starwars::character* properEnemy(starwars::character* player) {
 void battleStage(starwars::character* player, starwars::character* enemy) {
     //Using character class, from scratch
     cout << "\nYour Character:\n";
-    cout << player;
+    cout << *player << endl;
 
     cout << "\nEnemy Character:\n";
-    cout << enemy;
+    cout << *enemy << endl;
 
     compareCharacters(player, enemy);
 
     cout << "\n\nThe enemy provokes and attacks first!\n";
 
     do {
-        int damageToPlayer = enemy->attack();
-        cout <<"\n" << enemy->getName() << " attacks for " << damageToPlayer << " damage to " << player->getName() << "!" << endl;
-        player = (player - damageToPlayer);
+        cout <<"\n" << enemy->getName() << " attacks for " << enemy->attack() << " damage to " << player->getName() << "!" << endl;
+        *player - enemy->attack();
         cout << player->getName() << " takes damage!\n";
         cout << player->getName() << " has " << player->getHealth() << " health remaining!" << endl;
 
@@ -110,19 +109,19 @@ void battleStage(starwars::character* player, starwars::character* enemy) {
 
         int damageToEnemy = player->attack();
         cout << player->getName() << " attacks for " << damageToEnemy << endl;
-        enemy = (enemy - damageToEnemy);
+        *enemy + enemy->getLightsaberSkill();
         cout << enemy->getName() << "'s remaining health: " << enemy->getHealth() << endl;
 
         if (enemy->getHealth() <= 0) {
             if (player->getType() == "Sith" || player->getType() == "Acolyte" || player->getType() == "Darth") {
                 cout << player->getName() << " has cleansed the weak light side..." << endl;
-                player = (player + player->getLightsaberSkill());
+                *player + player->getLightsaberSkill();
                 cout << player->getName() << " rests and recovers for " << player->getLightsaberSkill() << " health!" << endl;
             }
 
             if (player->getType() == "Jedi" || player->getType() == "Guardian" || player->getType() == "Consular") {
                 cout << player->getName() << " has brought balance to the force!" << endl;
-                player = (player + player->getLightsaberSkill());
+                *player + player->getLightsaberSkill();
                 cout << player->getName() << " rests and recovers for " << player->getLightsaberSkill() << " health!" << endl;
             }
             break;
