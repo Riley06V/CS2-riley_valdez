@@ -3,7 +3,6 @@
 #include "Jedi.h"
 #include "Sith.h"
 #include <filesystem>
-
 #include "Darth.h"
 #include "Acolyte.h"
 #include "Consular.h"
@@ -86,10 +85,10 @@ starwars::character* properEnemy(starwars::character* player) {
 void battleStage(starwars::character* player, starwars::character* enemy) {
     //Using character class, from scratch
     cout << "\nYour Character:\n";
-    cout << player << endl;
+    cout << *player << endl;
 
     cout << "\nEnemy Character:\n";
-    cout << enemy << endl;
+    cout << *enemy << endl;
 
     compareCharacters(player, enemy);
 
@@ -105,6 +104,7 @@ void battleStage(starwars::character* player, starwars::character* enemy) {
             cout << enemy->getName() << " has won this battle..." << endl;
             enemy = (enemy + enemy->getLightsaberSkill());
             cout << enemy->getName() << " rests and recovers for " << enemy->getLightsaberSkill() << " health!" << endl;
+            cout << enemy->getHealth();
             break;
         }
 
