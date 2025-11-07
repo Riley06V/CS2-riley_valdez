@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Character.h"
 #include "Jedi.h"
 #include "Sith.h"
 #include <filesystem>
@@ -85,10 +86,10 @@ starwars::character* properEnemy(starwars::character* player) {
 void battleStage(starwars::character* player, starwars::character* enemy) {
     //Using character class, from scratch
     cout << "\nYour Character:\n";
-    cout << *player << endl;
+    cout << player << endl;
 
     cout << "\nEnemy Character:\n";
-    cout << *enemy << endl;
+    cout << enemy << endl;
 
     compareCharacters(player, enemy);
 
@@ -109,7 +110,7 @@ void battleStage(starwars::character* player, starwars::character* enemy) {
 
         int damageToEnemy = player->attack();
         cout << player->getName() << " attacks for " << damageToEnemy << endl;
-        *enemy + enemy->getLightsaberSkill();
+        *enemy - player->attack();
         cout << enemy->getName() << "'s remaining health: " << enemy->getHealth() << endl;
 
         if (enemy->getHealth() <= 0) {
