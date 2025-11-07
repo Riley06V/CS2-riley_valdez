@@ -88,7 +88,8 @@ void starwars::character::loadFromFile(std::string &fileName) {
 }
 
 std::ostream& operator<<(std::ostream& os, starwars::character& characterOutput) {
-	os << "Name: " << characterOutput.getName() << "\nHealth: " << characterOutput.getHealth()
+	os << "Name: " << characterOutput.getName()
+       << "\nHealth: " << characterOutput.getHealth()
 	   << "\nAttack Power: " << characterOutput.getLightsaberSkill() << "\n";
 	return os;
 }
