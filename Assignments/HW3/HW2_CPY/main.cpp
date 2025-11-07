@@ -15,6 +15,7 @@ using namespace std;
 void battleStage(starwars::character, starwars::character);
 void menu();
 void saveFileInfo();
+void compareCharacters(starwars::character*, starwars::character*);
 starwars::character* properEnemy(starwars::character*);
 starwars::character* createCharacter();
 starwars::character* createCustomCharacter();
@@ -84,14 +85,12 @@ starwars::character* properEnemy(starwars::character* player) {
 void battleStage(starwars::character* player, starwars::character* enemy) {
     //Using character class, from scratch
     cout << "\nYour Character:\n";
-    cout << "Name: " << player->getName() << "\n";
-    cout << "Type: " << player->getType() << "\n";
-    cout << "Health: " << player->getHealth() << "\n";
+    cout << player;
 
     cout << "\nEnemy Character:\n";
-    cout << "Name: " << enemy->getName() << "\n";
-    cout << "Type: " << enemy->getType() << "\n";
-    cout << "Health: " << enemy->getHealth() << "\n";
+    cout << enemy;
+
+    compareCharacters(player, enemy);
 
     cout << "\n\nThe enemy provokes and attacks first!\n";
 
@@ -303,3 +302,12 @@ starwars::character* createCustomCharacter() {
     return nullptr;
 }
 
+void compareCharacters(starwars::character* c1, starwars::character* c2) {
+   if(c1 == c2) {
+       cout << "This is an equal battle..." << endl;
+   } else if (c1 < c2) {
+       cout << c2->getName() << " has more lightsaber training than " << c1->getName() << " and is looking dangerous..." << endl;
+   } else if (c1 > c2) {
+       cout << c1->getName() << " has more lightsaber training than " << c2->getName() << " and is looking dangerous..." << endl;
+   }
+}

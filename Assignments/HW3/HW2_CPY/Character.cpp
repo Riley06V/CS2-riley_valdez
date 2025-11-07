@@ -86,3 +86,35 @@ void starwars::character::loadFromFile(std::string &fileName) {
 			  << "Health: " << _health << "\n"
 			  << "LightsaberSkill: " << _lightsaberSkill << "\n";
 }
+
+std::ostream& operator<<(std::ostream& os, starwars::character& characterOutput) {
+	os << "Name: " << characterOutput.getName() << "\nHealth: " << characterOutput.getHealth()
+	   << "\nAttack Power: " << characterOutput.getLightsaberSkill() << "\n";
+	return os;
+}
+
+
+//Comparison Operators based on attack
+bool operator!=( starwars::character &character1,  starwars::character &character2) {
+	return character1.getLightsaberSkill() != character2.getLightsaberSkill();
+}
+
+bool operator==( starwars::character &character1,  starwars::character &character2) {
+	return character1.getLightsaberSkill() == character2.getLightsaberSkill();
+}
+
+bool operator<( starwars::character &character1,  starwars::character &character2) {
+	return character1.getLightsaberSkill() < character2.getLightsaberSkill();
+}
+
+bool operator>( starwars::character &character1,  starwars::character &character2) {
+	return character1.getLightsaberSkill() > character2.getLightsaberSkill();
+}
+
+bool operator<=( starwars::character &character1,  starwars::character &character2) {
+	return character1.getLightsaberSkill() <= character2.getLightsaberSkill();
+}
+
+bool operator>=( starwars::character &character1,  starwars::character &character2) {
+	return character1.getLightsaberSkill() >= character2.getLightsaberSkill();
+}

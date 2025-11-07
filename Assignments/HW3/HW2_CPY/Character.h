@@ -28,6 +28,18 @@ namespace starwars {
         virtual int takeDamage(int damage);
 		virtual void saveToFile(std::string &fileName);
 		virtual void loadFromFile(std::string &fileName);
+
+		friend std::ostream& operator<<(std::ostream& os, starwars::character& characterOutput);
+
+
+		//Comparison Operators based on attack
+		friend bool operator!=( starwars::character &character1,  starwars::character &character2);
+		friend bool operator==( starwars::character &character1,  starwars::character &character2);
+		friend bool operator<( starwars::character &character1,  starwars::character &character2);
+		friend bool operator>( starwars::character &character1,  starwars::character &character2);
+		friend bool operator<=( starwars::character &character1,  starwars::character &character2);
+		friend bool operator>=( starwars::character &character1,  starwars::character &character2);
+
 	};
 }
 
