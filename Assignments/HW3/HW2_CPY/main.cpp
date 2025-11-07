@@ -97,27 +97,33 @@ void battleStage(starwars::character* player, starwars::character* enemy) {
     do {
         int damageToPlayer = enemy->attack();
         cout <<"\n" << enemy->getName() << " attacks for " << damageToPlayer << " damage to " << player->getName() << "!" << endl;
-        player->takeDamage(damageToPlayer);
+        player = (player - damageToPlayer);
         cout << player->getName() << " takes damage!\n";
         cout << player->getName() << " has " << player->getHealth() << " health remaining!" << endl;
 
         if (player->getHealth() <= 0) {
             cout << enemy->getName() << " has won this battle..." << endl;
+            enemy = (enemy + enemy->getLightsaberSkill());
+            cout << enemy->getName() << " rests and recovers for " << enemy->getLightsaberSkill() << " health!" << endl;
             break;
         }
 
         int damageToEnemy = player->attack();
         cout << player->getName() << " attacks for " << damageToEnemy << endl;
-        enemy->takeDamage(damageToEnemy);
+        enemy = (enemy - damageToEnemy);
         cout << enemy->getName() << "'s remaining health: " << enemy->getHealth() << endl;
 
         if (enemy->getHealth() <= 0) {
             if (player->getType() == "Sith" || player->getType() == "Acolyte" || player->getType() == "Darth") {
                 cout << player->getName() << " has cleansed the weak light side..." << endl;
+                player = (player + player->getLightsaberSkill());
+                cout << player->getName() << " rests and recovers for " << player->getLightsaberSkill() << " health!" << endl;
             }
 
             if (player->getType() == "Jedi" || player->getType() == "Guardian" || player->getType() == "Consular") {
                 cout << player->getName() << " has brought balance to the force!" << endl;
+                player = (player + player->getLightsaberSkill());
+                cout << player->getName() << " rests and recovers for " << player->getLightsaberSkill() << " health!" << endl;
             }
             break;
         }
