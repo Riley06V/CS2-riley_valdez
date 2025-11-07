@@ -29,13 +29,13 @@ void starwars::character::setLightsaberSkill(int lightsaberSkill) {
 void starwars::character::setType(std::string type) {
 	_type = type;
 }
-std::string starwars::character::getName() {
+std::string starwars::character::getName() const {
 	return  _name;
 }
-int starwars::character::getHealth() {
+int starwars::character::getHealth() const {
 	return _health;
 }
-int starwars::character::getLightsaberSkill() {
+int starwars::character::getLightsaberSkill() const {
 	return _lightsaberSkill;
 }
 
@@ -87,7 +87,7 @@ void starwars::character::loadFromFile(std::string &fileName) {
 			  << "LightsaberSkill: " << _lightsaberSkill << "\n";
 }
 
-std::ostream& operator<<(std::ostream& os, starwars::character& characterOutput) {
+std::ostream& operator<<(std::ostream& os, const starwars::character& characterOutput) {
 	os << "Name: " << characterOutput.getName()
        << "\nHealth: " << characterOutput.getHealth()
 	   << "\nAttack Power: " << characterOutput.getLightsaberSkill() << "\n";
