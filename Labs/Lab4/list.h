@@ -82,6 +82,11 @@ void List<T1>::push_front(T1 data)
 template <class T1>
 T1 List<T1>::front()
 {
+    if (_head == nullptr) {
+        cout << "List is empty" << endl;
+        return 0;
+    }
+    return _head->data;
 }
 
 // remove the first element from the list and return its data
