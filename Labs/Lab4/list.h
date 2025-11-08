@@ -94,6 +94,17 @@ T1 List<T1>::front()
 template <class T1>
 T1 List<T1>::pop_front()
 {
+    //make sure its not empty
+    if (_head == nullptr) return nullptr;
+    Node<T1> *temp = _head;
+    //move head to the next node
+    _head = _head->next;
+    if (_head != nullptr) {
+        _head->prev = nullptr;
+    }
+    delete temp;
+    listSize--;
+    return _head->data;
 }
 
 // add an element to the end of hte list, updating _tail
