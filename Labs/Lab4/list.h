@@ -130,6 +130,16 @@ T1 List<T1>::back()
 template <class T1>
 T1 List<T1>::pop_back()
 {
+    if (_tail == nullptr) return nullptr;
+    Node<T1> *temp = _tail;
+    //move tail to the previous
+    _tail = _tail->prev;
+    if (_tail != nullptr) {
+        _tail->next = nullptr;
+    }
+    delete temp;
+    listSize--;
+    return _tail->data;
 }
 
 // overloading <<, should return a space separated stream of all of the elements
