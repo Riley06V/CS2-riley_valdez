@@ -45,6 +45,13 @@ List<T1>::List()
 template <class T1>
 List<T1>::~List()
 {
+    Node<T1> *curr = _head;
+    while (curr != nullptr) {
+        Node<T1> *nextNode= curr->next;
+        delete curr;
+        curr = nextNode;
+    }
+    listSize = 0;
 }
 
 // return true if the list is empty, false otherwise.
