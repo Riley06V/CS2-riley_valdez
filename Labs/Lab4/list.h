@@ -110,7 +110,7 @@ T1 List<T1>::pop_front()
     Node<T1> *temp = _head;
     T1 data = temp->getData();
     //move head to the next node
-    _head = _head->getNext();
+    _head = temp->getNext();
     if (_head != nullptr) {
         _head->setPrev(nullptr);
     } else {
@@ -126,9 +126,9 @@ template <class T1>
 void List<T1>::push_back(T1 data)
 {
     Node<T1> *newNode = new Node<T1>(data);
-    newNode->_prev = _tail; //add-on to the back, newNode now end
+    newNode->getPrev() = _tail; //add-on to the back, newNode now end
     if (_tail != nullptr) {
-        _tail->_next = newNode;
+        _tail->setNext(newNode);
     } else {
         _head = newNode; //first node case
     }
@@ -145,7 +145,7 @@ T1 List<T1>::back()
         cout << "List is empty" << endl;
         return 0;
     }
-    return _tail->_data;
+    return _tail->getData();
 }
 
 // remove the last element from the list and return its data
@@ -158,24 +158,27 @@ T1 List<T1>::pop_back()
         return 0;
     }
     Node<T1> *temp = _tail;
+    T1 data = temp->getData();
     //move tail to the previous
-    _tail = _tail->_prev;
+    _tail = temp->getPrev();
     if (_tail != nullptr) {
-        _tail->_next = nullptr;
+        _tail->setNext(nullptr);
+    } else {
+        _head = nullptr; //empty list
     }
     delete temp;
     listSize--;
-    return _tail->_data;
+    return data;
 }
 
 // overloading <<, should return a space separated stream of all of the elements
 template <class T1>
 ostream &operator<<(ostream &os, const List<T1> &list)
 {
-    Node<T1> *curr = list._head;
+    Node<T1> *curr = list.getHead();
     while (curr != nullptr) {
-        os << curr->_data << " "; //print element's data
-        curr = curr->_next; //Go to the next element
+        os << curr->getData() << " "; //print element's data
+        curr = curr->getNext(); //Go to the next element
     }
     return os;
 }
@@ -188,9 +191,9 @@ bool List<T1>::operator==(const List<T1>& rhs)
     Node<T1> *curr1 = _head;
     Node<T1> *curr2 = rhs._head;
     while (curr1 != nullptr && curr2 != nullptr) {
-        if (curr1->_data != curr2->_data) return false; //if one is not equal to the other in the location break
-        curr1 = curr1->_next; //go through both until nullptr
-        curr2 = curr2->_next;
+        if (curr1->getData() != curr2->getData()) return false; //if one is not equal to the other in the location break
+        curr1 = curr1->getNext(); //go through both until nullptr
+        curr2 = curr2->getNext();
     }
     return true; //both reached nullptr at the same time, so equal
 }
