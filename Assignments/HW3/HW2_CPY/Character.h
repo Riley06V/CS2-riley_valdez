@@ -20,16 +20,18 @@ namespace starwars {
         void setHealth(int health);
         void setLightsaberSkill(int lightsaberSkill);
 		void setType(std::string type);
+
         std::string getName() const;
         int getHealth() const;
         int getLightsaberSkill() const;
+
 		virtual std::string getType();
         virtual int attack();
         virtual int takeDamage(int damage);
 		virtual void saveToFile(std::string &fileName);
 		virtual void loadFromFile(std::string &fileName);
 
-		friend std::ostream& operator<<(std::ostream& os, const starwars::character& characterOutput);
+		friend std::ostream& operator<<(std::ostream& os, const starwars::character* characterOutput);
 
 
 		//Comparison Operators based on attack

@@ -12,7 +12,7 @@ using namespace std;
 //void saveToFile();
 //void loadFromFile(); Belong in Jedi Class
 
-void battleStage(starwars::character, starwars::character);
+void battleStage(starwars::character*, starwars::character*);
 void menu();
 void saveFileInfo();
 void compareCharacters(starwars::character*, starwars::character*);
@@ -85,10 +85,12 @@ starwars::character* properEnemy(starwars::character* player) {
 void battleStage(starwars::character* player, starwars::character* enemy) {
     //Using character class, from scratch
     cout << "\nYour Character:\n";
-    cout << *player << endl;
+    //Operator Overload
+    cout << player << endl;
 
     cout << "\nEnemy Character:\n";
-    cout << *enemy << endl;
+    //Operator Overlaod
+    cout << enemy << endl;
 
     compareCharacters(player, enemy);
 

@@ -87,10 +87,11 @@ void starwars::character::loadFromFile(std::string &fileName) {
 			  << "LightsaberSkill: " << _lightsaberSkill << "\n";
 }
 
-std::ostream& operator<<(std::ostream& os, const starwars::character& characterOutput) {
-	os << "Name: " << characterOutput.getName()
-       << "\nHealth: " << characterOutput.getHealth()
-	   << "\nAttack Power: " << characterOutput.getLightsaberSkill() << "\n";
+std::ostream& operator<<(std::ostream& os, const starwars::character* characterOutput) {
+//	os << "Name: " << characterOutput.getName()
+//       << "\nHealth: " << characterOutput.getHealth()
+//	   << "\nAttack Power: " << characterOutput.getLightsaberSkill() << "\n";
+	os << "Hello World!" << std::endl;
 	return os;
 }
 
