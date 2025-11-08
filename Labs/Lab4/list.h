@@ -47,7 +47,7 @@ List<T1>::~List()
 {
     Node<T1> *curr = _head;
     while (curr != nullptr) {
-        Node<T1> *nextNode= curr->_next;
+        Node<T1> *nextNode= curr->getNext();
         delete curr;
         curr = nextNode;
     }
@@ -73,7 +73,7 @@ size_t List<T1>::size()
 template <class T1>
 void List<T1>::push_front(T1 data)
 {
-    Node<T1> *newNode = new Node<T1>(data);
+    auto *newNode = new Node<T1>(data);
     newNode->setNext(_head);
     newNode->setPrev(nullptr);
     if (_head != nullptr) {
@@ -125,7 +125,7 @@ T1 List<T1>::pop_front()
 template <class T1>
 void List<T1>::push_back(T1 data)
 {
-    Node<T1> *newNode = new Node<T1>(data);
+    auto *newNode = new Node<T1>(data);
     newNode->getPrev() = _tail; //add-on to the back, newNode now end
     if (_tail != nullptr) {
         _tail->setNext(newNode);
@@ -175,7 +175,7 @@ T1 List<T1>::pop_back()
 template <class T1>
 ostream &operator<<(ostream &os, const List<T1> &list)
 {
-    Node<T1> *curr = list.getHead();
+    Node<T1> *curr = list._head;
     while (curr != nullptr) {
         os << curr->getData() << " "; //print element's data
         curr = curr->getNext(); //Go to the next element
