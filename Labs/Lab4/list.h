@@ -162,10 +162,25 @@ T1 List<T1>::pop_back()
 template <class T1>
 ostream &operator<<(ostream &os, const List<T1> &list)
 {
+    Node<T1> *curr = list._head;
+    while (curr != nullptr) {
+        os << curr->data << " "; //print element's data
+        curr = curr->next; //Go to the next element
+    }
+    return os;
 }
 
 // should iterate through each list to check that they are exactly the same
 template <class T1>
 bool List<T1>::operator==(const List<T1>& rhs)
 {
+    if (listSize != rhs.listSize) return false;
+    Node<T1> *curr1 = _head;
+    Node<T1> *curr2 = rhs._head;
+    while (curr1 != nullptr && curr2 != nullptr) {
+        if (curr1->data != curr2->data) return false; //if one is not equal to the other in the location break
+        curr1 = curr1->next; //go through both until nullptr
+        curr2 = curr2->next;
+    }
+    return true; //both reached nullptr at the same time, so equal
 }
