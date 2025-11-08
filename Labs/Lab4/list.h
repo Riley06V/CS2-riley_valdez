@@ -36,6 +36,9 @@ class List
 template <class T1>
 List<T1>::List()
 {
+    _head = nullptr;
+    _tail = nullptr;
+    listSize = 0;
 }
 
 // iteratively delete the list starting at _head
@@ -49,18 +52,29 @@ List<T1>::~List()
 template <class T1>
 bool List<T1>::empty()
 {
+    return _head == nullptr && _tail == nullptr;
 }
 
 // return number of elements in list
 template <class T1>
 size_t List<T1>::size()
 {
+    return listSize;
 }
 
 // add an element to the beginning of the list, updating _head
 template <class T1>
 void List<T1>::push_front(T1 data)
 {
+    Node<T1> *newNode = new Node<T1>(data);
+    newNode->next = _head;
+    if (_head != nullptr) {
+        _head->prev = newNode;
+    } else {
+        _tail = newNode; //first
+    }
+    _head = newNode;
+    listSize++;
 }
 
 // return the first element in the list.
