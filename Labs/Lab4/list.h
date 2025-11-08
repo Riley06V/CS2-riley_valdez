@@ -111,6 +111,15 @@ T1 List<T1>::pop_front()
 template <class T1>
 void List<T1>::push_back(T1 data)
 {
+    Node<T1> *newNode = new Node<T1>(data);
+    newNode->_prev = _tail; //add-on to the back, newNode now end
+    if (_tail != nullptr) {
+        _tail->next = newNode;
+    } else {
+        _head = newNode; //first node case
+    }
+    _tail = newNode;
+    listSize++;
 }
 
 // return the last element in the list.
