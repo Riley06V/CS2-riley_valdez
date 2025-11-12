@@ -125,8 +125,9 @@ T1 List<T1>::pop_front()
 template <class T1>
 void List<T1>::push_back(T1 data)
 {
-    auto *newNode = new Node<T1>(data);
-    newNode->getPrev() = _tail; //add-on to the back, newNode now end
+    auto *newNode = new Node<T1>();
+    newNode->setData(data); //Manually set data cuz no paramaterized constructor
+    newNode->setPrev(_tail); //add-on to the back, newNode now end
     if (_tail != nullptr) {
         _tail->setNext(newNode);
     } else {
