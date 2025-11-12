@@ -47,6 +47,8 @@ namespace starwars {
 
 
 	};
+
+	std::ostream& operator<<(std::ostream& os, const starwars::character& characterOutput);
 }
 
 
