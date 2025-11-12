@@ -31,7 +31,7 @@ namespace starwars {
 		virtual void saveToFile(std::string &fileName);
 		virtual void loadFromFile(std::string &fileName);
 
-		friend std::ostream& operator<<(std::ostream& os, const starwars::character* characterOutput);
+		friend std::ostream& operator<<(std::ostream& os, const starwars::character& characterOutput);
 
 
 		//Comparison Operators based on attack

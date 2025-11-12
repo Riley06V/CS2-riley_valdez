@@ -86,11 +86,11 @@ void battleStage(starwars::character* player, starwars::character* enemy) {
     //Using character class, from scratch
     cout << "\nYour Character:\n";
     //Operator Overload
-    cout << player << endl;
+    cout << *player << endl;
 
     cout << "\nEnemy Character:\n";
     //Operator Overlaod
-    cout << enemy << endl;
+    cout << *enemy << endl;
 
     compareCharacters(player, enemy);
 
