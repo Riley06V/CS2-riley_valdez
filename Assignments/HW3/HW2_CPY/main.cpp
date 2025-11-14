@@ -104,9 +104,9 @@ void battleStage(starwars::character* player, starwars::character* enemy) {
 
         if (player->getHealth() <= 0) {
             cout << enemy->getName() << " has won this battle..." << endl;
-            enemy = (enemy + enemy->getLightsaberSkill());
+            *enemy + enemy->getLightsaberSkill();
             cout << enemy->getName() << " rests and recovers for " << enemy->getLightsaberSkill() << " health!" << endl;
-            cout << enemy->getHealth();
+            cout << enemy->getName() << "'s health is: " << enemy->getHealth();
             break;
         }
 
@@ -120,12 +120,15 @@ void battleStage(starwars::character* player, starwars::character* enemy) {
                 cout << player->getName() << " has cleansed the weak light side..." << endl;
                 *player + player->getLightsaberSkill();
                 cout << player->getName() << " rests and recovers for " << player->getLightsaberSkill() << " health!" << endl;
+				cout << player->getName() << "'s health is: " << player->getHealth();
+
             }
 
             if (player->getType() == "Jedi" || player->getType() == "Guardian" || player->getType() == "Consular") {
                 cout << player->getName() << " has brought balance to the force!" << endl;
                 *player + player->getLightsaberSkill();
                 cout << player->getName() << " rests and recovers for " << player->getLightsaberSkill() << " health!" << endl;
+                cout << player->getName() << "'s health is: " << player->getHealth();
             }
             break;
         }
