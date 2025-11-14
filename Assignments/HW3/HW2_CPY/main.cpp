@@ -97,7 +97,8 @@ void battleStage(starwars::character* player, starwars::character* enemy) {
     cout << "\n\nThe enemy provokes and attacks first!\n";
 
     do {
-        cout <<"\n" << enemy->getName() << " attacks for " << enemy->attack() << " damage to " << player->getName() << "!" << endl;
+      	int damageToPlayer = enemy->attack();
+        cout <<"\n" << enemy->getName() << " attacks for " << damageToPlayer << " damage to " << player->getName() << "!" << endl;
         *player - enemy->attack();
         cout << player->getName() << " takes damage!\n";
         cout << player->getName() << " has " << player->getHealth() << " health remaining!" << endl;
