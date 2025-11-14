@@ -17,7 +17,7 @@ ________________________________________________________________________________
 | --- | --- |
 | Name: | HW1 - Star Wars Auto Battler |
 | Description: | "Create a simple Auto Battler using classes" |
-| Due Date: | 9/22/2020 |
+| Due Date: | 9/22/2025 |
 | Status: | Finished |
 | Location: | https://github.com/Riley06V/CS2-riley_valdez/tree/main/Assignments/HW1 |
 | Notes: | Finished, done with some bonus features such as menu, and file saving system |
@@ -27,10 +27,20 @@ ________________________________________________________________________________
 | --- | --- |
 | Name: | HW2 - Star Wars Auto Battler using class inheritance|
 | Description: | "Create a simple Auto Battler using classes" |
-| Due Date: | 10/13/2020 |
+| Due Date: | 10/13/2025 |
 | Status: | Finished |
 | Location: | https://github.com/Riley06V/CS2-riley_valdez/tree/main/Assignments/HW2 |
 | Notes: | Finished, done with some bonus features such as menu, and file saving system |
+
+## Assignment #3
+| Riley Valdez | I deserve 100% |
+| --- | --- |
+| Name: | HW2 - Star Wars Auto Battler using operator overloading|
+| Description: | "Create a simple Auto Battler using classes" |
+| Due Date: | 11/3/2025 |
+| Status: | Finished |
+| Location: | https://github.com/Riley06V/CS2-riley_valdez/tree/main/Assignments/HW3/HW2_CPY |
+| Notes: | Finished, after some help |
 
 # LABS
  
