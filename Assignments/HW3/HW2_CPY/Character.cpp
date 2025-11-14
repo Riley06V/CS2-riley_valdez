@@ -87,7 +87,7 @@ void starwars::character::loadFromFile(std::string &fileName) {
 			  << "LightsaberSkill: " << _lightsaberSkill << "\n";
 }
 
-std::ostream& operator<<(std::ostream& os, const starwars::character& characterOutput) {
+std::ostream& starwars::operator<<(std::ostream& os, const starwars::character& characterOutput) {
 	os << "Name: " << characterOutput.getName()
        << "\nHealth: " << characterOutput.getHealth()
 	   << "\nAttack Power: " << characterOutput.getLightsaberSkill() << "\n";
@@ -97,28 +97,28 @@ std::ostream& operator<<(std::ostream& os, const starwars::character& characterO
 
 
 //Comparison Operators based on attack
-bool operator!=( starwars::character &character1,  starwars::character &character2) {
-	return character1.getLightsaberSkill() != character2.getLightsaberSkill();
+bool starwars::character::operator!=( starwars::character &character) {
+	return this->getLightsaberSkill() != character.getLightsaberSkill();
 }
 
-bool operator==( starwars::character &character1,  starwars::character &character2) {
-	return character1.getLightsaberSkill() == character2.getLightsaberSkill();
+bool starwars::character::operator==( starwars::character &character) {
+	return this->getLightsaberSkill() == character.getLightsaberSkill();
 }
 
-bool operator<( starwars::character &character1,  starwars::character &character2) {
-	return character1.getLightsaberSkill() < character2.getLightsaberSkill();
+bool starwars::character::operator<( starwars::character &character) {
+	return this->getLightsaberSkill() < character.getLightsaberSkill();
 }
 
-bool operator>( starwars::character &character1,  starwars::character &character2) {
-	return character1.getLightsaberSkill() > character2.getLightsaberSkill();
+bool starwars::character::operator>( starwars::character &character) {
+	return this->getLightsaberSkill() > character.getLightsaberSkill();
 }
 
-bool operator<=( starwars::character &character1,  starwars::character &character2) {
-	return character1.getLightsaberSkill() <= character2.getLightsaberSkill();
+bool starwars::character::operator<=( starwars::character &character) {
+	return this->getLightsaberSkill() <= character.getLightsaberSkill();
 }
 
-bool operator>=( starwars::character &character1,  starwars::character &character2) {
-	return character1.getLightsaberSkill() >= character2.getLightsaberSkill();
+bool starwars::character::operator>=( starwars::character &character) {
+	return this->getLightsaberSkill() >= character.getLightsaberSkill();
 }
 
 //overloading with + and -
