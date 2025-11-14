@@ -91,7 +91,6 @@ std::ostream& starwars::operator<<(std::ostream& os, const starwars::character& 
 	os << "Name: " << characterOutput.getName()
        << "\nHealth: " << characterOutput.getHealth()
 	   << "\nAttack Power: " << characterOutput.getLightsaberSkill() << "\n";
-//	os << "Hello World!" << std::endl;
 	return os;
 }
 
