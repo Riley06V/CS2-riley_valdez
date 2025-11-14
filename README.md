@@ -54,7 +54,7 @@ ________________________________________________________________________________
 | Location: | https://github.com/Riley06V/CS2-riley_valdez/tree/main/Labs/Lab2 |
 | Notes: | Complete, I overthought the logic, talked about it during class Friday 9-12 |
 
-## Lab #2
+## Lab #3
 | Riley Valdez | I deserve 100% |
 | --- | --- |
 | Name: | Fractions Operator Overloading |
@@ -63,4 +63,15 @@ ________________________________________________________________________________
 | Status: | Complete |
 | Location: | https://github.com/Riley06V/CS2-riley_valdez/tree/main/Labs/Lab3 |
 | Notes: | Complete, Stayed debugging logic for incorrectly auto-completed code 👍 |
+
+## Lab #4
+| Riley Valdez | I deserve 100% |
+| --- | --- |
+| Name: | Doubly Linked List |
+| Description: | "Complete Functions for doubly linked list" |
+| Due Date: | 11/10/2025 |
+| Status: | Complete |
+| Location: | https://github.com/Riley06V/CS2-riley_valdez/tree/main/Labs/Lab4 |
+| Notes: | Completed by only touching list.h file |
+
 
