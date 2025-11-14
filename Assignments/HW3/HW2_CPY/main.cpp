@@ -311,11 +311,11 @@ starwars::character* createCustomCharacter() {
 }
 
 void compareCharacters(starwars::character* c1, starwars::character* c2) {
-   if(c1 == c2) {
+   if(*c1 == *c2) {
        cout << "This is an equal battle..." << endl;
-   } else if (c1 < c2) {
+   } else if (*c1 < *c2) {
        cout << c2->getName() << " has more lightsaber training than " << c1->getName() << " and is looking dangerous..." << endl;
-   } else if (c1 > c2) {
+   } else if (*c1 > *c2) {
        cout << c1->getName() << " has more lightsaber training than " << c2->getName() << " and is looking dangerous..." << endl;
    }
 }
