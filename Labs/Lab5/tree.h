@@ -25,6 +25,7 @@ public:
 template <class T1>
 BST<T1>::~BST()
 {
+    destroyTree(_root);
 }
 
 // This should recursively walk the tree and delete a node if both leafs are null. You can return from a void function if you just have the return statement.
@@ -32,13 +33,17 @@ BST<T1>::~BST()
 template <class T1>
 void BST<T1>::destroyTree(Node<T1>* root)
 {
-    return;
+    if (root == NULL) return; // if root is empty break
+    destroyTree(root->getLeft());
+    destroyTree(root->getRight());
+    delete root;
 }
 
 // Public method that takes in some data and passes that into the removeData method. Don't forget to update _root as you may end up deleting the original root.
 template <class T1>
 void BST<T1>::remove(T1 data)
 {
+    _root = removeData(_root, data);
 }
 
 // Private method to recursively walk the tree until the data is found.
@@ -49,14 +54,41 @@ void BST<T1>::remove(T1 data)
 template <class T1>
 Node<T1> *BST<T1>::removeData(Node<T1> *root, T1 data)
 {
-    return nullptr;
+    if (root == nullptr) return nullptr;
+
+    if (data < root->getData()) {
+        root->setLeft(removeData(root->getLeft(), data));
+    } else if (data > root->getData()) {
+        root->setRight(removeData(root->getRight(), data));
+    } else {
+        // Found node to delete
+        if (root->getLeft() == nullptr) {
+            Node<T1>* temp = root->getRight();
+            delete root;
+            return temp;
+        } else if (root->getRight() == nullptr) {
+            Node<T1>* temp = root->getLeft();
+            delete root;
+            return temp;
+        } else {
+            // Two children: replace with inorder successor
+            Node<T1>* temp = minVal(root->getRight());
+            root->setData(temp->getData());
+            root->setRight(removeData(root->getRight(), temp->getData()));
+        }
+    }
+    return root;
 }
 
 // Given a node, find the smallest value in that subtree. Return that node
 template <class T1>
 Node<T1> *BST<T1>::minVal(Node<T1> *root)
 {
-    return nullptr;
+    Node<T1>* current = root;
+    while (current && current->getLeft() != nullptr) {
+        current = current->getLeft();
+    }
+    return current;
 }
 
 // Given data and a node, recursively walk the tree to find that node if it exists.
