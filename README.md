@@ -84,4 +84,14 @@ ________________________________________________________________________________
 | Location: | https://github.com/Riley06V/CS2-riley_valdez/tree/main/Labs/Lab4 |
 | Notes: | Completed by only touching list.h file |
 
+## Lab #4
+| Riley Valdez | I deserve 100% |
+| --- | --- |
+| Name: | Binary Search Tree |
+| Description: | "Complete Functions for BST" |
+| Due Date: | 12/18/2025 |
+| Status: | Complete |
+| Location: | https://github.com/Riley06V/CS2-riley_valdez/tree/main/Labs/Lab5 |
+| Notes: | Completed by only touching tree.h file |
+
 
