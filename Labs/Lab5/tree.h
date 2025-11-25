@@ -126,8 +126,6 @@ template <class T1>
 void BST<T1>::inOrder()
 {
     inOrderPrint(_root);
-    std::cout << std::endl;
-
 }
 
 // Give some data and a node, recursively walk the tree until you get to a nullptr and store the value there.
