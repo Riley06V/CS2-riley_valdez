@@ -15,13 +15,13 @@ int main(int argc, char *argv[]) {
 	try {
 		if (argc == 3 && string(argv[1]) == "-p") {
 			string expr = argv[2];
-			int result = evaluateRPN(expr);
+			double result = evaluateRPN(expr);
 			cout << expr << " = " << result << std::endl;
 		} else {
 			string expr;
 			cout << "Enter an RPN expression: ";
 			getline(cin, expr);
-			int result = evaluateRPN(expr);
+			double result = evaluateRPN(expr);
 			cout << fixed << setprecision(5);
 			cout << expr << " = " << result << endl;
 		}
