@@ -73,7 +73,8 @@ size_t List<T1>::size()
 template <class T1>
 void List<T1>::push_front(T1 data)
 {
-    auto *newNode = new Node<T1>(data);
+    auto *newNode = new Node<T1>();
+    newNode->setData(data); //manually set data
     newNode->setNext(_head);
     newNode->setPrev(nullptr);
     if (_head != nullptr) {
