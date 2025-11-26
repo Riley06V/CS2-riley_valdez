@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 #include <sstream>
 #include <string>
 #include "stack.h"
@@ -21,6 +22,7 @@ int main(int argc, char *argv[]) {
 			cout << "Enter an RPN expression: ";
 			getline(cin, expr);
 			int result = evaluateRPN(expr);
+			cout << fixed << setprecision(5);
 			cout << expr << " = " << result << endl;
 		}
 	} catch (const std::exception &e) {
@@ -30,41 +32,41 @@ int main(int argc, char *argv[]) {
 }
 
 int evaluateRPN(const string& expr) {
-	stack<int> stack;
-	std::stringstream ss(expr);
-	std::string token;
+	stack<double> operandStack;
+	stringstream ss(expr);
+	string token;
 
 	while (ss >> token) {
 		// If token is a number
 		if (isdigit(token[0]) ||
 			(token.size() > 1 && token[0] == '-' && isdigit(token[1]))) {
-			stack.push(std::stoi(token));
+			operandStack.push(stod(token));
 			} else {
 				// Must be operator
-				if (stack.size() < 2) {
-					throw std::runtime_error("Invalid RPN expression: not enough operands");
+				if (operandStack.size() < 2) {
+					throw runtime_error("Invalid RPN expression: not enough operands");
 				}
-				int b = stack.pop();  // second operand
-				int a = stack.pop();  // first operand
-				int result;
+				double b = operandStack.pop();  // second operand
+				double a = operandStack.pop();  // first operand
+				double result;
 
 				if (token == "+") result = a + b;
 				else if (token == "-") result = a - b;
 				else if (token == "*") result = a * b;
 				else if (token == "/") {
-					if (b == 0) throw std::runtime_error("Division by zero");
+					if (b == 0) throw runtime_error("Division by zero");
 					result = a / b;
 				} else {
-					throw std::runtime_error("Invalid operator: " + token);
+					throw runtime_error("Invalid operator: " + token);
 				}
-				stack.push(result);
+				operandStack.push(result);
 			}
 	}
 
-	if (stack.size() != 1) {
-		throw std::runtime_error("Invalid RPN expression: leftover operands");
+	if (operandStack.size() != 1) {
+		throw runtime_error("Invalid RPN expression: leftover operands");
 	}
-	return stack.pop();
+	return operandStack.pop();
 
 }
 
