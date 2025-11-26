@@ -7,7 +7,7 @@
 
 using namespace std;
 
-int evaluateRPN(const string&);
+double evaluateRPN(const string&);
 void test();
 int main(int argc, char *argv[]) {
 
@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
 	return 0;
 }
 
-int evaluateRPN(const string& expr) {
+double evaluateRPN(const string& expr) {
 	stack<double> operandStack;
 	stringstream ss(expr);
 	string token;
