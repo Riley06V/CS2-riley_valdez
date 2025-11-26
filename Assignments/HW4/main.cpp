@@ -8,9 +8,24 @@ using namespace std;
 
 int evaluateRPN(const string&);
 void test();
-
 int main(int argc, char *argv[]) {
-	test();
+
+	//command line using argc and argv
+	try {
+		if (argc == 3 && string(argv[1]) == "-p") {
+			string expr = argv[2];
+			int result = evaluateRPN(expr);
+			cout << expr << " = " << result << std::endl;
+		} else {
+			string expr;
+			cout << "Enter an RPN expression: ";
+			getline(cin, expr);
+			int result = evaluateRPN(expr);
+			cout << expr << " = " << result << endl;
+		}
+	} catch (const std::exception &e) {
+		cerr << e.what() << endl;
+	}
 	return 0;
 }
 
@@ -56,6 +71,6 @@ int evaluateRPN(const string& expr) {
 void test() {
 	cout << "3 4 + = " << evaluateRPN("3 4 +") << endl;   // should be 7
 	cout << "3 4 + 5 6 - * = " << evaluateRPN("3 4 + 5 6 - *") << endl; // should be -7
-	cout << "7 5 + 1 42 / + = " << evaluateRPN("7 5 + 1 42 / +") << endl;
-	cout << "2 5 + 2 - 8 9 + + = " << evaluateRPN("2 5 + 2 - 8 9 + +") << endl;
+	cout << "7 5 + 1 42 / + = " << evaluateRPN("7 5 + 1 42 / +") << endl; //12
+	cout << "2 5 + 2 - 8 9 + + = " << evaluateRPN("2 5 + 2 - 8 9 + +") << endl; //22
 }
