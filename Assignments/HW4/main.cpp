@@ -54,7 +54,8 @@ int evaluateRPN(const string& expr) {
 }
 
 void test() {
-	cout << "3 4 + 5 6 - * = " << evaluateRPN("3 4 + 5 6 - * = ") << endl;
+	cout << "3 4 + = " << evaluateRPN("3 4 +") << endl;   // should be 7
+	cout << "3 4 + 5 6 - * = " << evaluateRPN("3 4 + 5 6 - *") << endl; // should be -7
 	cout << "7 5 + 1 42 / + = " << evaluateRPN("7 5 + 1 42 / +") << endl;
 	cout << "2 5 + 2 - 8 9 + + = " << evaluateRPN("2 5 + 2 - 8 9 + +") << endl;
 }
