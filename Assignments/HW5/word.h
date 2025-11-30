@@ -14,6 +14,7 @@ public:
 	Word();
 	Word(string tmpWord, int tmpCounter);
 
+	int getCount();
 	bool operator==(const Word &otherWord);
 	bool operator<(const Word &otherWord);
 	bool operator>(const Word &otherWord);
@@ -23,6 +24,7 @@ public:
 		os << tmpWord._word << ":" << tmpWord._counter;
 		return os;
 	}
+
 };
 
 // Default constructor, set word to "" and counter to 1
@@ -47,7 +49,7 @@ Word Word::operator++(int counter)
 	temp._word = _word;
 	temp._counter = _counter;
 	_counter++;
-	return temp; //returning instance of word updated
+	return *this ;//returning instance of word updated
 }
 
 // Check if two Words are equal (compare _word)
@@ -66,4 +68,8 @@ bool Word::operator<(const Word &otherWord)
 bool Word::operator>(const Word &otherWord)
 {
     return _word > otherWord._word;
+}
+
+int Word::getCount() {
+	return _counter;
 }

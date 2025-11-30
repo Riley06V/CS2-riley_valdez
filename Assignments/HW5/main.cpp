@@ -17,13 +17,18 @@ int main(int argc, char* argv[])
     string rawWord;
 
     while (file >> rawWord) {
+        //normalization of words
         string word = normalize(rawWord);
         if (word.empty()) continue; //skips
         Word tempWord(word, 1);
+        //If word is in multiple times, count and return number of times updated
         if (myTree.search(tempWord)) {
+            //remove old node
             myTree.remove(tempWord);
             tempWord++;
-            myTree.insert(tempWord);
+            int oldCount = tempWord.getCount();
+            Word updated(word, oldCount +1);
+            myTree.insert(updated);
         } else {
             myTree.insert(tempWord);
         }
