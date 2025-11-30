@@ -35,13 +35,22 @@ ________________________________________________________________________________
 ## Assignment #3
 | Riley Valdez | I deserve 100% |
 | --- | --- |
-| Name: | HW2 - Star Wars Auto Battler using operator overloading|
+| Name: | HW3 - Star Wars Auto Battler using operator overloading |
 | Description: | "Create a simple Auto Battler using classes" |
 | Due Date: | 11/3/2025 |
 | Status: | Finished |
 | Location: | https://github.com/Riley06V/CS2-riley_valdez/tree/main/Assignments/HW3/HW2_CPY |
 | Notes: | Finished, after some help |
 
+## Assignment #4
+| Riley Valdez | I deserve 100% |
+| --- | --- |
+| Name: | HW4 - RPN Calculator |
+| Description: | "Create a RPN calc with doubly linked list stack" |
+| Due Date: | 11/28/2025 |
+| Status: | Finished |
+| Location: | https://github.com/Riley06V/CS2-riley_valdez/tree/main/Assignments/HW4 |
+| Notes: | Finished, with some YouTube help |
 # LABS
  
 ## Lab #1
