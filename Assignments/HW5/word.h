@@ -46,7 +46,7 @@ Word Word::operator++(int counter)
 	Word temp;
 	temp._word = _word;
 	temp._counter = _counter;
-	_counter = _counter++;
+	_counter++;
 	return temp; //returning instance of word updated
 }
 
