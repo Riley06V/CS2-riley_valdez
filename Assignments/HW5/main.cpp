@@ -18,11 +18,18 @@ int main(int argc, char* argv[])
 
     while (file >> rawWord) {
         string word = normalize(rawWord);
+        if (word.empty()) continue; //skips
+        Word tempWord(word, 1);
+        if (myTree.search(tempWord)) {
+            myTree.remove(tempWord);
+            tempWord++;
+            myTree.insert(tempWord);
+        } else {
+            myTree.insert(tempWord);
+        }
     }
 
-
-
-
+    myTree.inOrder();
     return 0;
 }
 
