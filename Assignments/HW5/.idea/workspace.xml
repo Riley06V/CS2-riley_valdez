@@ -25,6 +25,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80d84610-1cff-4eaf-9375-e5e30d0e4127" name="Changes" comment="Failed at first due to endl;">
+      <change afterPath="$PROJECT_DIR$/../../Assignments/HW5/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignments/HW5/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignments/HW5/node.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +109,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/rcvaldez/projects/CS2-riley_valdez/Assignments",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/rcvaldez/projects/CS2-riley_valdez/Assignments/HW5",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -131,6 +134,11 @@
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Native Application.all" />
       <item itemvalue="Native Application.run" />
@@ -147,7 +155,6 @@
       <updated>1764100598960</updated>
       <workItem from="1764100600055" duration="3115000" />
       <workItem from="1764523566939" duration="132000" />
-      <workItem from="1764523810125" duration="752000" />
     </task>
     <task id="LOCAL-00001" summary="First time going through functions">
       <option name="closed" value="true" />
