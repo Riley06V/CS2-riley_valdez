@@ -7,6 +7,7 @@ class BST
 private:
     Node<T1> *_root;
     Node<T1> *insertNode(Node<T1> *, T1);
+    Node<T1> *insertNodeWordCount(Node<T1> *, T1);
     void inOrderPrint(Node<T1> *);
     Node<T1> *searchData(Node<T1> *, T1);
     Node<T1> *removeData(Node<T1> *, T1);
@@ -155,4 +156,24 @@ template <class T1>
 void BST<T1>::insert(T1 data)
 {
     _root = insertNode(_root, data);
+}
+
+
+template <class T1>
+Node<T1> *BST<T1>::insertNodeWordCount(Node<T1> *root, T1 data)
+{
+    if (root == nullptr) {
+        Node<T1>* newNode = new Node<T1>();
+        newNode->setData(data);
+        return newNode;
+    }
+
+    if (data < root->getData()) {
+        root->setLeft(insertNode(root->getLeft(), data));
+    } else if (data > root->getData()) {
+        root->setRight(insertNode(root->getRight(), data));
+    } else {
+        std::cout << "Value already exists in tree\n";
+    }
+    return root;
 }
