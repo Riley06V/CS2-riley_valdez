@@ -13,9 +13,9 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="Lab5" targetName="all" />
-      <config projectName="Lab5" targetName="test" />
-      <config projectName="Lab5" targetName="run" />
+      <config projectName="HW5" targetName="test" />
+      <config projectName="HW5" targetName="run" />
+      <config projectName="HW5" targetName="all" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -24,10 +24,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80d84610-1cff-4eaf-9375-e5e30d0e4127" name="Changes" comment="Failed at first due to endl;">
-      <change afterPath="$PROJECT_DIR$/../../Assignments/HW5/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignments/HW5/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignments/HW5/node.h" afterDir="false" />
+    <list default="true" id="80d84610-1cff-4eaf-9375-e5e30d0e4127" name="Changes" comment="Final">
+      <change afterPath="$PROJECT_DIR$/../Final/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final/.idea/Final.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final/.idea/editor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,24 +69,19 @@
         <entry>
           <key>
             <ExternalProjectPojo>
-              <option name="name" value="Lab5" />
+              <option name="name" value="HW5" />
               <option name="path" value="$PROJECT_DIR$" />
             </ExternalProjectPojo>
           </key>
           <value>
             <list>
               <ExternalProjectPojo>
-                <option name="name" value="Lab5" />
+                <option name="name" value="HW5" />
                 <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
             </list>
           </value>
         </entry>
-      </map>
-    </option>
-    <option name="projectSyncType">
-      <map>
-        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
       </map>
     </option>
   </component>
@@ -99,44 +99,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.RadMigrateCodeStyle": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/rcvaldez/projects/CS2-riley_valdez/Assignments/HW5",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu/home/rcvaldez/projects/CS2-riley_valdez/Assignments/HW5&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu\home\rcvaldez\projects\CS2-riley_valdez\Assignments\HW5" />
+    </key>
+  </component>
   <component name="RunManager" selected="Native Application.all">
-    <configuration name="all" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Lab5" TARGET_NAME="all" CONFIG_NAME="all" version="1">
+    <configuration name="all" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HW5" TARGET_NAME="all" CONFIG_NAME="all" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="run" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Lab5" TARGET_NAME="run" CONFIG_NAME="run" version="1">
+    <configuration name="run" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HW5" TARGET_NAME="run" CONFIG_NAME="run" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Lab5" TARGET_NAME="test" CONFIG_NAME="test" version="1">
+    <configuration name="test" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HW5" TARGET_NAME="test" CONFIG_NAME="test" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
@@ -155,6 +156,11 @@
       <updated>1764100598960</updated>
       <workItem from="1764100600055" duration="3115000" />
       <workItem from="1764523566939" duration="132000" />
+      <workItem from="1764524574618" duration="6559000" />
+      <workItem from="1764620119586" duration="60000" />
+      <workItem from="1764620198408" duration="7000" />
+      <workItem from="1764620234431" duration="6000" />
+      <workItem from="1764620268540" duration="208000" />
     </task>
     <task id="LOCAL-00001" summary="First time going through functions">
       <option name="closed" value="true" />
@@ -180,7 +186,63 @@
       <option name="project" value="LOCAL" />
       <updated>1764102929473</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Copied code from Lab5">
+      <option name="closed" value="true" />
+      <created>1764524598517</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1764524598517</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Copied code from Lab5">
+      <option name="closed" value="true" />
+      <created>1764524604694</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1764524604694</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Big changes coming now">
+      <option name="closed" value="true" />
+      <created>1764529693398</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764529693398</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added normalization of words">
+      <option name="closed" value="true" />
+      <created>1764529952086</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1764529952086</updated>
+    </task>
+    <task id="LOCAL-00008" summary="First test (fail)">
+      <option name="closed" value="true" />
+      <created>1764530858604</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1764530858604</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Second test (fail)">
+      <option name="closed" value="true" />
+      <created>1764531034795</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1764531034795</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Final">
+      <option name="closed" value="true" />
+      <created>1764532371462</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1764532371462</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +251,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First time going through functions" />
     <MESSAGE value="Failed at first due to endl;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Failed at first due to endl;" />
+    <MESSAGE value="Copied code from Lab5" />
+    <MESSAGE value="Big changes coming now" />
+    <MESSAGE value="Added normalization of words" />
+    <MESSAGE value="First test (fail)" />
+    <MESSAGE value="Second test (fail)" />
+    <MESSAGE value="Final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final" />
   </component>
 </project>
