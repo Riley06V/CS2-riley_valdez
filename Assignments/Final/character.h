@@ -10,12 +10,12 @@
 class character {
 protected:
 	//player info
-	std::string name;
-	int health;
-	int atkPower;
+	std::string _name;
+	int _health;
+	int _atkPower;
 	//position
-	int x;
-	int y;
+	int _x;
+	int _y;
 public:
   	//constructor
   	character(std::string name, int health, int atkPower, int xPos, int yPos);
@@ -23,11 +23,11 @@ public:
 	virtual ~character();
 
 	//setters
-	void setName();
-	void setHealth();
-	void setAtkPower();
-	void setX();
-	void setY();
+	void setName(std::string name);
+	void setHealth(int health);
+	void setAtkPower(int atkPower);
+	void setX(int xPos);
+	void setY(int yPos);
 	//getters
 	std::string getName();
 	int getHealth();
@@ -36,6 +36,7 @@ public:
 	int getY();
 	//helpers
 	void takeDamage(int damage);
+    void attack();
 	bool isAlive();
 };
 
