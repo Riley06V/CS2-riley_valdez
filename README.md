@@ -51,6 +51,16 @@ ________________________________________________________________________________
 | Status: | Finished |
 | Location: | https://github.com/Riley06V/CS2-riley_valdez/tree/main/Assignments/HW4 |
 | Notes: | Finished, with some YouTube help |
+
+## Assignment #5
+| Riley Valdez | I deserve 100% |
+| --- | --- |
+| Name: | HW5 BST Word Counter |
+| Description: | "Display times a word shows up in text file" |
+| Due Date: | 12/8/2025 |
+| Status: | Finished |
+| Location: | https://github.com/Riley06V/CS2-riley_valdez/tree/main/Assignments/HW5 |
+| Notes: | Finished with little complications|
 # LABS
  
 ## Lab #1
