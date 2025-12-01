@@ -14,7 +14,7 @@ class player {
     int health;
     int atkPower;
     int defense;
-    int inventorySpace;
+    int inventorySpace[];
     //player position
     int x;
     int y;
