@@ -20,12 +20,13 @@ class enemy : public character {
     ~enemy() override;
     //Setters
     void setDifficultyLevel(int difficultyLevel);
+    void setHeldItem(item* item);
     //Getters
     int getDifficultyLevel() const;
     //helpers
     Item* dropItem();
     //overrides
-    void attack() override;
+    int attack() override;
     void takeDamage(int damage) override;
 };
 

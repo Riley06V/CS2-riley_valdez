@@ -36,7 +36,7 @@ public:
 	int getY() const;
 	//helpers
 	virtual void takeDamage(int damage);
-    virtual void attack();
+    virtual int attack();
 	bool isAlive();
 };
 

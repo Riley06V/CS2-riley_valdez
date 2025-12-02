@@ -15,10 +15,10 @@ class player : public character {
   private:
     //player info
     int _defense;
-    Item* _inventory[inventorySize];
+    item* _inventory[inventorySize];
     int _itemCount;
-    Item* _weaponSlot; //Equipped weapon
-    Item* _armorSlot; //Equipped Armor
+    item* _weaponSlot; //Equipped weapon
+    item* _armorSlot; //Equipped Armor
   public:
     //Constructor
     player(std::string name, int startX, int startY, int health, int atkPower, int defense);
@@ -26,24 +26,25 @@ class player : public character {
     ~player() override;
     //setters from character.h
     void setDefense(int defense);
-    void setWeapon(Item* weapon);
-    void setArmor(Item* armor);
+    void setWeapon(item* weapon);
+    void setArmor(item* armor);
     //getters most from character.h
     int getDefense() const;
     int getCurrentItemCount() const;
-    Item* getWeapon() const;
-    Item* getArmor() const;
+    item* getWeapon() const;
+    item* getArmor() const;
     //helpers
     void heal(int healAmt);
-    void addItem(const Item &item);
+    void addItem(item *item);
     void removeItem(const int slotIndex);
     void showInventory() const;
     void unequipWeapon(room* currentRoom);
     void unequipArmor(room* currentRoom);
+    void equipItem(item* item);
+
     //overrides
-    void attack() override;
+    int	 attack() override;
     void takeDamage(int damage) override;
-    void equipItem
 };
 
 

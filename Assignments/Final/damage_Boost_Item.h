@@ -14,7 +14,7 @@ class damage_Boost_Item : public item {
           int _durability;
 	public:
           //constrtuctor
-          damage_Boost_Item(std::string name, std::string description, int x, int y int boostToDamage, int durability);
+          damage_Boost_Item(std::string name, std::string description, int x, int y, int boostToDamage, int durability);
           //destructor
           ~damage_Boost_Item() override;
           //setters
