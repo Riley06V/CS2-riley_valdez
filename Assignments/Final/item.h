@@ -5,6 +5,7 @@
 #ifndef ITEM_H
 #define ITEM_H
 #include <string>
+class player;
 
 class item {
   protected:
@@ -13,7 +14,7 @@ class item {
     int _x;
     int _y;
   public:
-    virtual item(std::string name, std::string description, int x, int y);
+    item(std::string name, std::string description, int x, int y);
     virtual ~item();
     //setters
     void setName(std::string name);
@@ -21,10 +22,12 @@ class item {
     void setX(int x);
     void setY(int y);
     //getters
-    std::string getName();
-    std::string getDescription();
-    int getX();
-    int getY();
+    std::string getName() const;
+    std::string getDescription() const;
+    int getX() const;
+    int getY() const;
+
+    virtual void use(player& player);
 };
 
 

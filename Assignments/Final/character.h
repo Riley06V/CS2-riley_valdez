@@ -29,14 +29,14 @@ public:
 	void setX(int xPos);
 	void setY(int yPos);
 	//getters
-	std::string getName();
-	int getHealth();
-	int getAtkPower();
-	int getX();
-	int getY();
+	std::string getName() const;
+	int getHealth() const;
+	int getAtkPower() const;
+	int getX() const;
+	int getY() const;
 	//helpers
-	void takeDamage(int damage);
-    void attack();
+	virtual void takeDamage(int damage);
+    virtual void attack();
 	bool isAlive();
 };
 

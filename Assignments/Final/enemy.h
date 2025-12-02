@@ -9,7 +9,7 @@
 #include "item.h"
 
 
-class enemy : protected character {
+class enemy : public character {
   private:
     int _difficultyLevel;
     item* _heldItem;
@@ -17,13 +17,16 @@ class enemy : protected character {
     //constructor
     enemy(std::string name, int health, int attkPower, int difficultyPower, int xPos, int yPos);
     //destructor
-    ~enemy();
+    ~enemy() override;
     //Setters
     void setDifficultyLevel(int difficultyLevel);
     //Getters
-    int getDifficultyLevel();
+    int getDifficultyLevel() const;
     //helpers
-    int dropItem();
+    Item* dropItem();
+    //overrides
+    void attack() override;
+    void takeDamage(int damage) override;
 };
 
 

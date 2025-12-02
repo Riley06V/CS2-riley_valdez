@@ -6,21 +6,24 @@
 #define CONSUMABLE_ITEM_H
 #include "item.h"
 #include <string>
+class player;
 
-
-class consumable_Item : protected item {
+class consumable_Item : public item {
 	private:
-          int effectLevel;
+          int _effectLevel;
+          bool _consumed;
 	public:
           consumable_Item();
           consumable_Item(std::string itemName, std::string itemDescription, int effectLevel);
-          ~consumable_Item();
+          ~consumable_Item() override;
           //setters
           void setEffectLevel(int effectLevel);
           //getters
-          int getEffectLevel();
+          int getEffectLevel() const;
           //helpers
-          bool consumed();
+          bool consumed(); //returns true if the item was consumed successfully.
+          //override
+          void use(player& player) override; //one time buff since consumable
 };
 
 

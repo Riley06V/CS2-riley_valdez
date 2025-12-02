@@ -6,9 +6,9 @@
 #define DAMAGE_BOOST_ITEM_H
 #include "item.h"
 #include <string>
+class player;
 
-
-class damage_Boost_Item : protected item {
+class damage_Boost_Item : public item {
 	private:
           int _boostToDamage;
           int _durability;
@@ -16,16 +16,16 @@ class damage_Boost_Item : protected item {
           //constrtuctor
           damage_Boost_Item(std::string name, std::string description, int x, int y int boostToDamage, int durability);
           //destructor
-          virtual ~damage_Boost_Item();
+          ~damage_Boost_Item() override;
           //setters
           void setDurability(int durability);
           void setBoostToDamage(int boostToDamage);
           //getters
-          int getBoostToDamage();
-          int getDurability();
+          int getBoostToDamage() const;
+          int getDurability() const;
+          //override
+          void use(player *player) override; //equip, uses durability over time
 
 };
-
-
 
 #endif //DAMAGE_BOOST_ITEM_H
