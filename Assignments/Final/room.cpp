@@ -5,10 +5,37 @@
 #include "room.h"
 #include "item.h"
 #include "enemy.h"
+#include "player.h"
+#include <algorithm>
 #include <iostream>
 
-room::room(const std::string& description, int x, int y, bool isTreasureRoom)
-    : _description(description), _x(x), _y(y), _enemy(nullptr), _isTreasureRoom(isTreasureRoom) {}
+room::room(const std::string& description,
+           const std::vector<std::string>& grid,
+           bool isTreasureRoom)
+    : _description(description),
+      _x(0), _y(0), // starting coordinates for the room itself
+      _enemy(nullptr),
+      _isTreasureRoom(isTreasureRoom),
+      _grid(grid),
+      _height(static_cast<int>(grid.size())),
+      _width(_height ? static_cast<int>(grid[0].size()) : 0),
+      _doorX(-1),
+      _doorY(-1) {
+
+    // Scan the grid for special tiles
+    for (int y = 0; y < _height; ++y) {
+        for (int x = 0; x < _width; ++x) {
+            char c = _grid[y][x];
+            if (c == '!') {
+                _itemPositions.emplace_back(x, y);
+            } else if (c == 'D') {
+                _doorX = x;
+                _doorY = y;
+            }
+            //enemies are hidden: will be added with helper
+        }
+    }
+}
 
 //destructor
 room::~room() {
@@ -51,23 +78,73 @@ int room::getY() const {
 bool room::isTreasureRoom() const {
   return _isTreasureRoom;
 }
-
+//item management
 void room::addItem(item* item) {
-  _items.push_back(newItem);
+  _items.push_back(item);
 }
 
-void room::removeItem(item* item) {
-  if (index < _items.size()) {
-    _items.erase(_items.begin() + index);
-  }
+void room::removeItem(item* target) {
+    auto it = std::find(_items.begin(), _items.end(), target);
+    if (it != _items.end()) {
+        _items.erase(it);
+    }
 }
 
 const std::vector<item*>& room::getItems() const {
   return _items;
 }
+//movement
+bool room::canMoveTo(int x, int y) const {
+  if (y < 0 || y >= _height || x < 0 || x >= _width) return false;
+  char tile = _grid[y][x];
+  return (tile == '.' || tile == '!' || tile == 'D');
+}
 
+bool room::isDoor(int x, int y) const {
+  return (x == _doorX && y == _doorY);
+}
+
+bool room::isItem(int x, int y) const {
+  return std::find (_itemPositions.begin(), _itemPositions.end(),
+                   std::make_pair(x, y)) != _itemPositions.end();
+}
+
+bool room::isEnemy(int x, int y) const {
+  auto it = std::find(_enemyPositions.begin(), _enemyPositions.end(),
+                        std::make_pair(x, y)) != _enemyPositions.end();
+}
+
+//state changes
+void room::pickupItemAt(int x, int y) {
+  auto it = std::find(_itemPositions.begin(), _itemPositions.end(), std::make_pair(x, y));
+  if (it != _itemPositions.end()) {
+    _itemPositions.erase(it);
+    _grid[y][x] = '.'; //clear title
+  }
+}
+
+bool room::revealEnemyAt(int x, int y) {
+  auto it = std::find(_enemyPositions.begin(), _enemyPositions.end(), std::make_pair(x, y));
+  if (it != _enemyPositions.end()) {
+    _enemyPositions.erase(it);
+    return true;
+    //enemy stays hidden visually, combat trigggers
+  }
+  return false;
+}
+
+void room::addHiddenEnemy(int x, int y) {
+  _enemyPositions.emplace_back(x, y);
+}
 //ASCII rendering
-
-std::vector<std::string> room::renderAscii(const player* p) const {
-  //more to do
+std::vector<std::string> room::renderAscii(const player* player) const {
+	std::vector<std::string> rendered = _grid;
+    if (player) {
+      int playerX = player->getX();
+      int playerY = player->getY();
+      if(playerY >= 0 && playerY < _height && playerX >= 0 && playerX < _width) {
+        rendered[playerY][playerX] = '@';
+      }
+    }
+    return rendered;
 }
