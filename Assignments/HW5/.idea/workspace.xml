@@ -25,14 +25,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80d84610-1cff-4eaf-9375-e5e30d0e4127" name="Changes" comment="Final">
-      <change afterPath="$PROJECT_DIR$/../Final/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Final/.idea/Final.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Final/.idea/editor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Final/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Final/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Final/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Final/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final/dungeon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Final/dungeon.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final/dungeon.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Final/dungeon.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final/list.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Final/list.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -161,6 +156,8 @@
       <workItem from="1764620198408" duration="7000" />
       <workItem from="1764620234431" duration="6000" />
       <workItem from="1764620268540" duration="208000" />
+      <workItem from="1764708025070" duration="57000" />
+      <workItem from="1764708097925" duration="41000" />
     </task>
     <task id="LOCAL-00001" summary="First time going through functions">
       <option name="closed" value="true" />

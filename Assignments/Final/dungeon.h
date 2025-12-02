@@ -14,6 +14,7 @@ class dungeon {
   private:
     List<room*> _rooms;
     room* _currentRoom;
+    int _currentIndex;
 
     public:
       dungeon();

@@ -16,8 +16,8 @@ class List
         List();
         ~List();
 
-        bool empty();
-        size_t size();
+        bool empty() const;
+        size_t size() const;
 
         void push_front(T1);
         T1 pop_front();
@@ -25,6 +25,7 @@ class List
         void push_back(T1);
         T1 pop_back();
         T1 back();
+        T1 get(size_t index) const;
 
         bool operator==(const List<T1>&);
         // Have to declare a template for friend functions using a different template variable
@@ -57,14 +58,14 @@ List<T1>::~List()
 // return true if the list is empty, false otherwise.
 // Do not just check listSize, should actually check _head and _tail
 template <class T1>
-bool List<T1>::empty()
+bool List<T1>::empty const()
 {
     return _head == nullptr && _tail == nullptr;
 }
 
 // return number of elements in list
 template <class T1>
-size_t List<T1>::size()
+size_t List<T1>::size const()
 {
     return listSize;
 }
@@ -171,6 +172,15 @@ T1 List<T1>::pop_back()
     listSize--;
     return data;
 }
+
+T1 get(size_t index) const {
+  Node<T1> *curr = _head;
+  for (size_t i = 0; i < index && curr != nullptr; ++i) {
+    curr = curr->getNext();
+  }
+  return curr ? curr->getData() : T1();
+}
+
 
 // overloading <<, should return a space separated stream of all of the elements
 template <class T1>
