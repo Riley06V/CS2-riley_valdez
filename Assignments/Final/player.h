@@ -8,6 +8,7 @@
 #include "character.h"
 
 class item;
+class room;
 //Constant inventory size, (slots 1-0 for num row)
 const int inventorySize = 10;
 class player : public character {
@@ -37,8 +38,8 @@ class player : public character {
     void addItem(const Item &item);
     void removeItem(const int slotIndex);
     void showInventory() const;
-    void unequipWeapon();
-    void unequipArmor();
+    void unequipWeapon(room* currentRoom);
+    void unequipArmor(room* currentRoom);
     //overrides
     void attack() override;
     void takeDamage(int damage) override;
