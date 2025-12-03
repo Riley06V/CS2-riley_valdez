@@ -26,6 +26,8 @@ class room {
     int _width;
     int _doorX;
     int _doorY;
+	int _prevDoorX, _prevDoorY;
+
     std::vector<std::pair<int, int>> _itemPositions;
     std::vector<std::pair<int, int>> _enemyPositions;
   public:
@@ -36,12 +38,17 @@ class room {
     void setDescription(const std::string& description);
     void setEnemy(enemy* enemy);
     void setTreasure(bool treasure);
+    void setDoor(int x, int y);
+    void setPrevDoor(int x, int y);
     //getters
     std::string getDescription() const;
     enemy* getEnemy() const;
     int getX() const;
     int getY() const;
     bool isTreasureRoom() const;
+    //door getters
+    std::pair<int, int> getDoor() const;
+    std::pair<int, int> getPrevDoor() const;
     //methods item management
     void addItem(item* item);
     void removeItem(item* target);
@@ -49,8 +56,10 @@ class room {
     //movement + queries
     bool canMoveTo(int x, int y) const;
     bool isDoor(int x, int y) const;
+    bool isPrevDoor(int x, int y) const;
     bool isItem(int x, int y) const;
     bool isEnemy(int x, int y) const;
+
     //state changes
     void pickupItemAt(int x, int y);
     bool revealEnemyAt(int x, int y);

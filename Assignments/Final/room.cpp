@@ -20,7 +20,8 @@ room::room(const std::string& description,
       _height(static_cast<int>(grid.size())),
       _width(_height ? static_cast<int>(grid[0].size()) : 0),
       _doorX(-1),
-      _doorY(-1) {
+      _doorY(-1),
+	  _prevDoorX(-1), _prevDoorY(-1) {
 
     // Scan the grid for special tiles
     for (int y = 0; y < _height; ++y) {
@@ -31,6 +32,9 @@ room::room(const std::string& description,
             } else if (c == 'D') {
                 _doorX = x;
                 _doorY = y;
+            } else if (c == 'P') {
+              _prevDoorX = x;
+              _prevDoorY = y;
             }
             //enemies are hidden: will be added with helper
         }
@@ -58,6 +62,16 @@ void room::setTreasure(bool treasure) {
   _isTreasureRoom = treasure;
 }
 
+void room::setDoor(int x, int y) {
+  _doorX = x;
+  _doorY = y;
+}
+
+void room::setPrevDoor(int x, int y) {
+  _prevDoorX = x;
+  _prevDoorY = y;
+}
+
 //getters;
 std::string room::getDescription() const {
   return _description;
@@ -75,8 +89,25 @@ int room::getY() const {
   return _y;
 }
 
+std::pair<int,int> room::getDoor() const {
+    return {_doorX, _doorY};
+}
+
+std::pair<int,int> room::getPrevDoor() const {
+    return {_prevDoorX, _prevDoorY};
+}
+
+
 bool room::isTreasureRoom() const {
   return _isTreasureRoom;
+}
+
+bool room::isDoor(int x, int y) const {
+  return (x == _doorX && y == _doorY);
+}
+
+bool room::isPrevDoor(int x, int y) const {
+  return (_prevDoorX == x && _prevDoorY == y);
 }
 //item management
 void room::addItem(item* it) {
@@ -101,10 +132,6 @@ bool room::canMoveTo(int x, int y) const {
     char tile = _grid[y][x];
     // '#' = wall, blocked
     return (tile != '#');
-}
-
-bool room::isDoor(int x, int y) const {
-  return (x == _doorX && y == _doorY);
 }
 
 bool room::isItem(int x, int y) const {
