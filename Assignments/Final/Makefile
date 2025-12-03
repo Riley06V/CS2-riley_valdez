@@ -13,7 +13,7 @@ CXXFLAGS = -c -g -Wall -std=c++17
 PROGRAM = main.out
 
 # list all .cpp files separated by space
-CPPFILES = main.cpp character.cpp player.cpp enemy.cpp item.cpp damage_Boost_Item.cpp heal_Item.cpp consumable_Item.cpp dungeon.cpp room.cpp
+CPPFILES = main.cpp character.cpp player.cpp enemy.cpp item.cpp defense_Item.cpp damage_Boost_Item.cpp consumable_Item.cpp dungeon.cpp room.cpp
 
 # make all rule/default rule that'll be run when we run "make"
 # first compile each file to object file

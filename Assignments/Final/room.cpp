@@ -79,8 +79,10 @@ bool room::isTreasureRoom() const {
   return _isTreasureRoom;
 }
 //item management
-void room::addItem(item* item) {
-  _items.push_back(item);
+void room::addItem(item* it) {
+    _items.push_back(it);
+    _itemPositions.emplace_back(it->getX(), it->getY());
+    _grid[it->getY()][it->getX()] = '!'; // mark on map
 }
 
 void room::removeItem(item* target) {

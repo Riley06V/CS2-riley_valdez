@@ -32,24 +32,27 @@ void player::addItem(item *item) {
   }
 }
 
-void player::removeItem(const int slotIndex) {
-  if (slotIndex < 0 || slotIndex >= _itemCount) {
-    _inventory[slotIndex] = nullptr;
-    for(int i = slotIndex; i < _itemCount - 1; ++i) {
-      _inventory[i] = _inventory[i + 1];
+void player::removeItem(int slotIndex) {
+    if (slotIndex >= 0 && slotIndex < _itemCount) {
+        for (int i = slotIndex; i < _itemCount - 1; ++i) {
+            _inventory[i] = _inventory[i + 1];
+        }
+        _inventory[_itemCount - 1] = nullptr;
+        _itemCount--;
     }
-    _inventory[_itemCount - 1] = nullptr;
-    _itemCount--;
-  }
 }
 
+
 void player::showInventory() const {
-  std::cout << _name << "'s inventory: \n" << std::endl;
-  for(int i = 0; i < _itemCount; ++i) {
-    if(_inventory[i]) {
-      std::cout << i << ": " << _inventory[i]->getName() << "\n";
+    std::cout << _name << "'s inventory:\n";
+    for (int i = 0; i < _itemCount; ++i) {
+        if (_inventory[i]) {
+            std::cout << i << ": " << _inventory[i]->getName();
+            if (_inventory[i] == _weaponSlot) std::cout << " (equipped weapon)";
+            if (_inventory[i] == _armorSlot) std::cout << " (equipped armor)";
+            std::cout << "\n";
+        }
     }
-  }
 }
 
 void player::setWeapon(item* weapon) {_weaponSlot = weapon; }
@@ -78,34 +81,61 @@ void player::takeDamage(int damage) {
 }
 
 void player::equipItem(item* item) {
-  if (auto* weapon = dynamic_cast<damage_Boost_Item*>(item)) {
-    setWeapon(weapon);
-  } else if (auto* armor = dynamic_cast<defense_Item*>(item)) {
-    setArmor(armor);
-  } else {
-    std::cout << "Item cannot be equipped." << std::endl;
-  }
-
+    room* currentRoom = _currentRoom; // always available
+    if (auto* weapon = dynamic_cast<damage_Boost_Item*>(item)) {
+        unequipWeapon(currentRoom);
+        setWeapon(weapon);
+        std::cout << "Equipped weapon: " << weapon->getName() << "\n";
+    } else if (auto* armor = dynamic_cast<defense_Item*>(item)) {
+        unequipArmor(currentRoom);
+        setArmor(armor);
+        std::cout << "Equipped armor: " << armor->getName() << "\n";
+    } else {
+        std::cout << "Item cannot be equipped.\n";
+    }
 }
 
-void player::unequipWeapon(room* currentRoom) { //If inventory is full, drop item on floor
-  if(_weaponSlot) {
-    if(_itemCount < inventorySize) {
-      _inventory[_itemCount++] = _weaponSlot;
-    } else {
-      currentRoom->addItem(_weaponSlot);
+void player::unequipWeapon(room* currentRoom) {
+    if (_weaponSlot) {
+        if (_itemCount < inventorySize) {
+            _inventory[_itemCount++] = _weaponSlot;
+        } else {
+            currentRoom->addItem(_weaponSlot);
+        }
+        _weaponSlot = nullptr;
     }
-    _weaponSlot = nullptr;
-  }
 }
 
 void player::unequipArmor(room* currentRoom) {
-  if(_armorSlot) {
-    if(_itemCount < inventorySize) {
-      _inventory[_itemCount++] = _armorSlot;
-    } else {
-      currentRoom->addItem(_armorSlot);
+    if (_armorSlot) {
+        if (_itemCount < inventorySize) {
+            _inventory[_itemCount++] = _armorSlot;
+        } else {
+            currentRoom->addItem(_armorSlot);
+        }
+        _armorSlot = nullptr;
     }
-    _armorSlot = nullptr;
-  }
+}
+
+
+void player::setCurrentRoom(room* currentRoom) {
+  _currentRoom = currentRoom;
+}
+
+room* player::getCurrentRoom() const {
+  return _currentRoom;
+}
+
+item* player::getItemAt(int index) const {
+  if (index < 0 || index >= _itemCount) return nullptr;
+  return _inventory[index];
+}
+
+void player::removeItemByPointer(item* it) {
+    for (int i = 0; i < 10; ++i) {
+        if (_inventory[i] == it) {
+            _inventory[i] = nullptr; // mark slot empty
+            break;
+        }
+    }
 }

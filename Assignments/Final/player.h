@@ -19,6 +19,7 @@ class player : public character {
     int _itemCount;
     item* _weaponSlot; //Equipped weapon
     item* _armorSlot; //Equipped Armor
+  	room* _currentRoom;
   public:
     //Constructor
     player(std::string name, int startX, int startY, int health, int atkPower, int defense);
@@ -28,11 +29,14 @@ class player : public character {
     void setDefense(int defense);
     void setWeapon(item* weapon);
     void setArmor(item* armor);
+    void setCurrentRoom(room* currentRoom);
     //getters most from character.h
     int getDefense() const;
     int getCurrentItemCount() const;
     item* getWeapon() const;
     item* getArmor() const;
+    room* getCurrentRoom() const;
+    item* getItemAt(int index) const;
     //helpers
     void heal(int healAmt);
     void addItem(item *item);
@@ -41,6 +45,10 @@ class player : public character {
     void unequipWeapon(room* currentRoom);
     void unequipArmor(room* currentRoom);
     void equipItem(item* item);
+    void equipItemAt(int index, room* currentRoom);
+    void useItemAt(int index);
+    void removeItemByPointer(item* item);
+
 
     //overrides
     int	 attack() override;

@@ -24,7 +24,7 @@ class damage_Boost_Item : public item {
           int getBoostToDamage() const;
           int getDurability() const;
           //override
-          void use(player *player) override; //equip, uses durability over time
+          void use(player &player) override; //equip, uses durability over time
 
 };
 

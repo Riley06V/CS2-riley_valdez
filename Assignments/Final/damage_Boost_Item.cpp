@@ -35,11 +35,9 @@ int damage_Boost_Item::getDurability() const {
 }
 
 // override
-void damage_Boost_Item::use(player* player) {
-	if (!player) return;
+void damage_Boost_Item::use(player& player) {
+    player.equipItem(this);
 
-	player->equipItem(this);
-
-	std::cout << player->getName() << " equipped " << getName()
-			  << " (+" << _boostToDamage << " attack).\n";
+    std::cout << player.getName() << " equipped " << getName()
+              << " (+" << _boostToDamage << " attack).\n";
 }

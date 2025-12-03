@@ -58,14 +58,14 @@ List<T1>::~List()
 // return true if the list is empty, false otherwise.
 // Do not just check listSize, should actually check _head and _tail
 template <class T1>
-bool List<T1>::empty const()
+bool List<T1>::empty() const
 {
     return _head == nullptr && _tail == nullptr;
 }
 
 // return number of elements in list
 template <class T1>
-size_t List<T1>::size const()
+size_t List<T1>::size() const
 {
     return listSize;
 }
@@ -173,7 +173,8 @@ T1 List<T1>::pop_back()
     return data;
 }
 
-T1 get(size_t index) const {
+template <class T1>
+T1 List<T1>::get(size_t index) const {
   Node<T1> *curr = _head;
   for (size_t i = 0; i < index && curr != nullptr; ++i) {
     curr = curr->getNext();

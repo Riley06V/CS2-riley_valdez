@@ -50,7 +50,7 @@ bool dungeon::movePrevious() {
   return false;
 }
 
-int getCurrentRoomLevel() const {
+int dungeon::getCurrentRoomLevel() const {
   return _currentIndex + 1;
 }
 
