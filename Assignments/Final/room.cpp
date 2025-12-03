@@ -112,8 +112,8 @@ bool room::isItem(int x, int y) const {
 }
 
 bool room::isEnemy(int x, int y) const {
-  auto it = std::find(_enemyPositions.begin(), _enemyPositions.end(),
-                        std::make_pair(x, y)) != _enemyPositions.end();
+    return std::find(_enemyPositions.begin(), _enemyPositions.end(),
+                     std::make_pair(x, y)) != _enemyPositions.end();
 }
 
 //state changes

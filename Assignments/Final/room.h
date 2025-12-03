@@ -22,8 +22,8 @@ class room {
 
 //ascii grid stuff
   	std::vector<std::string> _grid;
+	int _height;
     int _width;
-    int _height;
     int _doorX;
     int _doorY;
     std::vector<std::pair<int, int>> _itemPositions;
