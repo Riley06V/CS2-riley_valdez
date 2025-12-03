@@ -97,9 +97,10 @@ const std::vector<item*>& room::getItems() const {
 }
 //movement
 bool room::canMoveTo(int x, int y) const {
-  if (y < 0 || y >= _height || x < 0 || x >= _width) return false;
-  char tile = _grid[y][x];
-  return (tile == '.' || tile == '!' || tile == 'D');
+    if (y < 0 || y >= _height || x < 0 || x >= _width) return false;
+    char tile = _grid[y][x];
+    // '#' = wall, blocked
+    return (tile != '#');
 }
 
 bool room::isDoor(int x, int y) const {
