@@ -22,8 +22,9 @@ class dungeon {
 
       void addRoom(room* room); //push_back
       room* getCurrentRoom() const;
-      void moveNext();
-      void movePrevious();
+      bool moveNext();
+      bool movePrevious();
+      int getCurrentRoomLevel() const;
 
       size_t size() const;
       bool empty() const;

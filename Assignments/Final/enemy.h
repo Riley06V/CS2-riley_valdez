@@ -7,6 +7,8 @@
 #include <string>
 #include "character.h"
 #include "item.h"
+#include "dungeon.h"
+#include "room.h"
 
 
 class enemy : public character {
@@ -26,7 +28,7 @@ class enemy : public character {
     //helpers
     Item* dropItem();
     //overrides
-    int attack(const room* room) const override;
+    int attack(const dungeon& d) const override;
     void takeDamage(int damage) override;
 };
 

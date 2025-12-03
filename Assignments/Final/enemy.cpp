@@ -34,8 +34,8 @@ item* enemy::dropItem() {
 }
 
 //combat
-int enemy::attack(const room* room) const { //unfinished. Damage will scale based on room level and difficulty level
-  int roomLevel = room->getLevel();
+int enemy::attack(const dungeon& dungeon) const { //unfinished. Damage will scale based on room level and difficulty level
+  int roomLevel = dungeon.getCurrentRoomLevel();
   return _atkPower + _difficultyLevel * roomLevel;
 }
 

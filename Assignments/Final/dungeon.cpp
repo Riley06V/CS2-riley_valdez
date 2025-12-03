@@ -31,19 +31,27 @@ room* dungeon::getCurrentRoom() const {
   return _rooms.get(_currentIndex);
 }
 
-void dungeon::moveNext() {
+bool dungeon::moveNext() {
   if(_currentIndex + 1 < static_cast<int>(_rooms.size())) {
     _currentIndex++;
     _currentRoom = _rooms.get(_currentIndex);
+    return true;
   }
+  return false;
 }
 
 //move to previous room
-void dungeon::movePrevious() {
+bool dungeon::movePrevious() {
   if(_currentIndex > 0) {
     _currentIndex--;
     _currentRoom = _rooms.get(_currentIndex);
+    return true;
   }
+  return false;
+}
+
+int getCurrentRoomLevel() const {
+  return _currentIndex + 1;
 }
 
 //size
