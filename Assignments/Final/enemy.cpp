@@ -4,9 +4,10 @@
 
 #include "enemy.h"
 #include "item.h"
+#include "room.h"
 #include <iostream>
 
-enemy::enemy(std::string name, int health, int atkPoewr, int difficultyLevel, int xPos, int yPos)
+enemy::enemy(std::string name, int health, int atkPower, int difficultyLevel, int xPos, int yPos)
     : character(name, health, atkPower, xPos, yPos),
       _difficultyLevel(difficultyLevel), _heldItem(nullptr) {}
 

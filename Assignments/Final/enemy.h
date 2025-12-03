@@ -26,7 +26,7 @@ class enemy : public character {
     //helpers
     Item* dropItem();
     //overrides
-    int attack() override;
+    int attack(const room* room) const override;
     void takeDamage(int damage) override;
 };
 
