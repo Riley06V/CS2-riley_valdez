@@ -111,9 +111,16 @@ bool room::isPrevDoor(int x, int y) const {
 }
 //item management
 void room::addItem(item* it) {
-    _items.push_back(it);
-    _itemPositions.emplace_back(it->getX(), it->getY());
-    _grid[it->getY()][it->getX()] = '!'; // mark on map
+  	int x = it->getX();
+    int y = it->getY();
+    if(y >= 0 && y < _height && x >= 0 && x < _width) {
+		_items.push_back(it);
+    	_itemPositions.emplace_back(it->getX(), it->getY());
+    	_grid[it->getY()][it->getX()] = '!'; // mark on map
+    } else {
+      std::cerr << "item out of bounds at " << x << "," << y << std::endl;
+    }
+
 }
 
 void room::removeItem(item* target) {
