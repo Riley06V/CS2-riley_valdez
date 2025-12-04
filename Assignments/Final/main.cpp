@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
 		"#....##..#",
 		"#.....#.D#",
 		"##.......#",
-		"###.....!#",
+		"###......#",
 		"####.....#",
 		"##########"
 
@@ -50,7 +50,7 @@ int main(int argc, char *argv[]) {
 	std::vector<std::string> grid2 = {
 		"##########",
 		"#P.......#",
-		"#..#!#...#",
+		"#..###...#",
 		"#........#",
 		"#..#.....#",
 		"#..#.###.#",
@@ -137,10 +137,10 @@ int main(int argc, char *argv[]) {
     dungeonGame.addRoom(r6);
 
     // Link rooms
-    linkRooms(r1, r2, 5, 8);
+    linkRooms(r1, r2, 8, 5);
     linkRooms(r2, r3, 2, 7);
-    linkRooms(r3, r4, 8, 3);
-    linkRooms(r4, r5, 4,6);
+    linkRooms(r3, r4, 3, 8);
+    linkRooms(r4, r5, 6, 4);
     linkRooms(r5, r6, 8, 8);
 
     // Create player
@@ -270,7 +270,7 @@ void movement(dungeon& dungeon, player& player) {
       if (askPickupItem == 'N' || askPickupItem == 'n') {
         return;
       } else if (askPickupItem == 'Y' || askPickupItem == 'y') {
-        item* found = rm->getItems()[0];
+        item* found = rm->getItemAt(nx, ny);
         player.addItem(found);
         rm->pickupItemAt(nx, ny);
         cout << "You picked up an item!\n";
@@ -411,9 +411,9 @@ void openInventory(player& player) {
         }
       }
     } else if (choice == 'w' || choice == 'W') {
-      player.unequipWeapon(player.getCurrentRoom());
+      player.unequipWeapon();
     } else if (choice == 'a' || choice == 'A') {
-      player.unequipArmor(player.getCurrentRoom());
+      player.unequipArmor();
     }
   }
 }

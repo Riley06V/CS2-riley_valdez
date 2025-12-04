@@ -65,6 +65,10 @@ int player::attack() {
   int dmg = _atkPower;
   if (_weaponSlot) {
     //Damage boost item code here
+    damage_Boost_Item* weapon = dynamic_cast<damage_Boost_Item*>(_weaponSlot);
+    if(weapon) {
+      dmg+= weapon->getBoostToDamage();
+    }
   }
   return dmg;
 }
@@ -73,6 +77,10 @@ void player::takeDamage(int damage) {
   int reducedDamage = damage - _defense;
   if(_armorSlot) {
     //armor stuff stats
+    defense_Item* armor = dynamic_cast<defense_Item*>(_armorSlot);
+    if(armor) {
+      reducedDamage -= armor->getDefenseAmount();
+    }
   }
   if (reducedDamage < 1) reducedDamage = 1;
   _health -= reducedDamage;
@@ -81,42 +89,19 @@ void player::takeDamage(int damage) {
 }
 
 void player::equipItem(item* item) {
-    room* currentRoom = _currentRoom; // always available
     if (auto* weapon = dynamic_cast<damage_Boost_Item*>(item)) {
-        unequipWeapon(currentRoom);
-        setWeapon(weapon);
+        _weaponSlot = weapon; // already in inventory
         std::cout << "Equipped weapon: " << weapon->getName() << "\n";
     } else if (auto* armor = dynamic_cast<defense_Item*>(item)) {
-        unequipArmor(currentRoom);
-        setArmor(armor);
+        _armorSlot = armor; // already in inventory
         std::cout << "Equipped armor: " << armor->getName() << "\n";
     } else {
         std::cout << "Item cannot be equipped.\n";
     }
 }
 
-void player::unequipWeapon(room* currentRoom) {
-    if (_weaponSlot) {
-        if (_itemCount < inventorySize) {
-            _inventory[_itemCount++] = _weaponSlot;
-        } else {
-            currentRoom->addItem(_weaponSlot);
-        }
-        _weaponSlot = nullptr;
-    }
-}
-
-void player::unequipArmor(room* currentRoom) {
-    if (_armorSlot) {
-        if (_itemCount < inventorySize) {
-            _inventory[_itemCount++] = _armorSlot;
-        } else {
-            currentRoom->addItem(_armorSlot);
-        }
-        _armorSlot = nullptr;
-    }
-}
-
+void player::unequipWeapon() { _weaponSlot = nullptr; }
+void player::unequipArmor()  { _armorSlot  = nullptr; }
 
 void player::setCurrentRoom(room* currentRoom) {
   _currentRoom = currentRoom;

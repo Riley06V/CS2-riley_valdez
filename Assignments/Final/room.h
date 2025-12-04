@@ -50,6 +50,7 @@ class room {
     std::pair<int, int> getDoor() const;
     std::pair<int, int> getPrevDoor() const;
     //methods item management
+    item* getItemAt(int x, int y);
     void addItem(item* item);
     void removeItem(item* target);
     const std::vector<item*>& getItems() const;

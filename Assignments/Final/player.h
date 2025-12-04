@@ -42,8 +42,8 @@ class player : public character {
     void addItem(item *item);
     void removeItem(const int slotIndex);
     void showInventory() const;
-    void unequipWeapon(room* currentRoom);
-    void unequipArmor(room* currentRoom);
+    void unequipWeapon();
+    void unequipArmor();
     void equipItem(item* item);
     void equipItemAt(int index, room* currentRoom);
     void useItemAt(int index);

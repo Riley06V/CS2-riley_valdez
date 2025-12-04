@@ -160,6 +160,15 @@ void room::pickupItemAt(int x, int y) {
   }
 }
 
+item* room::getItemAt(int x, int y) {
+    for (auto* it : _items) {
+        if (it->getX() == x && it->getY() == y) {
+            return it;
+        }
+    }
+    return nullptr;
+}
+
 bool room::revealEnemyAt(int x, int y) {
   auto it = std::find(_enemyPositions.begin(), _enemyPositions.end(), std::make_pair(x, y));
   if (it != _enemyPositions.end()) {
