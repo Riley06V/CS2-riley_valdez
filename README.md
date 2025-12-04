@@ -61,6 +61,16 @@ ________________________________________________________________________________
 | Status: | Finished |
 | Location: | https://github.com/Riley06V/CS2-riley_valdez/tree/main/Assignments/HW5 |
 | Notes: | Finished with little complications|
+
+## Final
+| Riley Valdez | I deserve 100% |
+| --- | --- |
+| Name: | Doubly Linked List Dungeon |
+| Description: | "Create a dungeon Game that is ran over a doubly linked list" |
+| Due Date: | 12/8/2025 |
+| Status: | Finished |
+| Location: | https://github.com/Riley06V/CS2-riley_valdez/tree/main/Assignments/Final |
+| Notes: | I'd like to keep working on this as it is a fun project. Meets requirements, lots of things to add overall|
 # LABS
  
 ## Lab #1
